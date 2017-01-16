@@ -16,8 +16,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 /**
- *
- * @author Luca
+ * Initialises the session.
+ * If userType parameter is not present, create it.
+ * @author Luca, Riccardo, Mario
  */
 public class SessionFilter implements Filter {
 
@@ -27,11 +28,14 @@ public class SessionFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+        // Get the session. If not present, create it.
         HttpSession session = ((HttpServletRequest)request).getSession();
+        // If userType is not present, create it
         if(session.getAttribute("userType") == null){
             session.setAttribute("userType", 0);
         }
-    
+
+        // Forward the request
         chain.doFilter(request, response);
     }
 

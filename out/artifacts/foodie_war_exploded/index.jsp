@@ -135,7 +135,9 @@
     <body>
         <div class="container">
             <%@include file="WEB-INF/navbar.jsp" %>
-            
+
+            <h1><c:out value="${sessionScope.userType}"/></h1>
+
             <form role="form" id="search">
                 <div class="form-group">
                     <input type="text" class="form-control typeahead" placeholder="What do you need">

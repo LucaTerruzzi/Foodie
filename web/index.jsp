@@ -135,7 +135,7 @@
     <body>
         <div class="container">
             <%@include file="WEB-INF/navbar.jsp" %>
-            
+
             <form role="form" id="search">
                 <div class="form-group">
                     <input type="text" class="form-control typeahead" placeholder="What do you need">
