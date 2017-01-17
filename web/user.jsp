@@ -14,7 +14,7 @@
     </head>
     <body>
         <%@include file="WEB-INF/navbar.jsp" %>
-        <h3><jsp:getProperty name="user" property="username"/></h3>
+        <h3><jsp:getProperty name="user" property="name"/></h3>
         <p>
             Name: <jsp:getProperty name="user" property="name"/><br/>
             Surname: <jsp:getProperty name="user" property="surname"/><br/>

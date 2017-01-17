@@ -48,13 +48,12 @@ public class DBManager {
         }*/
     }
     
-    public User authenticate(String username, String password){
-        if("barzo".equals(username) && "password".equals(password)){
+    public User authenticate(String email, String password){
+        if("barzo@tuca.it".equals(email) && "password".equals(password)){
             User user = new User();
             user.setName("Tuca");
             user.setSurname("Lerruzzi");
             user.setEmail("luca.terruzzi@studenti.unitn.it");
-            user.setUsername("RbaRzo");
             user.setUserType(1);
             return user;
         }else{

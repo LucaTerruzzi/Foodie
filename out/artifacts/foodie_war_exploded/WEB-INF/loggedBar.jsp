@@ -13,5 +13,7 @@
     <form action="Logout" method="POST">
             <input type="submit" value="logout"/>
     </form>
-            
+
+    <a href="/user.jsp">PROFILO</a>
+
 </div>

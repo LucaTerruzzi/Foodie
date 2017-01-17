@@ -17,8 +17,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- *
- * @author Luca
+ * Filter non authenticated requests
+ * @author Luca, Riccardo, Mario
  */
 public class AuthenticatedFilter implements Filter {
     
@@ -30,6 +30,7 @@ public class AuthenticatedFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         
         HttpSession session = ((HttpServletRequest)request).getSession();
+        // If not authenticated
         if((int)session.getAttribute("userType") == 0 || session.getAttribute("user") == null){
             ((HttpServletResponse)response).sendRedirect("index.jsp");
         }else{

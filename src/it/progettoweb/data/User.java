@@ -8,15 +8,15 @@ package it.progettoweb.data;
 import java.io.Serializable;
 
 /**
- *
- * @author Luca
+ * User Class
+ * Class which collects all user's infos
+ * @author Luca, Riccardo, Mario
  */
 public class User implements Serializable{
     
     private int userType;       //0 -> anonymous, 1 -> standard, 2 -> owner, 3 -> administrator 
     private String name;        //user's name
     private String surname;     //user's surname
-    private String username;    //user's username
     private String email;       //user's email
     
     public User(){
@@ -62,20 +62,6 @@ public class User implements Serializable{
      */
     public void setSurname(String surname) {
         this.surname = surname;
-    }
-
-    /**
-     * @return the username
-     */
-    public String getUsername() {
-        return username;
-    }
-
-    /**
-     * @param username the username to set
-     */
-    public void setUsername(String username) {
-        this.username = username;
     }
 
     /**

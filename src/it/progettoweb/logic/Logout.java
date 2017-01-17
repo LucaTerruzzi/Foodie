@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- *
- * @author Luca
+ * Class for logging out users
+ * @author Luca, Riccardo, Mario
  */
 public class Logout extends HttpServlet {
 

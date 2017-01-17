@@ -15,8 +15,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- *
- * @author Luca
+ * Servlet for managing logins
+ * @author Luca, Riccardo, Mario
  */
 public class Login extends HttpServlet {
 
@@ -64,16 +64,16 @@ public class Login extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        String name = request.getParameter("name");
+        String email = request.getParameter("email");
         String password = request.getParameter("password");
            
         //if necessary parameters are null, something wrong happened
-        if(name == null || password == null){
+        if(email == null || password == null){
             response.sendRedirect("index.jsp");
         }
         
         //authentiate user
-        User user = dbmanager.authenticate(name, password);
+        User user = dbmanager.authenticate(email, password);
         
         if(user == null){
             //user not present in DB
@@ -100,6 +100,6 @@ public class Login extends HttpServlet {
     @Override
     public String getServletInfo() {
         return "Manages login process";
-    }// </editor-fold>
+    }
 
 }
