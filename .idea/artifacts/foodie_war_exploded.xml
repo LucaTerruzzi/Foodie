@@ -15,6 +15,7 @@
           <element id="library" level="project" name="api" />
           <element id="library" level="project" name="lib" />
           <element id="library" level="project" name="ext" />
+          <element id="library" level="project" name="jbcrypt-0.4-atlassian-1" />
         </element>
       </element>
     </root>

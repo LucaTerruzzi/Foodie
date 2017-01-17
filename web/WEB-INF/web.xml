@@ -12,6 +12,10 @@
         <filter-name>AuthenticatedFilter</filter-name>
         <filter-class>it.progettoweb.filters.AuthenticatedFilter</filter-class>
     </filter>
+    <filter>
+        <filter-name>GuestFilter</filter-name>
+        <filter-class>it.progettoweb.filters.GuestFilter</filter-class>
+    </filter>
     <filter-mapping>
         <filter-name>SessionFilter</filter-name>
         <url-pattern>/*</url-pattern>
@@ -19,6 +23,12 @@
     <filter-mapping>
         <filter-name>AuthenticatedFilter</filter-name>
         <url-pattern>/user.jsp</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>GuestFilter</filter-name>
+        <url-pattern>/register.jsp</url-pattern>
+        <url-pattern>/Register</url-pattern>
+        <url-pattern>/Login</url-pattern>
     </filter-mapping>
     <listener>
         <description>ServletContextListener</description>

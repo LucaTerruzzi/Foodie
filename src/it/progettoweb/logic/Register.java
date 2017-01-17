@@ -64,12 +64,11 @@ public class Register extends HttpServlet {
             throws ServletException, IOException {
         
         //Parameters of the form
-        String name, surname, username, email, emailRep, password, passwordRep, terms;
+        String name, surname, email, emailRep, password, passwordRep, terms;
         
         //Rretrieve parameters values
         name = request.getParameter("name");
         surname = request.getParameter("surname");
-        username = request.getParameter("username");
         email = request.getParameter("email");
         emailRep = request.getParameter("email-rep");
         password = request.getParameter("password");
@@ -77,42 +76,67 @@ public class Register extends HttpServlet {
         terms = request.getParameter("terms");
         
         //If these parameters are null something went wrong (should never happen!)
-        if(name == null || surname == null || username == null || email == null || emailRep == null || password == null || passwordRep == null){
+        if(name == null || surname == null || email == null || emailRep == null || password == null || passwordRep == null){
             response.sendRedirect("index.jsp");
+            return;
         }
         
         //Parameters error check (already performed via javascript. Server side control for security reasons).
         
-        //name
+        //name length
         if(name.length() < 2 || name.length() > 20){
             response.sendRedirect("register.jsp?error=1");
+            return;
         }
         
-        //surname
+        //surname length
         if(surname.length() < 2 || surname.length() > 20){
             response.sendRedirect("register.jsp?error=1");
-        }
-        
-        //name
-        if(username.length() < 3 || username.length() > 20){
-            response.sendRedirect("register.jsp?error=1");
+            return;
         }
 
-        /*
-        boolean result = true;
-
+        //email validator
         try {
-           InternetAddress emailAddr = new InternetAddress(email);
-           emailAddr.validate();
+            InternetAddress emailAddr = new InternetAddress(email);
+            emailAddr.validate();
         } catch (AddressException ex) {
-           result = false;
+            response.sendRedirect("register.jsp?error=1");
+            return;
         }
-        
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
-        out.println("InternetAddress ->"+result);
-        out.close();
-        */
+
+        //email equal
+        if(!email.equals(emailRep)){
+            response.sendRedirect("register.jsp?error=2");
+            return;
+        }
+
+        //password length
+        if(password.length() < 6 || password.length() > 20){
+            response.sendRedirect("register.jsp?error=1");
+            return;
+        }
+
+        //password equal
+        if(!password.equals(passwordRep)){
+            response.sendRedirect("register.jsp?error=3");
+            return;
+        }
+
+        //terms of service
+        if(terms == null || !terms.equals("yes")){
+            response.sendRedirect("register.jsp?error=4");
+            return;
+        }
+
+        //Register in DB or error if already present
+        if(dbmanager.register(name, surname, email, password) == 0){
+            response.sendRedirect("register.jsp?error=5");
+            return;
+        }
+
+        //MANDA EMAIL CONFERMA
+
+        response.sendRedirect("index.jsp");
     }
 
     /**

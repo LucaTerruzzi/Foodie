@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -28,10 +29,6 @@
                 <input type="text" class="form-control" id="surname" placeholder="Enter surname" name="surname">
               </div>
               <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" class="form-control" id="username" placeholder="Enter username" name="username">
-              </div>
-              <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
               </div>
@@ -53,5 +50,14 @@
               <button type="submit" class="btn btn-default">Submit</button>
             </form>
       </div>
+
+        <c:choose>
+            <c:when test="${param.error == 1}">Generic error</c:when>
+            <c:when test="${param.error == 2}">Emails are different</c:when>
+            <c:when test="${param.error == 3}">Passwords are different</c:when>
+            <c:when test="${param.error == 4}">You must accept the terms of service</c:when>
+            <c:when test="${param.error == 5}">Email already present</c:when>
+        </c:choose>
+
     </body>
 </html>

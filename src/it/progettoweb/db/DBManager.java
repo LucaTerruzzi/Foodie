@@ -9,6 +9,7 @@ import it.progettoweb.data.AutocompleteElement;
 import it.progettoweb.data.User;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import org.mindrot.jbcrypt.BCrypt;
 
 /**
  *
@@ -59,6 +60,13 @@ public class DBManager {
         }else{
             return null;
         }
+    }
+
+    public int register(String name, String surname, String email, String password){
+        //SALVA LE COSINE
+        String hashed = BCrypt.hashpw(password, BCrypt.gensalt());
+        System.out.println("Password -> " + hashed + " - " + BCrypt.checkpw(password, hashed));
+        return 1;
     }
     
     public ArrayList<AutocompleteElement> getCuisineSuggestion(String term){
