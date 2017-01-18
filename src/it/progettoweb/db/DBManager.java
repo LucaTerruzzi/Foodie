@@ -52,7 +52,7 @@ public class DBManager {
     }
     
     public User authenticate(String email, String password){
-        if("barzo@tuca.it".equals(email) && "password".equals(password)){
+        if("asdf".equals(email) && "asdf".equals(password)){
             User user = new User();
             user.setName("Tuca");
             user.setSurname("Lerruzzi");
@@ -83,8 +83,33 @@ public class DBManager {
         return token;
     }
 
-    public boolean changePassword(String email, String token, String password){
+    public boolean changePasswordRecovery(String email, String token, String password){
         //CAMBIA LA PASSWORD
+        return true;
+    }
+
+    public User changeName(String name, String email){
+        //CAMBIA IL NOME
+        User user = new User();
+        user.setName(name);
+        user.setSurname("Lerruzzi");
+        user.setEmail("luca.terruzzi@studenti.unitn.it");
+        user.setUserType(1);
+        return user;
+    }
+
+    public User changeSurname(String surname, String email){
+        //CAMBIA IL SURNOME
+        User user = new User();
+        user.setName("Tuca");
+        user.setSurname(surname);
+        user.setEmail("luca.terruzzi@studenti.unitn.it");
+        user.setUserType(1);
+        return user;
+    }
+
+    public boolean changePassword(String password, String email){
+        //CAMBIA IL LA PASSWORD
         return true;
     }
 

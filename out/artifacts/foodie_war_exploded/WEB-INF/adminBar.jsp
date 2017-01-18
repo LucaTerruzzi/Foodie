@@ -15,6 +15,6 @@
         <input type="submit" value="logout"/>
     </form>
 
-    <!--AGGIUNGERE PULSANTE PROFILO!!!-->
+    <a href="/user.jsp">PROFILO</a>
     <!--AGGIUNGERE PULSANTE NOTIFICHE!!!-->
 </div>

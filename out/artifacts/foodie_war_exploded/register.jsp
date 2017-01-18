@@ -18,6 +18,7 @@
     </head>
     <body>
         <div class="container">
+            <%@include file="WEB-INF/navbar.jsp" %>
             <h2>Register</h2>
             <form role="form" method="POST" action="Register">
               <div class="form-group">

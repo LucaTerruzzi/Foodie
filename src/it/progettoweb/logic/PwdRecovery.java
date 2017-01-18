@@ -79,7 +79,7 @@ public class PwdRecovery extends HttpServlet {
         }
 
         //change password in DB
-        if(dbmanager.changePassword(email, token, password)){
+        if(dbmanager.changePasswordRecovery(email, token, password)){
             response.sendRedirect("index.jsp?message=4");
         }else{
             response.sendRedirect("index.jsp?error=2");

@@ -29,6 +29,10 @@
         <url-pattern>/register.jsp</url-pattern>
         <url-pattern>/Register</url-pattern>
         <url-pattern>/Login</url-pattern>
+        <url-pattern>/pwdRecovery.jsp</url-pattern>
+        <url-pattern>/pwdRecoverySender</url-pattern>
+        <url-pattern>/pwdChange.jsp</url-pattern>
+        <url-pattern>/pwdRecovery</url-pattern>
     </filter-mapping>
     <listener>
         <description>ServletContextListener</description>
@@ -58,6 +62,10 @@
         <servlet-name>PwdRecoverySender</servlet-name>
         <servlet-class>it.progettoweb.logic.PwdRecoverySender</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>EditInfos</servlet-name>
+        <servlet-class>it.progettoweb.logic.EditInfos</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -81,6 +89,10 @@
     <servlet-mapping>
         <servlet-name>PwdRecoverySender</servlet-name>
         <url-pattern>/PwdRecoverySender</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditInfos</servlet-name>
+        <url-pattern>/EditInfos/*</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
