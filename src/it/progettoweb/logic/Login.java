@@ -70,6 +70,7 @@ public class Login extends HttpServlet {
         //if necessary parameters are null, something wrong happened
         if(email == null || password == null){
             response.sendRedirect("index.jsp");
+            return;
         }
         
         //authentiate user

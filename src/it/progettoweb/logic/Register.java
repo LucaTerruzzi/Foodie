@@ -5,6 +5,7 @@
  */
 package it.progettoweb.logic;
 
+import it.progettoweb.data.ConfirmationMail;
 import it.progettoweb.db.DBManager;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -17,8 +18,8 @@ import javax.mail.*;
 import java.util.*;
 
 /**
- *
- * @author Luca
+ * Servlet which manages registration
+ * @author Luca, Riccardo, Mario
  */
 public class Register extends HttpServlet {
 
@@ -129,14 +130,22 @@ public class Register extends HttpServlet {
         }
 
         //Register in DB or error if already present
-        if(dbmanager.register(name, surname, email, password) == 0){
+        String token = dbmanager.register(name, surname, email, password);
+        if(token == null){
             response.sendRedirect("register.jsp?error=5");
             return;
         }
 
-        //MANDA EMAIL CONFERMA
+        // Send confirmation email
+        if(new ConfirmationMail(email, token).send()){
+            // if everything is ok
+            response.sendRedirect("index.jsp?message=2");
+        }else{
+            // if something wrong redirect with error
+            response.sendRedirect("index.jsp?error=3");
+        }
 
-        response.sendRedirect("index.jsp");
+
     }
 
     /**

@@ -142,8 +142,15 @@
                 </div>
             </form>
 
+            <h5><a href="pwdRecovery.jsp">--> IN CASO DI AMNESIA <--</a></h5>
             <c:choose>
                 <c:when test="${param.error == 1}">Wrong username or password</c:when>
+                <c:when test="${param.error == 2}">Invalid link</c:when>
+                <c:when test="${param.error == 3}">Something went wrong :(</c:when>
+                <c:when test="${param.message == 1}">Account confirmed</c:when>
+                <c:when test="${param.message == 2}">Registration successful. Check email</c:when>
+                <c:when test="${param.message == 3}">Recovery email sent. Check email</c:when>
+                <c:when test="${param.message == 4}">Password succesfully changed</c:when>
             </c:choose>
             
         </div>

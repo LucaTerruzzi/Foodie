@@ -46,6 +46,18 @@
         <servlet-name>Register</servlet-name>
         <servlet-class>it.progettoweb.logic.Register</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AccountConfirm</servlet-name>
+        <servlet-class>it.progettoweb.logic.AccountConfirm</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PwdRecovery</servlet-name>
+        <servlet-class>it.progettoweb.logic.PwdRecovery</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PwdRecoverySender</servlet-name>
+        <servlet-class>it.progettoweb.logic.PwdRecoverySender</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -57,6 +69,18 @@
     <servlet-mapping>
         <servlet-name>Register</servlet-name>
         <url-pattern>/Register</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AccountConfirm</servlet-name>
+        <url-pattern>/AccountConfirm</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PwdRecovery</servlet-name>
+        <url-pattern>/PwdRecovery</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PwdRecoverySender</servlet-name>
+        <url-pattern>/PwdRecoverySender</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

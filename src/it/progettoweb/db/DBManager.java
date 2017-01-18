@@ -9,6 +9,8 @@ import it.progettoweb.data.AutocompleteElement;
 import it.progettoweb.data.User;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.UUID;
+
 import org.mindrot.jbcrypt.BCrypt;
 
 /**
@@ -62,13 +64,31 @@ public class DBManager {
         }
     }
 
-    public int register(String name, String surname, String email, String password){
+    public String register(String name, String surname, String email, String password){
         //SALVA LE COSINE
+        String token = UUID.randomUUID().toString();
         String hashed = BCrypt.hashpw(password, BCrypt.gensalt());
         System.out.println("Password -> " + hashed + " - " + BCrypt.checkpw(password, hashed));
-        return 1;
+        return token;
     }
-    
+
+    public boolean enableAccount(String email, String token){
+        //CERCA E TROVA E CAMBIA OPPURE NO
+        return true;
+    }
+
+    public String enableRecovery(String email){
+        //CERCA EMAIL, SE ESISTE METTE IL TOKEN
+        String token = UUID.randomUUID().toString();
+        return token;
+    }
+
+    public boolean changePassword(String email, String token, String password){
+        //CAMBIA LA PASSWORD
+        return true;
+    }
+
+
     public ArrayList<AutocompleteElement> getCuisineSuggestion(String term){
         ArrayList<AutocompleteElement> result = new ArrayList<>();
         for(String cur:cuisine){
