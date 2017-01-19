@@ -23,6 +23,7 @@
     <filter-mapping>
         <filter-name>AuthenticatedFilter</filter-name>
         <url-pattern>/user.jsp</url-pattern>
+        <url-pattern>/EditInfos</url-pattern>
     </filter-mapping>
     <filter-mapping>
         <filter-name>GuestFilter</filter-name>
@@ -66,6 +67,10 @@
         <servlet-name>EditInfos</servlet-name>
         <servlet-class>it.progettoweb.logic.EditInfos</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RetrieveRestaurant</servlet-name>
+        <servlet-class>it.progettoweb.logic.RetrieveRestaurant</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -93,6 +98,10 @@
     <servlet-mapping>
         <servlet-name>EditInfos</servlet-name>
         <url-pattern>/EditInfos/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RetrieveRestaurant</servlet-name>
+        <url-pattern>/RetrieveRestaurant</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

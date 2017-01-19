@@ -19,9 +19,11 @@ public class Restaurant{
     private String link;
     private ArrayList<String> cuisine;
     private Location location;
-    private OpeningHours openingHours;
+    //private OpeningHours openingHours;
+    private String openingHours;
     private int priceRange;
     private int rating;
+    private ArrayList<Review> reviews;
 
     /**
      * @return the id
@@ -139,7 +141,7 @@ public class Restaurant{
      *
      * @return the opening hours
      */
-    public OpeningHours getOpeningHours() {
+    public String getOpeningHours() {
         return openingHours;
     }
 
@@ -147,7 +149,23 @@ public class Restaurant{
      *
      * @param openingHours the opening hours to set
      */
-    public void setOpeningHours(OpeningHours openingHours) {
+    public void setOpeningHours(String openingHours) {
         this.openingHours = openingHours;
+    }
+
+    /**
+     *
+     * @return the list of reviews
+     */
+    public ArrayList<Review> getReviews() {
+        return reviews;
+    }
+
+    /**
+     *
+     * @param reviews the list of reviews to set
+     */
+    public void setReviews(ArrayList<Review> reviews) {
+        this.reviews = reviews;
     }
 }
