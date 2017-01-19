@@ -8,24 +8,20 @@ package it.progettoweb.data;
 import java.util.ArrayList;
 
 /**
- *
- * @author Luca
+ * Class which stores restaurant data
+ * @author Luca, Riccardo, Mario
  */
 public class Restaurant{
     
     private int id;
     private String name;
     private String description;
-    
-    //!!! images !!!
-    
     private String link;
     private ArrayList<String> cuisine;
     private Location location;
-    //!!! opening time !!!
-    //!!! price range !!!
-    
-    private int rank;
+    private OpeningHours openingHours;
+    private int priceRange;
+    private int rating;
 
     /**
      * @return the id
@@ -100,15 +96,15 @@ public class Restaurant{
     /**
      * @return the rank
      */
-    public int getRank() {
-        return rank;
+    public int getRating() {
+        return rating;
     }
 
     /**
      * @param rank the rank to set
      */
-    public void setRank(int rank) {
-        this.rank = rank;
+    public void setRating(int rank) {
+        this.rating = rank;
     }
 
     /**
@@ -124,5 +120,34 @@ public class Restaurant{
     public void setLocation(Location location) {
         this.location = location;
     }
-    
+
+    /**
+     * @return the price range
+     */
+    public int getPriceRange() {
+        return priceRange;
+    }
+
+    /**
+     * @param priceRange the price range to set
+     */
+    public void setPriceRange(int priceRange) {
+        this.priceRange = priceRange;
+    }
+
+    /**
+     *
+     * @return the opening hours
+     */
+    public OpeningHours getOpeningHours() {
+        return openingHours;
+    }
+
+    /**
+     *
+     * @param openingHours the opening hours to set
+     */
+    public void setOpeningHours(OpeningHours openingHours) {
+        this.openingHours = openingHours;
+    }
 }

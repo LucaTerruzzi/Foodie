@@ -7,8 +7,8 @@ package it.progettoweb.data;
 
 
 /**
- *
- * @author Luca
+ * Class which stores location data
+ * @author Luca, Riccardo, Mario
  */
 public class Location{
     
@@ -16,6 +16,8 @@ public class Location{
     private double longitude;
     private String state;
     private String city;
+    private String region;
+    private String province;
     private String address;
 
     /**
@@ -75,6 +77,34 @@ public class Location{
     }
 
     /**
+     * @return the region
+     */
+    public String getRegion() {
+        return region;
+    }
+
+    /**
+     * @param region the region to set
+     */
+    public void setRegion(String region) {
+        this.region = region;
+    }
+
+    /**
+     * @return the province
+     */
+    public String getProvince() {
+        return province;
+    }
+
+    /**
+     * @param province the province to set
+     */
+    public void setProvince(String province) {
+        this.province = province;
+    }
+
+    /**
      * @return the address
      */
     public String getAddress() {
@@ -87,4 +117,5 @@ public class Location{
     public void setAddress(String address) {
         this.address = address;
     }
+
 }
