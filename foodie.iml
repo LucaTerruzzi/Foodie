@@ -30,5 +30,7 @@
     <orderEntry type="library" name="ext" level="project" />
     <orderEntry type="library" name="api" level="project" />
     <orderEntry type="library" name="jbcrypt-0.4-atlassian-1" level="project" />
+    <orderEntry type="library" name="derbyclient" level="project" />
+    <orderEntry type="library" name="derby" level="project" />
   </component>
 </module>

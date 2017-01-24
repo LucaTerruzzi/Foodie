@@ -177,7 +177,7 @@ public class EditInfos extends HttpServlet {
             return false;
         }
 
-        if(!dbmanager.changePassword(password, email)) {
+        if(!dbmanager.changePassword(password, passwordOld, email)) {
             return false;
         }
 

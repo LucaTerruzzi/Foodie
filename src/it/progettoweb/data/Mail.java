@@ -28,7 +28,7 @@ public class Mail {
         Session session = Session.getInstance(props, null);
 
         //Create a new message
-        Message msg = new MimeMessage(session);
+        MimeMessage msg = new MimeMessage(session);
 
         Transport t = null;
         try {
@@ -42,8 +42,8 @@ public class Mail {
         try {
             msg.setFrom(new InternetAddress("team.at.foodie@gmail.com"));
             msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to,false));
-            msg.setSubject("Peni blu");
-            msg.setText(message);
+            msg.setSubject("Foodie team");
+            msg.setText(message, "utf-8", "html");
             msg.setSentDate(new Date());
             t.connect("smtp.gmail.com", 465,"team.at.foodie@gmail.com", "scC-Tvt-Upt-X5C");
             t.sendMessage(msg, msg.getAllRecipients());

@@ -23,6 +23,8 @@ public class ContextListener implements ServletContextListener {
         //!!!! dburl -> TO BE SET IN web.xml !!!!
         String dburl = sce.getServletContext().getInitParameter("dburl");
 
+        //System.out.println(System.getProperty("user.dir"));
+
         try {
 
             DBManager manager = new DBManager(dburl);
