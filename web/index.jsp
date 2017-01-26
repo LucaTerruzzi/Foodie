@@ -18,13 +18,17 @@
         <script src="js/typeahead.bundle.min.js"></script>
         <script>
             $(function(){
-                var cuisine = new Bloodhound({
+                /*var cuisine = new Bloodhound({
                     datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
                     queryTokenizer: Bloodhound.tokenizers.whitespace,
                     remote: {
                       url: 'service/autocomplete/cuisine/%QUERY',
                       wildcard: '%QUERY'
                     }
+                });*/
+
+                $(window).bind("pageshow", function() {
+                    $('#search #type').val(0);;
                 });
                 
                 var places = new Bloodhound({
@@ -49,7 +53,7 @@
                     hint: true,
                     highlight: true,
                     minLength: 3
-                },{
+                }/*,{
                     name: 'couisine',
                     source: cuisine,
                     display : 'value',
@@ -57,14 +61,14 @@
                     templates: {
                         header: '<h4 class="header"><span class="glyphicon glyphicon-record"></span>Cuisine</h4>'
                     }
-                },{
+                }*/,{
                     name: 'places',
                     source: places,
                     display : 'value',
                     limit: 100,
                     templates: {
                         header: '<h4 class="header"><span class="glyphicon glyphicon-map-marker"></span>Places</h4>',
-                        suggestion: Handlebars.compile('<div>{{value}}, {{spec1}}{{#if spec2}}, {{spec2}}{{/if}}</div>')
+                        suggestion: Handlebars.compile('<div>{{value}}, {{spec}}</div>')
                         
                     }
                 },{
@@ -74,14 +78,38 @@
                     limit: 100,
                     templates: {
                         header: '<h4 class="header"><span class="glyphicon glyphicon-cutlery"></span>Restaurants</h4>',
-                        suggestion: Handlebars.compile('<div>{{value}}, {{spec1}}, {{spec2}}, {{spec3}}</div>')
+                        suggestion: Handlebars.compile('<div>{{value}}, {{spec}}</div>')
                         
                     }
                 });
-                
-                $("#search .typeahead").bind('typeahead:select', function(ev, suggestion) {
-                    console.log('Selection: ' + suggestion.value);
+
+                $('#search .typeahead').on('typeahead:selected', function(e, datum) {
+                    console.log(datum);
+                    console.log('selected');
+                    switch (datum.id){
+                        case -2:
+                            $('#search #type').val(2);
+                            $('#search #field').val(datum.value);
+                            $('#search').submit();
+                            break;
+                        case -1:
+                            $('#search #type').val(1);
+                            $('#search #field').val(datum.value);
+                            $('#search').submit();
+                            break;
+                        default:
+                            $('<form>').attr({
+                                method: 'POST',
+                                action: 'RetrieveRestaurant'
+                            }).append($('<input>').attr({
+                                type: 'hidden',
+                                name: 'id',
+                                value: datum.id
+                            })).submit();
+
+                    }
                 });
+
             });
         </script>
         <style>
@@ -136,10 +164,12 @@
         <div class="container">
             <%@include file="WEB-INF/navbar.jsp" %>
 
-            <form role="form" id="search">
+            <form role="form" id="search" method="POST" action="Search">
                 <div class="form-group">
-                    <input type="text" class="form-control typeahead" placeholder="What do you need">
+                    <input type="text" id="field" class="form-control typeahead" placeholder="What do you need" name="term">
                 </div>
+                <input type="hidden" id="type" name="type" value="0"/>
+                <button type="submit" class="btn btn-default">Search</button>
             </form>
 
             <h5><a href="pwdRecovery.jsp">--> IN CASO DI AMNESIA <--</a></h5>

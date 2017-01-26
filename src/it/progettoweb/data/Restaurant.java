@@ -22,8 +22,9 @@ public class Restaurant{
     //private OpeningHours openingHours;
     private String openingHours;
     private int priceRange;
-    private int rating;
+    private float rating;
     private ArrayList<Review> reviews;
+    private String owner;
 
     /**
      * @return the id
@@ -98,14 +99,14 @@ public class Restaurant{
     /**
      * @return the rank
      */
-    public int getRating() {
+    public float getRating() {
         return rating;
     }
 
     /**
      * @param rank the rank to set
      */
-    public void setRating(int rank) {
+    public void setRating(float rank) {
         this.rating = rank;
     }
 
@@ -167,5 +168,21 @@ public class Restaurant{
      */
     public void setReviews(ArrayList<Review> reviews) {
         this.reviews = reviews;
+    }
+
+    /**
+     *
+     * @return the owner of the restaurant
+     */
+    public String getOwner() {
+        return owner;
+    }
+
+    /**
+     *
+     * @param owner the owner of the restaurant to set
+     */
+    public void setOwner(String owner) {
+        this.owner = owner;
     }
 }

@@ -7,6 +7,7 @@ package it.progettoweb.logic;
 
 import it.progettoweb.data.Location;
 import it.progettoweb.data.Restaurant;
+import it.progettoweb.db.DBManager;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -23,46 +24,19 @@ import javax.servlet.http.HttpSession;
  */
 public class RetrieveRestaurant extends HttpServlet {
 
+    private DBManager dbmanager;
     /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
+     * initialize DBManager attribute
      *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
+     * @throws ServletException
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-
-        Restaurant restaurant = new Restaurant();
-        restaurant.setId(1482);
-        restaurant.setName("Procinto");
-        restaurant.setDescription("Il procinto è molto fico");
-        restaurant.setLink("www.garfer.it");
-        restaurant.setPriceRange(3);
-        restaurant.setRating(4);
-        restaurant.setOpeningHours("Mon-Sat: 11-22 | Sun: Closed");
-
-        ArrayList<String> cuisines = new ArrayList<String>();
-        cuisines.add("povera");
-        cuisines.add("ricca");
-        cuisines.add("costosa");
-        restaurant.setCuisine(cuisines);
-
-        Location location = new Location();
-        location.setCity("Pordenone");
-        location.setAddress("Parco della Vittoria, 47");
-
-        restaurant.setLocation(location);
-
-        request.setAttribute("restaurant", restaurant);
-
-        getServletContext().getRequestDispatcher("/restaurant.jsp").forward(request, response);
-
+    @Override
+    public void init() throws ServletException {
+        // initialize dbmanager attribute
+        this.dbmanager = (DBManager)super.getServletContext().getAttribute("dbmanager");
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+
     /**
      * Handles the HTTP <code>GET</code> method.
      *
@@ -72,9 +46,9 @@ public class RetrieveRestaurant extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //you shouldn't reach this servlet via GET !!!
+        response.sendRedirect("index.jsp");
     }
 
     /**
@@ -86,10 +60,26 @@ public class RetrieveRestaurant extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        int id;
+        try {
+            id = Integer.parseInt(request.getParameter("id"));
+        } catch (NumberFormatException e){
+            response.sendRedirect("index.jsp");
+            return;
+        }
+
+        Restaurant restaurant = dbmanager.getRestaurantById(id);
+
+        if(restaurant == null){
+            response.sendRedirect("index.jsp");
+        }else{
+            request.setAttribute("restaurant", restaurant);
+            getServletContext().getRequestDispatcher("/restaurant.jsp").forward(request, response);
+        }
     }
+
 
     /**
      * Returns a short description of the servlet.
@@ -99,6 +89,6 @@ public class RetrieveRestaurant extends HttpServlet {
     @Override
     public String getServletInfo() {
         return "Retrieve restaurant";
-    }// </editor-fold>
+    }
 
 }

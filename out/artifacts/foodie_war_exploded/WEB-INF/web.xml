@@ -24,6 +24,8 @@
         <filter-name>AuthenticatedFilter</filter-name>
         <url-pattern>/user.jsp</url-pattern>
         <url-pattern>/EditInfos</url-pattern>
+        <url-pattern>/writeRev.jsp</url-pattern>
+        <url-pattern>/StoreReview</url-pattern>
     </filter-mapping>
     <filter-mapping>
         <filter-name>GuestFilter</filter-name>
@@ -71,6 +73,14 @@
         <servlet-name>RetrieveRestaurant</servlet-name>
         <servlet-class>it.progettoweb.logic.RetrieveRestaurant</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Search</servlet-name>
+        <servlet-class>it.progettoweb.logic.Search</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>StoreReview</servlet-name>
+        <servlet-class>it.progettoweb.logic.StoreReview</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -103,6 +113,18 @@
         <servlet-name>RetrieveRestaurant</servlet-name>
         <url-pattern>/RetrieveRestaurant</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Search</servlet-name>
+        <url-pattern>/Search</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>StoreReview</servlet-name>
+        <url-pattern>/StoreReview</url-pattern>
+    </servlet-mapping>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error.jsp</location>
+    </error-page>
     <session-config>
         <session-timeout>
             30

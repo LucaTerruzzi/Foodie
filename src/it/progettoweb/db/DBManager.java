@@ -5,8 +5,7 @@
  */
 package it.progettoweb.db;
 
-import it.progettoweb.data.AutocompleteElement;
-import it.progettoweb.data.User;
+import it.progettoweb.data.*;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -263,62 +262,251 @@ public class DBManager {
         return true;
     }
 
+    /*public boolean saveReview(){
 
+    }*/
 
-    public ArrayList<AutocompleteElement> getCuisineSuggestion(String term){
-        ArrayList<AutocompleteElement> result = new ArrayList<>();
-        for(String cur:cuisine){
-            if(cur.contains(term)){
-                AutocompleteElement elem = new AutocompleteElement();
-                elem.setValue(cur);
-                result.add(elem);
+    public Restaurant getRestaurantById(int id){
+        try (PreparedStatement stm = connection.prepareStatement("SELECT * FROM APP.RESTAURANT JOIN APP.RESTAURANTCUISINE ON APP.RESTAURANT.ID = APP.RESTAURANTCUISINE.IDRES WHERE ID = ?")) {
+            stm.setInt(1, id);
+            try (ResultSet rs = stm.executeQuery()) {
+                Restaurant restaurant = new Restaurant();
+                ArrayList<String> cuisines = new ArrayList<>();
+                if (rs.next()) {
+                    restaurant.setId(rs.getInt("ID"));
+                    restaurant.setName(rs.getString("NAME"));
+                    restaurant.setDescription(rs.getString("DESCRIPTION"));
+                    restaurant.setLink(rs.getString("LINK"));
+                    restaurant.setOpeningHours(rs.getString("TIMETABLE"));
+                    restaurant.setPriceRange(rs.getInt("PRICE"));
+                    restaurant.setRating(rs.getFloat("RATING"));
+                    restaurant.setOwner(rs.getString("OWNER"));
+                    Location location = new Location();
+                    location.setLatitude(rs.getFloat("LATITUDE"));
+                    location.setLongitude(rs.getFloat("LONGITUDE"));
+                    location.setState(rs.getString("STATE"));
+                    location.setRegion(rs.getString("REGION"));
+                    location.setProvince(rs.getString("PROVINCE"));
+                    location.setCity(rs.getString("CITY"));
+                    location.setAddress(rs.getString("ADDRESS"));
+                    restaurant.setLocation(location);
+                    cuisines.add(rs.getString("CUISINETYPE"));
+                }
+
+                while (rs.next()){
+                    cuisines.add(rs.getString("CUISINETYPE"));
+                }
+
+                restaurant.setCuisine(cuisines);
+                return restaurant;
             }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
         }
+        return null;
+    }
+
+    public ArrayList<SearchResult> getRestaurants(String term){
+        try (PreparedStatement stm = connection.prepareStatement("SELECT * FROM APP.RESTAURANT JOIN APP.RESTAURANTCUISINE ON APP.RESTAURANT.ID = APP.RESTAURANTCUISINE.IDRES WHERE LOWER(NAME) LIKE ? ORDER BY APP.RESTAURANT.NAME, APP.RESTAURANT.ID")) {
+            stm.setString(1, '%' + term.toLowerCase() + '%');
+            try (ResultSet rs = stm.executeQuery()) {
+                ArrayList<SearchResult> results = new ArrayList<>();
+                int curid = -1;
+                while (rs.next()){
+                    if(rs.getInt("ID") == curid){
+                        results.get(results.size() - 1).getCuisine().add(rs.getString("CUISINETYPE"));
+                    }else{
+                        ArrayList<String> cuisines = new ArrayList<>();
+                        SearchResult result = new SearchResult();
+                        curid = rs.getInt("ID");
+                        result.setId(rs.getInt("ID"));
+                        result.setName(rs.getString("NAME"));
+                        result.setRange(rs.getInt("PRICE"));
+                        result.setRating(rs.getFloat("RATING"));
+                        result.setLatitude(rs.getFloat("LATITUDE"));
+                        result.setLongitude(rs.getFloat("LONGITUDE"));
+                        result.setState(rs.getString("STATE"));
+                        result.setCity(rs.getString("CITY"));
+                        cuisines.add(rs.getString("CUISINETYPE"));
+                        result.setCuisine(cuisines);
+                        results.add(result);
+                    }
+                }
+
+                return results;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
+        return null;
+    }
+
+    public ArrayList<SearchResult> getRestaurantsByRegion(String term){
+        try (PreparedStatement stm = connection.prepareStatement("SELECT * FROM APP.RESTAURANT JOIN APP.RESTAURANTCUISINE ON APP.RESTAURANT.ID = APP.RESTAURANTCUISINE.IDRES WHERE LOWER(REGION) LIKE ? ORDER BY APP.RESTAURANT.RATING DESC, APP.RESTAURANT.ID")) {
+            stm.setString(1, '%' + term.toLowerCase() + '%');
+            try (ResultSet rs = stm.executeQuery()) {
+                ArrayList<SearchResult> results = new ArrayList<>();
+                int curid = -1;
+                int rank = 1;
+                while (rs.next()){
+                    if(rs.getInt("ID") == curid){
+                        results.get(results.size() - 1).getCuisine().add(rs.getString("CUISINETYPE"));
+                    }else{
+                        ArrayList<String> cuisines = new ArrayList<>();
+                        SearchResult result = new SearchResult();
+                        curid = rs.getInt("ID");
+                        result.setId(rs.getInt("ID"));
+                        result.setName(rs.getString("NAME"));
+                        result.setRange(rs.getInt("PRICE"));
+                        result.setRating(rs.getFloat("RATING"));
+                        result.setLatitude(rs.getFloat("LATITUDE"));
+                        result.setLongitude(rs.getFloat("LONGITUDE"));
+                        result.setState(rs.getString("STATE"));
+                        result.setCity(rs.getString("CITY"));
+                        result.setRank(rank);
+                        cuisines.add(rs.getString("CUISINETYPE"));
+                        result.setCuisine(cuisines);
+                        results.add(result);
+                        rank++;
+                    }
+                }
+
+                return results;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
+        return null;
+    }
+
+    public ArrayList<SearchResult> getRestaurantsByCity(String term){
+        try (PreparedStatement stm = connection.prepareStatement("SELECT * FROM APP.RESTAURANT JOIN APP.RESTAURANTCUISINE ON APP.RESTAURANT.ID = APP.RESTAURANTCUISINE.IDRES WHERE LOWER(CITY) LIKE ? ORDER BY APP.RESTAURANT.RATING DESC, APP.RESTAURANT.ID")) {
+            stm.setString(1, '%' + term.toLowerCase() + '%');
+            try (ResultSet rs = stm.executeQuery()) {
+                ArrayList<SearchResult> results = new ArrayList<>();
+                int curid = -1;
+                int rank = 1;
+                while (rs.next()){
+                    if(rs.getInt("ID") == curid){
+                        results.get(results.size() - 1).getCuisine().add(rs.getString("CUISINETYPE"));
+                    }else{
+                        ArrayList<String> cuisines = new ArrayList<>();
+                        SearchResult result = new SearchResult();
+                        curid = rs.getInt("ID");
+                        result.setId(rs.getInt("ID"));
+                        result.setName(rs.getString("NAME"));
+                        result.setRange(rs.getInt("PRICE"));
+                        result.setRating(rs.getFloat("RATING"));
+                        result.setLatitude(rs.getFloat("LATITUDE"));
+                        result.setLongitude(rs.getFloat("LONGITUDE"));
+                        result.setState(rs.getString("STATE"));
+                        result.setCity(rs.getString("CITY"));
+                        result.setRank(rank);
+                        cuisines.add(rs.getString("CUISINETYPE"));
+                        result.setCuisine(cuisines);
+                        results.add(result);
+                        rank++;
+                    }
+                }
+
+                return results;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
+        return null;
+    }
+
+    public ArrayList<AutocompleteElement> getCuisineSuggestion(String term) {
+        ArrayList<AutocompleteElement> result = new ArrayList<>();
+        try (PreparedStatement stm = connection.prepareStatement("SELECT TYPE FROM APP.CUISINETYPE WHERE LOWER(TYPE) LIKE ?")) {
+            stm.setString(1, '%'+term.toLowerCase()+'%');
+            try (ResultSet rs = stm.executeQuery()) {
+                int i = 0;
+                while (rs.next() && i < 2) {
+                    AutocompleteElement elem = new AutocompleteElement();
+                    elem.setValue(rs.getString("TYPE"));
+                    result.add(elem);
+                    i++;
+                }
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
         return result;
     }
     
     public ArrayList<AutocompleteElement> getPlaceSuggestion(String term){
         ArrayList<AutocompleteElement> result = new ArrayList<>();
-        for(String cur:cities){
-            if(cur.contains(term)){
-                AutocompleteElement elem = new AutocompleteElement();
-                elem.setValue(cur);
-                elem.setSpec1("Lombardia");
-                elem.setSpec2("Italia");
-                result.add(elem);
+        try (PreparedStatement stm = connection.prepareStatement("SELECT DISTINCT CITY, REGION FROM APP.RESTAURANT WHERE LOWER(CITY) LIKE ?")) {
+            stm.setString(1, '%'+term.toLowerCase()+'%');
+            try (ResultSet rs = stm.executeQuery()) {
+                int i = 0;
+                while (rs.next() && i < 2) {
+                    AutocompleteElement elem = new AutocompleteElement();
+                    elem.setValue(rs.getString("CITY"));
+                    elem.setSpec(rs.getString("REGION"));
+                    elem.setId(-1);
+                    result.add(elem);
+                    i++;
+                }
             }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-        for(String cur:regions){
-            if(cur.contains(term)){
-                AutocompleteElement elem = new AutocompleteElement();
-                elem.setValue(cur);
-                elem.setSpec1("Italia");
-                result.add(elem);
+
+        try (PreparedStatement stm = connection.prepareStatement("SELECT DISTINCT REGION, STATE FROM APP.RESTAURANT WHERE LOWER(REGION) LIKE ?")) {
+            stm.setString(1, '%'+term.toLowerCase()+'%');
+            try (ResultSet rs = stm.executeQuery()) {
+                int i = 0;
+                while (rs.next() && i < 2) {
+                    AutocompleteElement elem = new AutocompleteElement();
+                    elem.setValue(rs.getString("REGION"));
+                    elem.setSpec(rs.getString("STATE"));
+                    elem.setId(-2);
+                    result.add(elem);
+                    i++;
+                }
             }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-        for(String cur:states){
-            if(cur.contains(term)){
-                AutocompleteElement elem = new AutocompleteElement();
-                elem.setValue(cur);
-                elem.setSpec1("Europa");
-                result.add(elem);
-            }
-        }
+
         return result;
     }
     
     public ArrayList<AutocompleteElement> getRestaurantSuggestion(String term){
         ArrayList<AutocompleteElement> result = new ArrayList<>();
-        for(String cur:restaurants){
-            if(cur.contains(term)){
-                AutocompleteElement elem = new AutocompleteElement();
-                elem.setValue(cur);
-                elem.setSpec1("Monza");
-                elem.setSpec2("Lombardia");
-                elem.setSpec3("Italia");
-                result.add(elem);
+        try (PreparedStatement stm = connection.prepareStatement("SELECT DISTINCT ID, NAME, CITY, REGION FROM APP.RESTAURANT WHERE LOWER(NAME) LIKE ?")) {
+            stm.setString(1, '%'+term.toLowerCase()+'%');
+            try (ResultSet rs = stm.executeQuery()) {
+                int i = 0;
+                while (rs.next() && i < 5) {
+                    AutocompleteElement elem = new AutocompleteElement();
+                    elem.setValue(rs.getString("NAME"));
+                    elem.setSpec(rs.getString("CITY") + ", " + rs.getString("REGION"));
+                    elem.setId(rs.getInt("ID"));
+                    result.add(elem);
+                    i++;
+                }
             }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
+
         return result;
     }
 }

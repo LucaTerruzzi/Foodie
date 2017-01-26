@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page errorPage="error.jsp"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <jsp:useBean id="restaurant" class="it.progettoweb.data.Restaurant" scope="request" />
 <html>
@@ -30,6 +31,7 @@
     </c:choose></p>
     <p><jsp:getProperty name="restaurant" property="rating"/></p>
     <p><c:out value="${restaurant.location.city}"/>, <c:out value="${restaurant.location.address}"/></p>
+    <p><a href="writeRev.jsp?id=<jsp:getProperty name="restaurant" property="id"/>">SCRIVI LA RECENSIONE, CAZZO!</a> </p>
 </div>
 </body>
 </html>

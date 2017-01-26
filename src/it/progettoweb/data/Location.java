@@ -12,8 +12,8 @@ package it.progettoweb.data;
  */
 public class Location{
     
-    private double latitude;
-    private double longitude;
+    private float latitude;
+    private float longitude;
     private String state;
     private String city;
     private String region;
@@ -23,28 +23,28 @@ public class Location{
     /**
      * @return the latitude
      */
-    public double getLatitude() {
+    public float getLatitude() {
         return latitude;
     }
 
     /**
      * @param latitude the latitude to set
      */
-    public void setLatitude(double latitude) {
+    public void setLatitude(float latitude) {
         this.latitude = latitude;
     }
 
     /**
      * @return the longitude
      */
-    public double getLongitude() {
+    public float getLongitude() {
         return longitude;
     }
 
     /**
      * @param longitude the longitude to set
      */
-    public void setLongitude(double longitude) {
+    public void setLongitude(float longitude) {
         this.longitude = longitude;
     }
 

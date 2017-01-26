@@ -260,12 +260,18 @@ IDRES</ColNames>
       <DataType>VARCHAR(64)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="62" parent="17" name="SQL170119180340000">
+    <column id="62" parent="17" name="TITLE">
+      <Position>7</Position>
+      <DataType>VARCHAR(32)|12</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;Title&apos;</DefaultExpression>
+    </column>
+    <key id="63" parent="17" name="SQL170119180340000">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="63" parent="17" name="REVIEW_RESTAURANT_ID_FK">
+    <foreign-key id="64" parent="17" name="REVIEW_RESTAURANT_ID_FK">
       <ColNames>RESTAURANT</ColNames>
       <RefSchemaName>APP</RefSchemaName>
       <RefTableName>RESTAURANT</RefTableName>
@@ -274,7 +280,7 @@ IDRES</ColNames>
       <OnDelete>no-action</OnDelete>
       <OnUpdate>no-action</OnUpdate>
     </foreign-key>
-    <foreign-key id="64" parent="17" name="REVIEW_USER_EMAIL_FK">
+    <foreign-key id="65" parent="17" name="REVIEW_USER_EMAIL_FK">
       <ColNames>AUTHOR</ColNames>
       <RefSchemaName>APP</RefSchemaName>
       <RefTableName>USER</RefTableName>
@@ -283,43 +289,43 @@ IDRES</ColNames>
       <OnDelete>no-action</OnDelete>
       <OnUpdate>no-action</OnUpdate>
     </foreign-key>
-    <column id="65" parent="18" name="EMAIL">
+    <column id="66" parent="18" name="EMAIL">
       <Position>1</Position>
       <DataType>VARCHAR(64)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="66" parent="18" name="NAME">
+    <column id="67" parent="18" name="NAME">
       <Position>2</Position>
       <DataType>VARCHAR(32)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="67" parent="18" name="SURNAME">
+    <column id="68" parent="18" name="SURNAME">
       <Position>3</Position>
       <DataType>VARCHAR(32)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="68" parent="18" name="PASSWORD">
+    <column id="69" parent="18" name="PASSWORD">
       <Position>4</Position>
       <DataType>CHAR(60)|1</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="69" parent="18" name="ACTIVE">
+    <column id="70" parent="18" name="ACTIVE">
       <Position>5</Position>
       <DataType>INTEGER(10)|4</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="70" parent="18" name="MAILTOKEN">
+    <column id="71" parent="18" name="MAILTOKEN">
       <Position>6</Position>
       <DataType>CHAR(36)|1</DataType>
     </column>
-    <column id="71" parent="18" name="TYPE">
+    <column id="72" parent="18" name="TYPE">
       <Position>7</Position>
       <DataType>INTEGER(10)|4</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
     </column>
-    <key id="72" parent="18" name="SQL170119172253100">
+    <key id="73" parent="18" name="SQL170119172253100">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>EMAIL</ColNames>
       <Primary>1</Primary>
