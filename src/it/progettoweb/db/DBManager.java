@@ -262,9 +262,25 @@ public class DBManager {
         return true;
     }
 
-    /*public boolean saveReview(){
+    public boolean saveReview(Review review){
+        try (PreparedStatement stm = connection.prepareStatement("INSERT INTO APP.REVIEW (TEXT, RATING, \"DATE\", RESTAURANT, AUTHOR, TITLE) VALUES (?, ?, ?, ?, ?, ?)")) {
+            stm.setString(1, review.getBody());
+            stm.setFloat(2, review.getRating());
+            stm.setDate(3, new java.sql.Date(review.getDate().getTime()));
+            stm.setInt(4,review.getRestaurant());
+            stm.setString(5, review.getAuthor());
+            stm.setString(6, review.getTitle());
 
-    }*/
+            stm.executeUpdate();
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+
+        return true;
+    }
 
     public Restaurant getRestaurantById(int id){
         try (PreparedStatement stm = connection.prepareStatement("SELECT * FROM APP.RESTAURANT JOIN APP.RESTAURANTCUISINE ON APP.RESTAURANT.ID = APP.RESTAURANTCUISINE.IDRES WHERE ID = ?")) {

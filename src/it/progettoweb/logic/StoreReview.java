@@ -89,17 +89,17 @@ public class StoreReview extends HttpServlet {
 
         // validate input
         if(rating < 1 || rating > 5){
-            response.sendRedirect("writeRev.jsp?error=1");
+            response.sendRedirect("writeRev.jsp?error=1&id="+id);
             return;
         }
 
         if(title.length() < 3 || title.length() > 63){
-            response.sendRedirect("writeRev.jsp?error=2");
+            response.sendRedirect("writeRev.jsp?error=2&id="+id);
             return;
         }
 
         if(body.length() < 16 || body.length() > 1023){
-            response.sendRedirect("writeRev.jsp?error=3");
+            response.sendRedirect("writeRev.jsp?error=3&id="+id);
             return;
         }
 
@@ -113,6 +113,11 @@ public class StoreReview extends HttpServlet {
         review.setRestaurant(id);
         //get user email
 
+        if(dbmanager.saveReview(review)){
+            response.sendRedirect("writeRev.jsp?message=1&id="+id);
+        }else{
+            response.sendRedirect("index.jsp");
+        }
 
     }
 

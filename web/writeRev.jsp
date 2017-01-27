@@ -30,7 +30,7 @@
         <div class="form-group">
             <label class="control-label col-sm-2" for="desc">Descrizione:</label>
             <div class="col-sm-10">
-                <textarea class="form-control" id="desc" placeholder="Scrivi qui la tua recensione" name="desc" rows="10" cols="50"/>
+                <textarea class="form-control" id="desc" placeholder="Scrivi qui la tua recensione" name="desc" rows="10" cols="50"></textarea>
             </div>
         </div>
         <div class="form-group">
@@ -52,7 +52,7 @@
     <c:when test="${param.error == 1}">Rating not valid</c:when>
     <c:when test="${param.error == 2}">Title not valid</c:when>
     <c:when test="${param.error == 3}">Description not valid</c:when>
-    <c:when test="${param.message == 1}">Password changed successfully</c:when>
+    <c:when test="${param.message == 1}">Review posted succesfully</c:when>
 </c:choose>
 
 </body>
