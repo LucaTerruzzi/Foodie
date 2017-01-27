@@ -17,6 +17,10 @@
         <filter-name>GuestFilter</filter-name>
         <filter-class>it.progettoweb.filters.GuestFilter</filter-class>
     </filter>
+    <filter>
+        <filter-name>AdminFilter</filter-name>
+        <filter-class>it.progettoweb.filters.AdminFilter</filter-class>
+    </filter>
     <filter-mapping>
         <filter-name>SessionFilter</filter-name>
         <url-pattern>/*</url-pattern>
@@ -27,6 +31,7 @@
         <url-pattern>/EditInfos</url-pattern>
         <url-pattern>/writeRev.jsp</url-pattern>
         <url-pattern>/StoreReview</url-pattern>
+        <url-pattern>/ClaimRestaurant</url-pattern>
     </filter-mapping>
     <filter-mapping>
         <filter-name>GuestFilter</filter-name>
@@ -37,6 +42,10 @@
         <url-pattern>/pwdRecoverySender</url-pattern>
         <url-pattern>/pwdChange.jsp</url-pattern>
         <url-pattern>/pwdRecovery</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>AdminFilter</filter-name>
+        <url-pattern>/AssignRestaurant</url-pattern>
     </filter-mapping>
     <listener>
         <description>ServletContextListener</description>
@@ -82,6 +91,18 @@
         <servlet-name>StoreReview</servlet-name>
         <servlet-class>it.progettoweb.logic.StoreReview</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ClaimRestaurant</servlet-name>
+        <servlet-class>it.progettoweb.logic.ClaimRestaurant</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RefreshNotifications</servlet-name>
+        <servlet-class>it.progettoweb.logic.RefreshNotifications</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AssignRestaurant</servlet-name>
+        <servlet-class>it.progettoweb.logic.AssignRestaurant</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -121,6 +142,18 @@
     <servlet-mapping>
         <servlet-name>StoreReview</servlet-name>
         <url-pattern>/StoreReview</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ClaimRestaurant</servlet-name>
+        <url-pattern>/ClaimRestaurant</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RefreshNotifications</servlet-name>
+        <url-pattern>/RefreshNotifications</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AssignRestaurant</servlet-name>
+        <url-pattern>/AssignRestaurant</url-pattern>
     </servlet-mapping>
     <error-page>
         <error-code>404</error-code>

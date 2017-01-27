@@ -18,7 +18,12 @@
     <a href="/user.jsp">PROFILO</a>
     <p><c:forEach items="${user.notifications}" var="notification">
         ${notification.text} - ${notification.type}<br>
-        ${notification.restaurantClaimer} claims: ${notification.restaurantClaimed}
+        ${notification.restaurantClaimer} claims: <a href="RetrieveRestaurant?id=${notification.restaurantClaimed}">THIS</a>
+        <form method="post" action="AssignRestaurant">
+            <input type="hidden" name="id" value="${notification.id}">
+            <button type="submit" name="dismiss" value="dismiss">Dismiss</button>
+            <button type="submit" name="accept" value="accept">Accept</button>
+        </form>
     </c:forEach></p>
     <a href="RefreshNotifications">REFRESH!</a>
     <!--AGGIUNGERE PULSANTE NOTIFICHE!!!-->

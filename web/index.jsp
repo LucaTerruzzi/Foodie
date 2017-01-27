@@ -83,7 +83,7 @@
                     }
                 });
 
-                $('#search .typeahead').on('typeahead:selected', function(e, datum) {
+                $('#search .typeahead').on('typeahead:selected typeahead:autocomplete', function(e, datum) {
                     console.log(datum);
                     console.log('selected');
                     switch (datum.id){
@@ -181,8 +181,11 @@
                 <c:when test="${param.message == 2}">Registration successful. Check email</c:when>
                 <c:when test="${param.message == 3}">Recovery email sent. Check email</c:when>
                 <c:when test="${param.message == 4}">Password succesfully changed</c:when>
-                <!--TO BE DELETED-->
+
                 <c:when test="${param.message == 5}">Restaurant claimed!!!!!</c:when>
+                <c:when test="${param.message == 6}">Notification dismissed!</c:when>
+                <c:when test="${param.message == 7}">Set owner!</c:when>
+
 
 
             </c:choose>

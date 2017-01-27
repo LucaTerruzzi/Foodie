@@ -68,12 +68,18 @@
       <Position>8</Position>
       <DataType>INTEGER(10)|4</DataType>
     </column>
-    <key id="29" parent="14" name="SQL170119184223990">
+    <column id="29" parent="14" name="DISMISSED">
+      <Position>9</Position>
+      <DataType>INTEGER(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <key id="30" parent="14" name="SQL170119184223990">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="30" parent="14" name="NOTIFICATION_USER_EMAIL_FK">
+    <foreign-key id="31" parent="14" name="NOTIFICATION_USER_EMAIL_FK">
       <ColNames>RESTAURANTCLAIMER</ColNames>
       <RefSchemaName>APP</RefSchemaName>
       <RefTableName>USER</RefTableName>
@@ -82,7 +88,7 @@
       <OnDelete>no-action</OnDelete>
       <OnUpdate>no-action</OnUpdate>
     </foreign-key>
-    <foreign-key id="31" parent="14" name="NOTIFICATION_RESTAURANT_ID_FK">
+    <foreign-key id="32" parent="14" name="NOTIFICATION_RESTAURANT_ID_FK">
       <ColNames>RESTAURANTCLAIMED</ColNames>
       <RefSchemaName>APP</RefSchemaName>
       <RefTableName>RESTAURANT</RefTableName>
@@ -91,7 +97,7 @@
       <OnDelete>no-action</OnDelete>
       <OnUpdate>no-action</OnUpdate>
     </foreign-key>
-    <foreign-key id="32" parent="14" name="NOTIFICATION_USER_EMAIL1_FK">
+    <foreign-key id="33" parent="14" name="NOTIFICATION_USER_EMAIL1_FK">
       <ColNames>RESTAURANTOWNER</ColNames>
       <RefSchemaName>APP</RefSchemaName>
       <RefTableName>USER</RefTableName>
@@ -100,7 +106,7 @@
       <OnDelete>no-action</OnDelete>
       <OnUpdate>no-action</OnUpdate>
     </foreign-key>
-    <foreign-key id="33" parent="14" name="NOTIFICATION_REVIEW_ID_FK">
+    <foreign-key id="34" parent="14" name="NOTIFICATION_REVIEW_ID_FK">
       <ColNames>REVIEW</ColNames>
       <RefSchemaName>APP</RefSchemaName>
       <RefTableName>REVIEW</RefTableName>
@@ -109,84 +115,84 @@
       <OnDelete>no-action</OnDelete>
       <OnUpdate>no-action</OnUpdate>
     </foreign-key>
-    <column id="34" parent="15" name="ID">
+    <column id="35" parent="15" name="ID">
       <Position>1</Position>
       <DataType>INTEGER(10)|4</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <DefaultExpression>AUTOINCREMENT: start 1 increment 1</DefaultExpression>
     </column>
-    <column id="35" parent="15" name="NAME">
+    <column id="36" parent="15" name="NAME">
       <Position>2</Position>
       <DataType>VARCHAR(32)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="36" parent="15" name="DESCRIPTION">
+    <column id="37" parent="15" name="DESCRIPTION">
       <Position>3</Position>
       <DataType>VARCHAR(512)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="37" parent="15" name="LINK">
+    <column id="38" parent="15" name="LINK">
       <Position>4</Position>
       <DataType>VARCHAR(64)|12</DataType>
     </column>
-    <column id="38" parent="15" name="LATITUDE">
+    <column id="39" parent="15" name="LATITUDE">
       <Position>5</Position>
       <DataType>DOUBLE(52)|8</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="39" parent="15" name="LONGITUDE">
+    <column id="40" parent="15" name="LONGITUDE">
       <Position>6</Position>
       <DataType>DOUBLE(52)|8</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="40" parent="15" name="STATE">
+    <column id="41" parent="15" name="STATE">
       <Position>7</Position>
       <DataType>VARCHAR(32)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="41" parent="15" name="REGION">
+    <column id="42" parent="15" name="REGION">
       <Position>8</Position>
       <DataType>VARCHAR(32)|12</DataType>
     </column>
-    <column id="42" parent="15" name="PROVINCE">
+    <column id="43" parent="15" name="PROVINCE">
       <Position>9</Position>
       <DataType>VARCHAR(32)|12</DataType>
     </column>
-    <column id="43" parent="15" name="CITY">
+    <column id="44" parent="15" name="CITY">
       <Position>10</Position>
       <DataType>VARCHAR(32)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="44" parent="15" name="ADDRESS">
+    <column id="45" parent="15" name="ADDRESS">
       <Position>11</Position>
       <DataType>VARCHAR(64)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="45" parent="15" name="TIMETABLE">
+    <column id="46" parent="15" name="TIMETABLE">
       <Position>12</Position>
       <DataType>VARCHAR(256)|12</DataType>
     </column>
-    <column id="46" parent="15" name="PRICE">
+    <column id="47" parent="15" name="PRICE">
       <Position>13</Position>
       <DataType>INTEGER(10)|4</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="47" parent="15" name="RATING">
+    <column id="48" parent="15" name="RATING">
       <Position>14</Position>
       <DataType>DOUBLE(52)|8</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="48" parent="15" name="OWNER">
+    <column id="49" parent="15" name="OWNER">
       <Position>15</Position>
       <DataType>VARCHAR(64)|12</DataType>
     </column>
-    <key id="49" parent="15" name="SQL170119164803300">
+    <key id="50" parent="15" name="SQL170119164803300">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="50" parent="15" name="RESTAURANT_USER_EMAIL_FK">
+    <foreign-key id="51" parent="15" name="RESTAURANT_USER_EMAIL_FK">
       <ColNames>OWNER</ColNames>
       <RefSchemaName>APP</RefSchemaName>
       <RefTableName>USER</RefTableName>
@@ -195,22 +201,22 @@
       <OnDelete>no-action</OnDelete>
       <OnUpdate>no-action</OnUpdate>
     </foreign-key>
-    <column id="51" parent="16" name="IDRES">
+    <column id="52" parent="16" name="IDRES">
       <Position>1</Position>
       <DataType>INTEGER(10)|4</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="52" parent="16" name="CUISINETYPE">
+    <column id="53" parent="16" name="CUISINETYPE">
       <Position>2</Position>
       <DataType>VARCHAR(32)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="53" parent="16" name="RESTAURANTCUISINE_CUISINETYPE_IDRES_PK">
+    <key id="54" parent="16" name="RESTAURANTCUISINE_CUISINETYPE_IDRES_PK">
       <ColNames>CUISINETYPE
 IDRES</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="54" parent="16" name="RESTAURANTCUISINE_RESTAURANT_ID_FK">
+    <foreign-key id="55" parent="16" name="RESTAURANTCUISINE_RESTAURANT_ID_FK">
       <ColNames>IDRES</ColNames>
       <RefSchemaName>APP</RefSchemaName>
       <RefTableName>RESTAURANT</RefTableName>
@@ -219,7 +225,7 @@ IDRES</ColNames>
       <OnDelete>no-action</OnDelete>
       <OnUpdate>no-action</OnUpdate>
     </foreign-key>
-    <foreign-key id="55" parent="16" name="RESTAURANTCUISINE_CUISINETYPE_TYPE_FK">
+    <foreign-key id="56" parent="16" name="RESTAURANTCUISINE_CUISINETYPE_TYPE_FK">
       <ColNames>CUISINETYPE</ColNames>
       <RefSchemaName>APP</RefSchemaName>
       <RefTableName>CUISINETYPE</RefTableName>
@@ -228,50 +234,50 @@ IDRES</ColNames>
       <OnDelete>no-action</OnDelete>
       <OnUpdate>no-action</OnUpdate>
     </foreign-key>
-    <column id="56" parent="17" name="ID">
+    <column id="57" parent="17" name="ID">
       <Position>1</Position>
       <DataType>INTEGER(10)|4</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <DefaultExpression>AUTOINCREMENT: start 1 increment 1</DefaultExpression>
     </column>
-    <column id="57" parent="17" name="TEXT">
+    <column id="58" parent="17" name="TEXT">
       <Position>2</Position>
       <DataType>VARCHAR(1024)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="58" parent="17" name="RATING">
+    <column id="59" parent="17" name="RATING">
       <Position>3</Position>
       <DataType>INTEGER(10)|4</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="59" parent="17" name="DATE">
+    <column id="60" parent="17" name="DATE">
       <Position>4</Position>
       <DataType>DATE(10)|91</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="60" parent="17" name="RESTAURANT">
+    <column id="61" parent="17" name="RESTAURANT">
       <Position>5</Position>
       <DataType>INTEGER(10)|4</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="61" parent="17" name="AUTHOR">
+    <column id="62" parent="17" name="AUTHOR">
       <Position>6</Position>
       <DataType>VARCHAR(64)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="62" parent="17" name="TITLE">
+    <column id="63" parent="17" name="TITLE">
       <Position>7</Position>
       <DataType>VARCHAR(32)|12</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;Title&apos;</DefaultExpression>
     </column>
-    <key id="63" parent="17" name="SQL170119180340000">
+    <key id="64" parent="17" name="SQL170119180340000">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="64" parent="17" name="REVIEW_RESTAURANT_ID_FK">
+    <foreign-key id="65" parent="17" name="REVIEW_RESTAURANT_ID_FK">
       <ColNames>RESTAURANT</ColNames>
       <RefSchemaName>APP</RefSchemaName>
       <RefTableName>RESTAURANT</RefTableName>
@@ -280,7 +286,7 @@ IDRES</ColNames>
       <OnDelete>no-action</OnDelete>
       <OnUpdate>no-action</OnUpdate>
     </foreign-key>
-    <foreign-key id="65" parent="17" name="REVIEW_USER_EMAIL_FK">
+    <foreign-key id="66" parent="17" name="REVIEW_USER_EMAIL_FK">
       <ColNames>AUTHOR</ColNames>
       <RefSchemaName>APP</RefSchemaName>
       <RefTableName>USER</RefTableName>
@@ -289,43 +295,43 @@ IDRES</ColNames>
       <OnDelete>no-action</OnDelete>
       <OnUpdate>no-action</OnUpdate>
     </foreign-key>
-    <column id="66" parent="18" name="EMAIL">
+    <column id="67" parent="18" name="EMAIL">
       <Position>1</Position>
       <DataType>VARCHAR(64)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="67" parent="18" name="NAME">
+    <column id="68" parent="18" name="NAME">
       <Position>2</Position>
       <DataType>VARCHAR(32)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="68" parent="18" name="SURNAME">
+    <column id="69" parent="18" name="SURNAME">
       <Position>3</Position>
       <DataType>VARCHAR(32)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="69" parent="18" name="PASSWORD">
+    <column id="70" parent="18" name="PASSWORD">
       <Position>4</Position>
       <DataType>CHAR(60)|1</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="70" parent="18" name="ACTIVE">
+    <column id="71" parent="18" name="ACTIVE">
       <Position>5</Position>
       <DataType>INTEGER(10)|4</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="71" parent="18" name="MAILTOKEN">
+    <column id="72" parent="18" name="MAILTOKEN">
       <Position>6</Position>
       <DataType>CHAR(36)|1</DataType>
     </column>
-    <column id="72" parent="18" name="TYPE">
+    <column id="73" parent="18" name="TYPE">
       <Position>7</Position>
       <DataType>INTEGER(10)|4</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
     </column>
-    <key id="73" parent="18" name="SQL170119172253100">
+    <key id="74" parent="18" name="SQL170119172253100">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>EMAIL</ColNames>
       <Primary>1</Primary>

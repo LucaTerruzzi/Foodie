@@ -282,8 +282,73 @@ public class DBManager {
         return true;
     }
 
+    public boolean dismissNotification(int id){
+        try (PreparedStatement stm = connection.prepareStatement("UPDATE APP.NOTIFICATION SET DISMISSED = 1 WHERE ID = ?")) {
+            stm.setInt(1, id);
+            //stm.setString(2, password);
+            if(stm.executeUpdate() == 0){
+                return false;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public boolean assignRestaurant(int notId){
+        int restaurantClaimed;
+        String restaurantClaimer;
+        try (PreparedStatement stm = connection.prepareStatement("SELECT APP.NOTIFICATION.RESTAURANTCLAIMED, APP.NOTIFICATION.RESTAURANTCLAIMER FROM APP.NOTIFICATION WHERE ID = ?")) {
+            stm.setInt(1, notId);
+            try (ResultSet rs = stm.executeQuery()) {
+                if (rs.next()) {
+                    restaurantClaimed = rs.getInt("RESTAURANTCLAIMED");
+                    restaurantClaimer = rs.getString("RESTAURANTCLAIMER");
+                }else{
+                    return false;
+                }
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+
+        }
+
+        try (PreparedStatement stm = connection.prepareStatement("UPDATE APP.RESTAURANT SET OWNER = ? WHERE ID = ?")) {
+            stm.setString(1, restaurantClaimer);
+            stm.setInt(2, restaurantClaimed);
+            //stm.setString(2, password);
+            if(stm.executeUpdate() == 0){
+                return false;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+
+        try (PreparedStatement stm = connection.prepareStatement("UPDATE APP.\"USER\" SET TYPE = 2 WHERE EMAIL = ?")) {
+            stm.setString(1, restaurantClaimer);
+            //stm.setString(2, password);
+            if(stm.executeUpdate() == 0){
+                return false;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+
+        return dismissNotification(notId);
+
+
+    }
+
     public ArrayList<Notification> getAdminNotifications(){
-        try (PreparedStatement stm = connection.prepareStatement("SELECT * FROM APP.NOTIFICATION WHERE RESTAURANTOWNER = NULL")) {
+        try (PreparedStatement stm = connection.prepareStatement("SELECT * FROM APP.NOTIFICATION WHERE RESTAURANTOWNER IS NULL AND DISMISSED = 0")) {
             try (ResultSet rs = stm.executeQuery()) {
                 ArrayList<Notification> notifications = new ArrayList<>();
                 while (rs.next()) {
@@ -327,7 +392,7 @@ public class DBManager {
     }
 
     public boolean hasOwner(int id){
-        try (PreparedStatement stm = connection.prepareStatement("SELECT APP.RESTAURANT.ID FROM APP.RESTAURANT WHERE ID = ? AND OWNER = NULL")) {
+        try (PreparedStatement stm = connection.prepareStatement("SELECT APP.RESTAURANT.ID FROM APP.RESTAURANT WHERE ID = ? AND OWNER IS NULL")) {
             stm.setInt(1, id);
             try (ResultSet rs = stm.executeQuery()) {
                 if (rs.next()) {
@@ -412,6 +477,8 @@ public class DBManager {
                     restaurant.setReviews(getReviews(id));
                     cuisines.add(rs.getString("CUISINETYPE"));
 
+                }else{
+                    return null;
                 }
 
                 while (rs.next()){
@@ -420,6 +487,7 @@ public class DBManager {
 
                 restaurant.setCuisine(cuisines);
                 return restaurant;
+
             }
 
         } catch (SQLException e) {

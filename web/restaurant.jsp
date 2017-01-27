@@ -17,13 +17,14 @@
 <div class="container">
     <%@include file="WEB-INF/navbar.jsp" %>
     <h2><jsp:getProperty name="restaurant" property="name"/></h2>
+    <c:if test="${sessionScope.userType != 0 && sessionScope.user.email == restaurant.owner}"><h3>You are the owner!</h3></c:if>
     <c:if test="${restaurant.owner == null && sessionScope.userType != 0}">
         <form method="post" action="ClaimRestaurant">
             <input type="hidden" name="id" value="<jsp:getProperty name="restaurant" property="id"/>">
             <button type="submit">CLAIM!</button>
         </form>
     </c:if>
-    <img src="pics/<jsp:getProperty name="restaurant" property="id"/>/owner_1.jpg" alt="foto"/>
+    <img src="pics/<jsp:getProperty name="restaurant" property="id"/>/<jsp:getProperty name="restaurant" property="id"/>_owner_1.jpg" alt="foto"/>
     <h5><jsp:getProperty name="restaurant" property="openingHours"/></h5>
     <p><jsp:getProperty name="restaurant" property="description"/></p>
     <a href="<jsp:getProperty name="restaurant" property="link"/>">Sito</a>
