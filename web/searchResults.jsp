@@ -19,6 +19,7 @@
     <h4>${result.getName()} - ${result.getRank()}</h4>
     <h5>${result.getCity()}, ${result.getState()}</h5>
         ${result.getRating()}
+        N. reviews: ${result.getNrev()}
         <c:forEach items="${result.getCuisine()}" var="cuisine">
             ${cuisine},
         </c:forEach>

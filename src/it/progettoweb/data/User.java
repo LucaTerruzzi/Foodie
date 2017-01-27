@@ -6,6 +6,7 @@
 package it.progettoweb.data;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  * User Class
@@ -18,7 +19,8 @@ public class User implements Serializable{
     private String name;        //user's name
     private String surname;     //user's surname
     private String email;       //user's email
-    
+    private ArrayList<Notification> notifications;
+
     public User(){
     }
 
@@ -78,5 +80,12 @@ public class User implements Serializable{
         this.email = email;
     }
 
-    
+
+    public ArrayList<Notification> getNotifications() {
+        return notifications;
+    }
+
+    public void setNotifications(ArrayList<Notification> notifications) {
+        this.notifications = notifications;
+    }
 }

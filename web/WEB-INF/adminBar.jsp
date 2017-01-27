@@ -7,7 +7,7 @@
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:useBean id="user" scope="session" class="it.progettoweb.data.User"/>
-
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <div>
     <h4>Hello!</h4><jsp:getProperty name="user" property="name"/>
@@ -16,5 +16,10 @@
     </form>
 
     <a href="/user.jsp">PROFILO</a>
+    <p><c:forEach items="${user.notifications}" var="notification">
+        ${notification.text} - ${notification.type}<br>
+        ${notification.restaurantClaimer} claims: ${notification.restaurantClaimed}
+    </c:forEach></p>
+    <a href="RefreshNotifications">REFRESH!</a>
     <!--AGGIUNGERE PULSANTE NOTIFICHE!!!-->
 </div>

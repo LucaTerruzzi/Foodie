@@ -32,6 +32,15 @@
     <p><jsp:getProperty name="restaurant" property="rating"/></p>
     <p><c:out value="${restaurant.location.city}"/>, <c:out value="${restaurant.location.address}"/></p>
     <p><a href="writeRev.jsp?id=<jsp:getProperty name="restaurant" property="id"/>">SCRIVI LA RECENSIONE, CAZZO!</a> </p>
+    <div>
+        <c:forEach items="${restaurant.reviews}" var="review">
+            <p>
+            <h4>${review.title} - Voto: ${review.rating}</h4>
+            <p>${review.body}</p>
+            <h6>${review.author} il ${review.date.toString()}</h6>
+            </p>
+        </c:forEach>
+    </div>
 </div>
 </body>
 </html>

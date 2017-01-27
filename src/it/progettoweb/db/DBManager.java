@@ -18,7 +18,7 @@ import org.mindrot.jbcrypt.BCrypt;
  * @author Luca
  */
 public class DBManager {
-    
+
     private String[] cuisine = {"bigola","italiana","francese","internazionale","tedesca","giapponese","indiana"};  //<-- TO BE DELETED
     private String[] cities = {"monza","milano","carnate","trento","caspoggio","roma","firenze"};  //<-- TO BE DELETED
     private String[] regions = {"lombardia","trentino","veneto","toscana","piemonte","puglia","emilia romagna"};  //<-- TO BE DELETED
@@ -26,18 +26,18 @@ public class DBManager {
     private String[] restaurants = {"da gino","bigoli","mensa","cracco pec","forst","orso gino","da gianfranco","bigazzero","bigiggia","italia mia"};  //<-- TO BE DELETED
 
     private Connection connection;
-    
+
     public DBManager(String dburl) throws SQLException {
 
         try {
 
-           //Class.forName("org.apache.derby.jdbc.EmbeddedDriver", true, getClass().getClassLoader());
+            //Class.forName("org.apache.derby.jdbc.EmbeddedDriver", true, getClass().getClassLoader());
             Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
 
         } catch(Exception e) {
             throw new RuntimeException(e.toString(), e);
         }
-        
+
         connection = DriverManager.getConnection(dburl);
 
     }
@@ -49,7 +49,7 @@ public class DBManager {
             ex.printStackTrace();
         }
     }
-    
+
     public User authenticate(String email, String password) {
 
         try (PreparedStatement stm = connection.prepareStatement("SELECT * FROM APP.\"USER\" WHERE EMAIL = ?")) {
@@ -65,6 +65,9 @@ public class DBManager {
                         user.setSurname(rs.getString("SURNAME"));
                         user.setEmail(rs.getString("EMAIL"));
                         user.setUserType(rs.getInt("TYPE"));
+                        if(rs.getInt("TYPE") == 3){
+                            user.setNotifications(getAdminNotifications());
+                        }
                         return user;
                     }
                 }
@@ -262,6 +265,47 @@ public class DBManager {
         return true;
     }
 
+    public boolean placeClaimNotification(Notification notification){
+        try (PreparedStatement stm = connection.prepareStatement("INSERT INTO APP.NOTIFICATION (TEXT, TYPE, RESTAURANTCLAIMER, RESTAURANTCLAIMED) VALUES (?, ?, ?, ?)")) {
+            stm.setString(1, notification.getText());
+            stm.setInt(2, notification.getType());
+            stm.setString(3, notification.getRestaurantClaimer());
+            stm.setInt(4, notification.getRestaurantClaimed());
+            stm.executeUpdate();
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+
+        return true;
+    }
+
+    public ArrayList<Notification> getAdminNotifications(){
+        try (PreparedStatement stm = connection.prepareStatement("SELECT * FROM APP.NOTIFICATION WHERE RESTAURANTOWNER = NULL")) {
+            try (ResultSet rs = stm.executeQuery()) {
+                ArrayList<Notification> notifications = new ArrayList<>();
+                while (rs.next()) {
+                    Notification notification = new Notification();
+                    notification.setId(rs.getInt("ID"));
+                    notification.setText(rs.getString("TEXT"));
+                    notification.setType(rs.getInt("TYPE"));
+                    notification.setRestaurantClaimed(rs.getInt("RESTAURANTCLAIMED"));
+                    notification.setRestaurantClaimer(rs.getString("RESTAURANTCLAIMER"));
+                    notifications.add(notification);
+                }
+
+                return notifications;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
+        return null;
+    }
+
     public boolean saveReview(Review review){
         try (PreparedStatement stm = connection.prepareStatement("INSERT INTO APP.REVIEW (TEXT, RATING, \"DATE\", RESTAURANT, AUTHOR, TITLE) VALUES (?, ?, ?, ?, ?, ?)")) {
             stm.setString(1, review.getBody());
@@ -282,6 +326,22 @@ public class DBManager {
         return true;
     }
 
+    public boolean hasOwner(int id){
+        try (PreparedStatement stm = connection.prepareStatement("SELECT APP.RESTAURANT.ID FROM APP.RESTAURANT WHERE ID = ? AND OWNER = NULL")) {
+            stm.setInt(1, id);
+            try (ResultSet rs = stm.executeQuery()) {
+                if (rs.next()) {
+                    return false;
+                }
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
+        return true;
+    }
+
     private ArrayList<Review> getReviews(int resId){
         try (PreparedStatement stm = connection.prepareStatement("SELECT * FROM APP.REVIEW JOIN APP.\"USER\" ON APP.REVIEW.AUTHOR = APP.\"USER\".EMAIL  WHERE RESTAURANT = ?")) {
             stm.setInt(1, resId);
@@ -290,12 +350,13 @@ public class DBManager {
                 while (rs.next()) {
                     Review review = new Review();
                     review.setId(rs.getInt("ID"));
-                    review.setTitle(rs.getString("TILE"));
-                    review.setBody(rs.getString("BODY"));
+                    review.setTitle(rs.getString("TITLE"));
+                    review.setBody(rs.getString("TEXT"));
                     review.setDate(rs.getDate("DATE"));
                     review.setRating(rs.getFloat("RATING"));
                     review.setAuthor(rs.getString("NAME") + ", " + rs.getString("SURNAME"));
                     review.setRestaurant(rs.getInt("RESTAURANT"));
+                    reviews.add(review);
                 }
 
                 return reviews;
@@ -306,6 +367,22 @@ public class DBManager {
 
         }
         return null;
+    }
+
+    private int getReviewsNumber(int resId){
+        try (PreparedStatement stm = connection.prepareStatement("SELECT COUNT(*) AS NUM FROM APP.REVIEW WHERE RESTAURANT = ?")) {
+            stm.setInt(1, resId);
+            try (ResultSet rs = stm.executeQuery()) {
+                if (rs.next()) {
+                    return rs.getInt("NUM");
+                }
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
+        return 0;
     }
 
     public Restaurant getRestaurantById(int id){
@@ -332,7 +409,9 @@ public class DBManager {
                     location.setCity(rs.getString("CITY"));
                     location.setAddress(rs.getString("ADDRESS"));
                     restaurant.setLocation(location);
+                    restaurant.setReviews(getReviews(id));
                     cuisines.add(rs.getString("CUISINETYPE"));
+
                 }
 
                 while (rs.next()){
@@ -371,6 +450,7 @@ public class DBManager {
                         result.setLongitude(rs.getFloat("LONGITUDE"));
                         result.setState(rs.getString("STATE"));
                         result.setCity(rs.getString("CITY"));
+                        result.setNrev(getReviewsNumber(curid));
                         cuisines.add(rs.getString("CUISINETYPE"));
                         result.setCuisine(cuisines);
                         results.add(result);
@@ -410,6 +490,7 @@ public class DBManager {
                         result.setState(rs.getString("STATE"));
                         result.setCity(rs.getString("CITY"));
                         result.setRank(rank);
+                        result.setNrev(getReviewsNumber(curid));
                         cuisines.add(rs.getString("CUISINETYPE"));
                         result.setCuisine(cuisines);
                         results.add(result);
@@ -450,6 +531,7 @@ public class DBManager {
                         result.setState(rs.getString("STATE"));
                         result.setCity(rs.getString("CITY"));
                         result.setRank(rank);
+                        result.setNrev(getReviewsNumber(curid));
                         cuisines.add(rs.getString("CUISINETYPE"));
                         result.setCuisine(cuisines);
                         results.add(result);
@@ -487,7 +569,7 @@ public class DBManager {
 
         return result;
     }
-    
+
     public ArrayList<AutocompleteElement> getPlaceSuggestion(String term){
         ArrayList<AutocompleteElement> result = new ArrayList<>();
         try (PreparedStatement stm = connection.prepareStatement("SELECT DISTINCT CITY, REGION FROM APP.RESTAURANT WHERE LOWER(CITY) LIKE ?")) {
@@ -528,7 +610,7 @@ public class DBManager {
 
         return result;
     }
-    
+
     public ArrayList<AutocompleteElement> getRestaurantSuggestion(String term){
         ArrayList<AutocompleteElement> result = new ArrayList<>();
         try (PreparedStatement stm = connection.prepareStatement("SELECT DISTINCT ID, NAME, CITY, REGION FROM APP.RESTAURANT WHERE LOWER(NAME) LIKE ?")) {

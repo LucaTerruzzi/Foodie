@@ -1,18 +1,29 @@
 ----------------------------------------------------------------
-Fri Jan 27 12:36:47 CET 2017:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.13.1.1 - (1765088): instance a816c00e-0159-dfb6-aaf2-00000da97218 
-on database directory /Users/Ricky/Documents/Uni/IntroduzioneProgrammazioneWeb/Foodie/FoodieDB with class loader ParallelWebappClassLoader
+Fri Jan 27 12:57:43 CET 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.13.1.1 - (1765088): instance a816c00e-0159-dfc9-d319-00000e46d9b8 
+on database directory /Users/Luca/Documents/UNI/ProgrammazioneWeb/Foodie/FoodieDB with class loader ParallelWebappClassLoader
   context: ROOT
   delegate: false
 ----------> Parent Classloader:
-java.net.URLClassLoader@108c4c35
+java.net.URLClassLoader@4629104a
  
-Loaded from file:/Users/Ricky/Documents/Uni/IntroduzioneProgrammazioneWeb/Foodie/out/artifacts/foodie_war_exploded/WEB-INF/lib/derby.jar
+Loaded from file:/Users/Luca/Documents/UNI/ProgrammazioneWeb/Foodie/out/artifacts/foodie_war_exploded/WEB-INF/lib/derby.jar
 java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_66-b17
-user.dir=/Users/Ricky/Documents/Uni/IntroduzioneProgrammazioneWeb/Foodie/apache-tomcat-8.5.5/bin
+java.runtime.version=1.8.0_102-b14
+user.dir=/Users/Luca/Documents/UNI/ProgrammazioneWeb/Foodie/apache-tomcat-8.5.5/bin
 os.name=Mac OS X
 os.arch=x86_64
 os.version=10.12.2
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Fri Jan 27 12:58:28 CET 2017: Shutting down Derby engine
+----------------------------------------------------------------
+Fri Jan 27 12:58:28 CET 2017:
+Shutting down instance a816c00e-0159-dfc9-d319-00000e46d9b8 on database directory /Users/Luca/Documents/UNI/ProgrammazioneWeb/Foodie/FoodieDB with class loader ParallelWebappClassLoader
+  context: ROOT
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@4629104a
+ 
+----------------------------------------------------------------
