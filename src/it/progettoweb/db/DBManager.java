@@ -282,6 +282,32 @@ public class DBManager {
         return true;
     }
 
+    private ArrayList<Review> getReviews(int resId){
+        try (PreparedStatement stm = connection.prepareStatement("SELECT * FROM APP.REVIEW JOIN APP.\"USER\" ON APP.REVIEW.AUTHOR = APP.\"USER\".EMAIL  WHERE RESTAURANT = ?")) {
+            stm.setInt(1, resId);
+            try (ResultSet rs = stm.executeQuery()) {
+                ArrayList<Review> reviews = new ArrayList<>();
+                while (rs.next()) {
+                    Review review = new Review();
+                    review.setId(rs.getInt("ID"));
+                    review.setTitle(rs.getString("TILE"));
+                    review.setBody(rs.getString("BODY"));
+                    review.setDate(rs.getDate("DATE"));
+                    review.setRating(rs.getFloat("RATING"));
+                    review.setAuthor(rs.getString("NAME") + ", " + rs.getString("SURNAME"));
+                    review.setRestaurant(rs.getInt("RESTAURANT"));
+                }
+
+                return reviews;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
+        return null;
+    }
+
     public Restaurant getRestaurantById(int id){
         try (PreparedStatement stm = connection.prepareStatement("SELECT * FROM APP.RESTAURANT JOIN APP.RESTAURANTCUISINE ON APP.RESTAURANT.ID = APP.RESTAURANTCUISINE.IDRES WHERE ID = ?")) {
             stm.setInt(1, id);

@@ -52,7 +52,13 @@
     <c:when test="${param.error == 1}">Rating not valid</c:when>
     <c:when test="${param.error == 2}">Title not valid</c:when>
     <c:when test="${param.error == 3}">Description not valid</c:when>
-    <c:when test="${param.message == 1}">Review posted succesfully</c:when>
+    <c:when test="${param.message == 1}">
+        Review posted succesfully
+        <form action="RetrieveRestaurant" method="post">
+            <input type="hidden" name="id" value="${param.id}">
+            <button type="submit">OK!</button>
+        </form>
+    </c:when>
 </c:choose>
 
 </body>
