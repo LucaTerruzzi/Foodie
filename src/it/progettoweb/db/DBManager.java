@@ -454,11 +454,12 @@ public class DBManager {
 
     private boolean computeRating(int id){
         float rating = 0;
-        try (PreparedStatement stm = connection.prepareStatement("SELECT AVG(RATING) AS AVGRATING FROM APP.REVIEW WHERE RESTAURANT = ?")) {
+        try (PreparedStatement stm = connection.prepareStatement("SELECT AVG(CAST (RATING AS FLOAT)) AS AVGRATING FROM APP.REVIEW WHERE RESTAURANT = ?")) {
             stm.setInt(1, id);
             try (ResultSet rs = stm.executeQuery()) {
                 if (rs.next()) {
                     rating = rs.getFloat("AVGRATING");
+                    System.out.println(rating);
                 }else{
                     return false;
                 }

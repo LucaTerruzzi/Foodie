@@ -47,9 +47,13 @@ public class autocompleteService {
     @Produces(MediaType.APPLICATION_JSON)
     public String getCuisine(@PathParam("term")String term) {        
         //final String term = request.getParameter("term");
-            Gson gson = new Gson();
-            return gson.toJson(((DBManager)context.getAttribute("dbmanager")).getCuisineSuggestion(term));
-        
+        if(term.toLowerCase().contains("%") || term.toLowerCase().contains("[") || term.toLowerCase().contains("]") ||
+                term.toLowerCase().contains("^")){
+            return null;
+        }
+        Gson gson = new Gson();
+        return gson.toJson(((DBManager)context.getAttribute("dbmanager")).getCuisineSuggestion(term));
+
     }
     
     @GET
@@ -57,8 +61,12 @@ public class autocompleteService {
     @Produces(MediaType.APPLICATION_JSON)
     public String getPlaces(@PathParam("term")String term) {        
         //final String term = request.getParameter("term");
-            Gson gson = new Gson();
-            return gson.toJson(((DBManager)context.getAttribute("dbmanager")).getPlaceSuggestion(term));
+        if(term.toLowerCase().contains("%") || term.toLowerCase().contains("[") || term.toLowerCase().contains("]") ||
+                term.toLowerCase().contains("^")){
+            return null;
+        }
+        Gson gson = new Gson();
+        return gson.toJson(((DBManager)context.getAttribute("dbmanager")).getPlaceSuggestion(term));
         
     }
     
@@ -67,8 +75,12 @@ public class autocompleteService {
     @Produces(MediaType.APPLICATION_JSON)
     public String getRestaurants(@PathParam("term")String term) {        
         //final String term = request.getParameter("term");
-            Gson gson = new Gson();
-            return gson.toJson(((DBManager)context.getAttribute("dbmanager")).getRestaurantSuggestion(term));
+        if(term.toLowerCase().contains("%") || term.toLowerCase().contains("[") || term.toLowerCase().contains("]") ||
+                term.toLowerCase().contains("^")){
+            return null;
+        }
+        Gson gson = new Gson();
+        return gson.toJson(((DBManager)context.getAttribute("dbmanager")).getRestaurantSuggestion(term));
         
     }
 

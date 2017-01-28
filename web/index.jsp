@@ -177,6 +177,8 @@
                 <c:when test="${param.error == 1}">Wrong username or password</c:when>
                 <c:when test="${param.error == 2}">Invalid link</c:when>
                 <c:when test="${param.error == 3}">Something went wrong :(</c:when>
+                <c:when test="${param.alert == 1}">Search item too short!</c:when>
+
                 <c:when test="${param.message == 1}">Account confirmed</c:when>
                 <c:when test="${param.message == 2}">Registration successful. Check email</c:when>
                 <c:when test="${param.message == 3}">Recovery email sent. Check email</c:when>

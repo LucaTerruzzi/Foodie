@@ -81,6 +81,18 @@ public class Search extends HttpServlet {
             return;
         }
 
+
+        if(term.length() < 3){
+            response.sendRedirect("index.jsp?alert=1");
+            return;
+        }
+
+        if(term.toLowerCase().contains("%") || term.toLowerCase().contains("[") || term.toLowerCase().contains("]") ||
+                term.toLowerCase().contains("^")){
+            response.sendRedirect("index.jsp");
+            return;
+        }
+
         ArrayList<SearchResult> results = null;
         switch (type){
             case 0:
