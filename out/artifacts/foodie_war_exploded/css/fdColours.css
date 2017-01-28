@@ -1,0 +1,24 @@
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+
+.fd-green{
+    background-color: #73AE57;
+    color: white;
+}
+
+.fd-light-grey{
+    background-color: #F1F1F1;
+    color: black;
+}
+
+.fd-dark-grey{
+    background-color: #5F5F5F;
+}
+
+.fd-text-dark-grey{
+    color: #5F5F5F;
+}
+
+.fd-suggestion-indented{
+    margin-left: 8px;
+}

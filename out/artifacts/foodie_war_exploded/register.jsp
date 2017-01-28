@@ -12,53 +12,57 @@
         <title>Register</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/fdColours.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <div class="container">
-            <%@include file="WEB-INF/navbar.jsp" %>
-            <h2>Register</h2>
-            <form role="form" method="POST" action="Register">
-              <div class="form-group">
-                <label for="name">Nome:</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
-              </div>
-              <div class="form-group">
-                <label for="surname">Cognome:</label>
-                <input type="text" class="form-control" id="surname" placeholder="Enter surname" name="surname">
-              </div>
-              <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-              </div>
-              <div class="form-group">
-                <label for="email-rep">Ripeti email:</label>
-                <input type="text" class="form-control" id="email-rep" placeholder="Repeat email" name="email-rep">
-              </div>
-              <div class="form-group">
-                <label for="pwd">Password:</label>
-                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password">
-              </div>
-              <div class="form-group">
-                <label for="pwd-rep">Ripeti password:</label>
-                <input type="password" class="form-control" id="pwd-rep" placeholder="Repeat password" name="password-rep">
-              </div>
-              <div class="checkbox">
-                  <label><input type="checkbox" name="terms" value="yes">Accetto i termini di servizio</label>
-              </div>
-              <button type="submit" class="btn btn-default">Submit</button>
-            </form>
-      </div>
-
+        <%@include file="WEB-INF/navbar.jsp" %>
         <c:choose>
-            <c:when test="${param.error == 1}">Generic error</c:when>
-            <c:when test="${param.error == 2}">Emails are different</c:when>
-            <c:when test="${param.error == 3}">Passwords are different</c:when>
-            <c:when test="${param.error == 4}">You must accept the terms of service</c:when>
-            <c:when test="${param.error == 5}">Email already present</c:when>
+            <c:when test="${param.error == 1}">
+                <div class="w3-panel w3-red">Generic error<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>
+            </c:when>
+            <c:when test="${param.error == 2}">
+                <div class="w3-panel w3-red">Emails are different<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>
+            </c:when>
+            <c:when test="${param.error == 3}">
+                <div class="w3-panel w3-red">Passwords are dfferent<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>
+            </c:when>
+            <c:when test="${param.error == 4}">
+                <div class="w3-panel w3-red">You must accept the terms of service<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>
+            </c:when>
+            <c:when test="${param.error == 5}">
+                <div class="w3-panel w3-red">This email has already been registered<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>
+            </c:when>
         </c:choose>
+        <div class="w3-container">
+            <h2>Register</h2>
+            <form class="w3-container" role="form" method="POST" action="Register">
+                <!--label class="w3-label" for="name">Nome:</label-->
+                <input class="w3-input w3-animate-input w3-margin-bottom" type="text" id="name" placeholder="Inserisci il tuo nome" name="name" style="width:30%">
 
+                <!--label class="w3-label" for="surname">Cognome:</label-->
+                <input class="w3-input w3-animate-input w3-margin-bottom" type="text" id="surname" placeholder="Inserisci il tuo cognome" name="surname" style="width:30%">
+
+                <!--label class="w3-label" for="email">Email:</label-->
+                <input class="w3-input w3-animate-input w3-margin-bottom" type="email" id="email" placeholder="Inserisci un'email" name="email" style="width:30%">
+
+                <!--label class="w3-label" for="email-rep">Ripeti email:</label-->
+                <input class="w3-input w3-animate-input w3-margin-bottom" type="email" id="email-rep" placeholder="Ripeti l'email" name="email-rep" style="width:30%">
+
+                <!--label class="w3-label" for="pwd">Password:</label-->
+                <input class="w3-input w3-animate-input w3-margin-bottom" type="password" id="pwd" placeholder="Inserisci una password" name="password" style="width:30%">
+
+                <!--label class="w3-label" for="pwd-rep">Ripeti password:</label-->
+                <input class="w3-input w3-animate-input w3-margin-bottom" type="password" id="pwd-rep" placeholder="Ripeti la password" name="password-rep" style="width:30%">
+
+                <label class="fd-text-dark-grey w3-validate">Accetto i termini di servizio</label>
+                <input class="w3-check w3-margin-bottom" type="checkbox" name="terms" value="yes"><br>
+
+                <button type="submit" class="fd-dark-grey w3-btn">Submit</button>
+            </form>
+        </div>
     </body>
 </html>

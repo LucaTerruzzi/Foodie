@@ -84,7 +84,7 @@ public class Search extends HttpServlet {
         }
 
 
-        if(term.length() < 0){
+        if(term.length() < 3){
             response.sendRedirect("index.jsp?alert=1");
             return;
         }

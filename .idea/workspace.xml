@@ -2,35 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="236c4e26-c158-4237-8c57-21e1b7388dbe" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FoodieDB/log/log27.dat" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FoodieDB/log/log.ctrl" afterPath="$PROJECT_DIR$/FoodieDB/log/log.ctrl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FoodieDB/log/log29.dat" afterPath="$PROJECT_DIR$/FoodieDB/log/log29.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FoodieDB/log/logmirror.ctrl" afterPath="$PROJECT_DIR$/FoodieDB/log/logmirror.ctrl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FoodieDB/seg0/c10.dat" afterPath="$PROJECT_DIR$/FoodieDB/seg0/c10.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FoodieDB/seg0/c230.dat" afterPath="$PROJECT_DIR$/FoodieDB/seg0/c230.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FoodieDB/seg0/c241.dat" afterPath="$PROJECT_DIR$/FoodieDB/seg0/c241.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FoodieDB/seg0/c251.dat" afterPath="$PROJECT_DIR$/FoodieDB/seg0/c251.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FoodieDB/seg0/c400.dat" afterPath="$PROJECT_DIR$/FoodieDB/seg0/c400.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FoodieDB/seg0/c4b0.dat" afterPath="$PROJECT_DIR$/FoodieDB/seg0/c4b0.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FoodieDB/seg0/c540.dat" afterPath="$PROJECT_DIR$/FoodieDB/seg0/c540.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FoodieDB/seg0/c551.dat" afterPath="$PROJECT_DIR$/FoodieDB/seg0/c551.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FoodieDB/seg0/c561.dat" afterPath="$PROJECT_DIR$/FoodieDB/seg0/c561.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FoodieDB/seg0/c571.dat" afterPath="$PROJECT_DIR$/FoodieDB/seg0/c571.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/WEB-INF/classes/it/progettoweb/db/DBManager.class" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/WEB-INF/classes/it/progettoweb/db/DBManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/WEB-INF/classes/it/progettoweb/logic/Search.class" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/WEB-INF/classes/it/progettoweb/logic/Search.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/foodie/it/progettoweb/db/DBManager.class" afterPath="$PROJECT_DIR$/out/production/foodie/it/progettoweb/db/DBManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/foodie/it/progettoweb/logic/Search.class" afterPath="$PROJECT_DIR$/out/production/foodie/it/progettoweb/logic/Search.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apache-tomcat-8.5.5/bin/derby.log" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.5/bin/derby.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/WEB-INF/adminBar.jsp" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/WEB-INF/adminBar.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/WEB-INF/anonimousBar.html" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/WEB-INF/anonimousBar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/WEB-INF/loggedBar.jsp" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/WEB-INF/loggedBar.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/WEB-INF/navbar.jsp" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/WEB-INF/navbar.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/WEB-INF/restaurantBar.jsp" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/WEB-INF/restaurantBar.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/searchResults.jsp" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/searchResults.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/it/progettoweb/data/Review.java" afterPath="$PROJECT_DIR$/src/it/progettoweb/data/Review.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/it/progettoweb/db/DBManager.java" afterPath="$PROJECT_DIR$/src/it/progettoweb/db/DBManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/it/progettoweb/logic/RetrieveRestaurant.java" afterPath="$PROJECT_DIR$/src/it/progettoweb/logic/RetrieveRestaurant.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/pwdRecovery.jsp" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/pwdRecovery.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/register.jsp" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/register.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/user.jsp" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/user.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/it/progettoweb/logic/Search.java" afterPath="$PROJECT_DIR$/src/it/progettoweb/logic/Search.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/it/progettoweb/logic/StoreReview.java" afterPath="$PROJECT_DIR$/src/it/progettoweb/logic/StoreReview.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/adminBar.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/adminBar.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/anonimousBar.html" afterPath="$PROJECT_DIR$/web/WEB-INF/anonimousBar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/loggedBar.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/loggedBar.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/navbar.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/navbar.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/restaurantBar.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/restaurantBar.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/restaurant.jsp" afterPath="$PROJECT_DIR$/web/restaurant.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/searchResults.jsp" afterPath="$PROJECT_DIR$/web/searchResults.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/pwdRecovery.jsp" afterPath="$PROJECT_DIR$/web/pwdRecovery.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/register.jsp" afterPath="$PROJECT_DIR$/web/register.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/user.jsp" afterPath="$PROJECT_DIR$/web/user.jsp" />
     </list>
     <ignored path="foodie.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,10 +83,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DBManager.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DBManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/it/progettoweb/db/DBManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
+            <state relative-caret-position="-77">
               <caret line="434" column="52" lean-forward="false" selection-start-line="434" selection-start-column="52" selection-end-line="434" selection-end-column="52" />
               <folding>
                 <element signature="method#DBManager#0;class#DBManager#0" expanded="false" />
@@ -171,7 +170,7 @@
       <file leaf-file-name="restaurant.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/restaurant.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
+            <state relative-caret-position="600">
               <caret line="40" column="32" lean-forward="false" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
               <folding />
             </state>
@@ -181,7 +180,7 @@
       <file leaf-file-name="writeRev.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/writeRev.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
+            <state relative-caret-position="330">
               <caret line="22" column="56" lean-forward="false" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
               <folding />
             </state>
@@ -191,8 +190,8 @@
       <file leaf-file-name="Search.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/Search.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2">
-              <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+            <state relative-caret-position="-77">
+              <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -201,7 +200,7 @@
       <file leaf-file-name="RetrieveRestaurant.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/RetrieveRestaurant.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
+            <state relative-caret-position="388">
               <caret line="84" column="115" lean-forward="false" selection-start-line="84" selection-start-column="115" selection-end-line="84" selection-end-column="115" />
               <folding>
                 <element signature="e#0#3391#0" expanded="true" />
@@ -211,7 +210,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StoreReview.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="StoreReview.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/StoreReview.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="403">
@@ -221,20 +220,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="31" column="45" lean-forward="false" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="searchResults.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/searchResults.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
+            <state relative-caret-position="433">
               <caret line="35" column="50" lean-forward="false" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
               <folding />
             </state>
@@ -319,11 +308,11 @@
         <option value="$PROJECT_DIR$/web/searchResults.jsp" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/data/Review.java" />
-        <option value="$PROJECT_DIR$/src/it/progettoweb/logic/Search.java" />
         <option value="$PROJECT_DIR$/web/restaurant.jsp" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/logic/StoreReview.java" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/logic/RetrieveRestaurant.java" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/db/DBManager.java" />
+        <option value="$PROJECT_DIR$/src/it/progettoweb/logic/Search.java" />
       </list>
     </option>
   </component>
@@ -364,6 +353,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -405,6 +395,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Foodie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Foodie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -552,7 +560,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -1165,7 +1172,8 @@
       <workItem from="1485514549243" duration="2337000" />
       <workItem from="1485517439965" duration="973000" />
       <workItem from="1485528275787" duration="17800000" />
-      <workItem from="1485589394857" duration="22628000" />
+      <workItem from="1485589394857" duration="22685000" />
+      <workItem from="1485620649357" duration="615000" />
     </task>
     <task id="LOCAL-00001" summary="Autocomplete &amp; Login">
       <created>1476382465551</created>
@@ -1178,7 +1186,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188122000" />
+    <option name="totallyTimeSpent" value="188794000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1215,8 +1223,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38915664" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32771084" sideWeight="0.49713877" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2160229" sideWeight="0.44378698" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21888413" sideWeight="0.44378698" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2160229" sideWeight="0.556213" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1227,6 +1234,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32771084" sideWeight="0.49713877" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1277,13 +1285,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/user.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="76" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/EditInfos.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1317,7 +1318,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="12" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1431,10 +1431,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="33" column="53" lean-forward="false" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#1412#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1466,7 +1462,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="30" column="46" lean-forward="false" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1490,7 +1485,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="33" column="20" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1498,7 +1492,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="31" column="53" lean-forward="false" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1514,7 +1507,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1522,7 +1514,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="41" lean-forward="false" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1535,7 +1526,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1543,10 +1533,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-          <folding>
-            <element signature="e#643#644#0" expanded="true" />
-            <element signature="e#670#671#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1554,23 +1540,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/searchResults.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="35" column="50" lean-forward="false" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="31" column="45" lean-forward="false" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1578,9 +1547,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="523">
           <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1588,21 +1554,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/Search.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/restaurant.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
+        <state relative-caret-position="600">
           <caret line="40" column="32" lean-forward="false" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
           <folding />
         </state>
@@ -1610,27 +1567,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/writeRev.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
+        <state relative-caret-position="330">
           <caret line="22" column="56" lean-forward="false" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/RetrieveRestaurant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="84" column="115" lean-forward="false" selection-start-line="84" selection-start-column="115" selection-end-line="84" selection-end-column="115" />
-          <folding>
-            <element signature="e#0#3391#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/StoreReview.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="111" column="19" lean-forward="false" selection-start-line="111" selection-start-column="19" selection-end-line="111" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -1644,13 +1582,12 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/it/progettoweb/db/DBManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
+        <state relative-caret-position="-77">
           <caret line="434" column="52" lean-forward="false" selection-start-line="434" selection-start-column="52" selection-end-line="434" selection-end-column="52" />
           <folding>
             <element signature="method#DBManager#0;class#DBManager#0" expanded="false" />
@@ -1727,6 +1664,57 @@
             <marker date="1485618875000" expanded="true" signature="32217:32293" ph="SELECT DISTI... RESTAURANT" />
             <marker date="1485618875000" expanded="true" signature="33127:33210" ph="SELECT DISTI... RESTAURANT" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/RetrieveRestaurant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="84" column="115" lean-forward="false" selection-start-line="84" selection-start-column="115" selection-end-line="84" selection-end-column="115" />
+          <folding>
+            <element signature="e#0#3391#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/searchResults.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="35" column="50" lean-forward="false" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/Search.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-77">
+          <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/indexScripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="45" lean-forward="false" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/StoreReview.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="111" column="19" lean-forward="false" selection-start-line="111" selection-start-column="19" selection-end-line="111" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -5,198 +5,85 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page errorPage="error.jsp"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>        
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-        <script src="js/typeahead.bundle.min.js"></script>
-        <script>
-            $(function(){
-                /*var cuisine = new Bloodhound({
-                    datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
-                    queryTokenizer: Bloodhound.tokenizers.whitespace,
-                    remote: {
-                      url: 'service/autocomplete/cuisine/%QUERY',
-                      wildcard: '%QUERY'
-                    }
-                });*/
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-                $(window).bind("pageshow", function() {
-                    $('#search #type').val(0);
-                    $('#search #order').val(2);
-                });
-                
-                var places = new Bloodhound({
-                    datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
-                    queryTokenizer: Bloodhound.tokenizers.whitespace,
-                    remote: {
-                      url: 'service/autocomplete/places/%QUERY',
-                      wildcard: '%QUERY'
-                    }
-                });
-                
-                var restaurants = new Bloodhound({
-                    datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
-                    queryTokenizer: Bloodhound.tokenizers.whitespace,
-                    remote: {
-                      url: 'service/autocomplete/restaurants/%QUERY',
-                      wildcard: '%QUERY'
-                    }
-                });
-                
-                $("#search .typeahead").typeahead({
-                    hint: true,
-                    highlight: true,
-                    minLength: 3
-                }/*,{
-                    name: 'couisine',
-                    source: cuisine,
-                    display : 'value',
-                    limit: 100,
-                    templates: {
-                        header: '<h4 class="header"><span class="glyphicon glyphicon-record"></span>Cuisine</h4>'
-                    }
-                }*/,{
-                    name: 'places',
-                    source: places,
-                    display : 'value',
-                    limit: 100,
-                    templates: {
-                        header: '<h4 class="header"><span class="glyphicon glyphicon-map-marker"></span>Places</h4>',
-                        suggestion: Handlebars.compile('<div>{{value}}, {{spec}}</div>')
-                        
-                    }
-                },{
-                    name: 'restaurants',
-                    source: restaurants,
-                    display : 'value',
-                    limit: 100,
-                    templates: {
-                        header: '<h4 class="header"><span class="glyphicon glyphicon-cutlery"></span>Restaurants</h4>',
-                        suggestion: Handlebars.compile('<div>{{value}}, {{spec}}</div>')
-                        
-                    }
-                });
+    <!--W3-CSS-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/fdColours.css">
+    <link rel="stylesheet" href="css/fdIndex.css">
 
-                $('#search .typeahead').on('typeahead:selected typeahead:autocomplete', function(e, datum) {
-                    console.log(datum);
-                    console.log('selected');
-                    switch (datum.id){
-                        case -2:
-                            $('#search #type').val(2);
-                            $('#search #order').val(1);
-                            $('#search #field').val(datum.value);
-                            $('#search').submit();
-                            break;
-                        case -1:
-                            $('#search #type').val(1);
-                            $('#search #order').val(1);
-                            $('#search #field').val(datum.value);
-                            $('#search').submit();
-                            break;
-                        default:
-                            $('<form>').attr({
-                                method: 'POST',
-                                action: 'RetrieveRestaurant'
-                            }).append($('<input>').attr({
-                                type: 'hidden',
-                                name: 'id',
-                                value: datum.id
-                            })).submit();
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <script src="js/typeahead.bundle.min.js"></script>
+    <script src="js/indexScripts.js"></script>
 
-                    }
-                });
-
-            });
-        </script>
-        <style>
-            /*.typeahead {
-              width: 396px;
-              height: 30px;
-              padding: 8px 12px;
-              font-size: 24px;
-              line-height: 30px;
-              border: 2px solid #ccc;
-              outline: none;
-            }*/
-                
-            .tt-hint {
-              color: #999
-            }
-
-            .tt-menu {
-              width: 422px;
-              margin: 12px 0;
-              padding: 8px 0;
-              background-color: #fff;
-              border: 1px solid #ccc;
-              border: 1px solid rgba(0, 0, 0, 0.2);
-              -webkit-border-radius: 8px;
-                 -moz-border-radius: 8px;
-                      border-radius: 8px;
-              -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
-                 -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
-                      box-shadow: 0 5px 10px rgba(0,0,0,.2);
-            }
-
-            .tt-suggestion {
-              padding: 3px 20px;
-              font-size: 18px;
-              line-height: 24px;
-            }
-
-            .tt-suggestion:hover {
-              cursor: pointer;
-              color: #fff;
-              background-color: #0097cf;
-            }
-              
-            #search .header {
-                border-bottom: 1px solid #ccc;
-            }
-        </style>
-        <title>Home</title>
-    </head>
-    <body>
+    <title>Home</title>
+</head>
+<body>
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+    <%@include file="WEB-INF/navbar.jsp" %>
+    <c:choose>
+        <c:when test="${param.error == 1}">
+            <div class="w3-panel w3-red">Wrong username or password<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>
+        </c:when>
+        <c:when test="${param.error == 2}">
+            <div class="w3-panel w3-red">Invalid link<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>
+        </c:when>
+        <c:when test="${param.error == 3}">
+            <div class="w3-panel w3-red">Something went wrong :(<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>
+        </c:when>
+        <c:when test="${param.alert == 1}">
+            <div class="w3-panel w3-yellow">Input too short<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>
+        </c:when>
+        <c:when test="${param.message == 1}">
+            <div class="w3-panel w3-green">Account confirmed<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>
+        </c:when>
+        <c:when test="${param.message == 2}">
+            <div class="w3-panel w3-green">Registration successful. Check email<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>
+        </c:when>
+        <c:when test="${param.message == 3}">
+            <div class="w3-panel w3-green">Recovery email sent. Check email<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>
+        </c:when>
+        <c:when test="${param.message == 4}">
+            <div class="w3-panel w3-green">Password succesfully changed<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>
+        </c:when>
+        <c:when test="${param.message == 5}">
+            <div class="w3-panel w3-green">Restaurant claimed!<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>
+        </c:when>
+        <c:when test="${param.message == 6}">
+            <div class="w3-panel w3-green">Notification dismissed!<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>
+        </c:when>
+        <c:when test="${param.message == 7}">
+            <div class="w3-panel w3-green">Owner set!<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>
+        </c:when>
+    </c:choose>
+    <div class="w3-display-middle">
         <div class="container">
-            <%@include file="WEB-INF/navbar.jsp" %>
-
             <form role="form" id="search" method="POST" action="Search">
-                <div class="form-group">
-                    <input type="text" id="field" class="form-control typeahead" placeholder="What do you need" name="term">
+                <div class="w3-row">
+
+                    <div class="w3-layout-cell">
+                        <input class="w3-input typeahead" type="text" id="field" size="64" placeholder="Search" name="term">
+                        <input type="hidden" id="type" name="type" value="0">
+                        <input type="hidden" id="pricefilter" name="pricefilter" value="0"/>
+                        <input type="hidden" id="order" name="order" value="2"/>
+                    </div>
+                    <div class="w3-layout-cell">
+                        <button type="submit" class="w3-btn fd-green"><i class="fa fa-search"></i></button>
+                    </div>
                 </div>
-                <input type="hidden" id="type" name="type" value="0"/>
-                <input type="hidden" id="pricefilter" name="pricefilter" value="0"/>
-                <input type="hidden" id="order" name="order" value="2"/>
-                <button type="submit" class="btn btn-default">Search</button>
             </form>
-
-            <h5><a href="pwdRecovery.jsp">--> IN CASO DI AMNESIA <--</a></h5>
-            <c:choose>
-                <c:when test="${param.error == 1}">Wrong username or password</c:when>
-                <c:when test="${param.error == 2}">Invalid link</c:when>
-                <c:when test="${param.error == 3}">Something went wrong :(</c:when>
-                <c:when test="${param.alert == 1}">Search item too short!</c:when>
-
-                <c:when test="${param.message == 1}">Account confirmed</c:when>
-                <c:when test="${param.message == 2}">Registration successful. Check email</c:when>
-                <c:when test="${param.message == 3}">Recovery email sent. Check email</c:when>
-                <c:when test="${param.message == 4}">Password succesfully changed</c:when>
-
-                <c:when test="${param.message == 5}">Restaurant claimed!!!!!</c:when>
-                <c:when test="${param.message == 6}">Notification dismissed!</c:when>
-                <c:when test="${param.message == 7}">Set owner!</c:when>
-
-
-
-            </c:choose>
-            
         </div>
-    </body>
+
+    </div>
+</div>
+</body>
 </html>

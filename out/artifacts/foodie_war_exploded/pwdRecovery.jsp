@@ -10,31 +10,28 @@
 <html>
 <head>
     <title>Password recovery</title>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/fdColours.css">
+    <link rel="stylesheet" href="css/fdIndex.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="container">
-    <h2>Password recovery</h2>
-    <form role="form" method="POST" action="PwdRecoverySender">
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-    </form>
-</div>
-
-<c:choose>
-    <c:when test="${param.error == 1}">Generic error</c:when>
-    <c:when test="${param.error == 2}">Emails are different</c:when>
-    <c:when test="${param.error == 3}">Passwords are different</c:when>
-    <c:when test="${param.error == 4}">You must accept the terms of service</c:when>
-    <c:when test="${param.error == 5}">Email already present</c:when>
-</c:choose>
-
+    <%@include file="WEB-INF/navbar.jsp" %>
+    <c:choose>
+        <c:when test="${param.error == 1}">
+            <div class="w3-panel w3-red">Wrong email<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>
+        </c:when>
+    </c:choose>
+    <div class="w3-container fd-text-dark-grey">
+        <h2>Recupero Password</h2>
+        <form role="form" class="w3-container" method="POST" action="PwdRecoverySender">
+            <input class="w3-input w3-animate-input w3-margin-bottom" type="email" id="email" placeholder="Inserisci la tua email" name="email" style="width:30%">
+            <button type="submit" class="fd-dark-grey w3-btn">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
