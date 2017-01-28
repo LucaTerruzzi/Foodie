@@ -21,6 +21,10 @@
         <filter-name>AdminFilter</filter-name>
         <filter-class>it.progettoweb.filters.AdminFilter</filter-class>
     </filter>
+    <filter>
+        <filter-name>AdminOwnerFilter</filter-name>
+        <filter-class>it.progettoweb.filters.AdminOwnerFilter</filter-class>
+    </filter>
     <filter-mapping>
         <filter-name>SessionFilter</filter-name>
         <url-pattern>/*</url-pattern>
@@ -46,6 +50,11 @@
     <filter-mapping>
         <filter-name>AdminFilter</filter-name>
         <url-pattern>/AssignRestaurant</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>AdminOwnerFilter</filter-name>
+        <url-pattern>/notifications.jsp</url-pattern>
+        <url-pattern>/RefreshNotifications</url-pattern>
     </filter-mapping>
     <listener>
         <description>ServletContextListener</description>

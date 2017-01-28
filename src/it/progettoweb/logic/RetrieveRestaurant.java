@@ -8,6 +8,7 @@ package it.progettoweb.logic;
 import it.progettoweb.data.Location;
 import it.progettoweb.data.Restaurant;
 import it.progettoweb.db.DBManager;
+import org.glassfish.jersey.server.model.Suspendable;
 
 import java.io.IOException;
 import java.util.ArrayList;

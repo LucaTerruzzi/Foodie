@@ -13,14 +13,14 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Initialises the session.
- * If userType parameter is not present, create it.
+ * Filter non authenticated requests
  * @author Luca, Riccardo, Mario
  */
-public class SessionFilter implements Filter {
+public class AdminOwnerFilter implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -28,21 +28,18 @@ public class SessionFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        request.setCharacterEncoding("UTF-8");
-        // Get the session. If not present, create it.
-        HttpSession session = ((HttpServletRequest)request).getSession();
-        // If userType is not present, create it
-        if(session.getAttribute("userType") == null){
-            session.setAttribute("userType", 0);
-        }
 
-        // Forward the request
-        chain.doFilter(request, response);
+        HttpSession session = ((HttpServletRequest)request).getSession();
+        // If not authenticated
+        if((int)session.getAttribute("userType") == 0 || (int)session.getAttribute("userType") == 1 || session.getAttribute("user") == null){
+            ((HttpServletResponse)response).sendRedirect("index.jsp");
+        }else{
+            chain.doFilter(request, response);
+        }
     }
 
     @Override
     public void destroy() {
     }
-    
-    
+
 }

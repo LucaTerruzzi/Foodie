@@ -388,6 +388,8 @@ public class DBManager {
             return false;
         }
 
+        computeRating(review.getRestaurant());
+
         return true;
     }
 
@@ -448,6 +450,40 @@ public class DBManager {
 
         }
         return 0;
+    }
+
+    private boolean computeRating(int id){
+        float rating = 0;
+        try (PreparedStatement stm = connection.prepareStatement("SELECT AVG(RATING) AS AVGRATING FROM APP.REVIEW WHERE RESTAURANT = ?")) {
+            stm.setInt(1, id);
+            try (ResultSet rs = stm.executeQuery()) {
+                if (rs.next()) {
+                    rating = rs.getFloat("AVGRATING");
+                }else{
+                    return false;
+                }
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+
+        }
+
+        try (PreparedStatement stm = connection.prepareStatement("UPDATE APP.RESTAURANT SET RATING = ? WHERE ID = ?")) {
+            stm.setFloat(1, rating);
+            stm.setInt(2, id);
+            //stm.setString(2, password);
+            if(stm.executeUpdate() == 0){
+                return false;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+
+        return true;
     }
 
     public Restaurant getRestaurantById(int id){

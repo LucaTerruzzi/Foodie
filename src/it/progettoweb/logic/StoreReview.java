@@ -81,6 +81,7 @@ public class StoreReview extends HttpServlet {
             return;
         }
 
+
         //if necessary parameters are null, something wrong happened
         if(title == null || body == null){
             response.sendRedirect("index.jsp");
