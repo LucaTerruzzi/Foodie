@@ -7,10 +7,12 @@ package it.progettoweb.logic;
 
 import it.progettoweb.data.Location;
 import it.progettoweb.data.Restaurant;
+import it.progettoweb.data.User;
 import it.progettoweb.db.DBManager;
 import org.glassfish.jersey.server.model.Suspendable;
 
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.StringJoiner;
 import javax.servlet.ServletException;
@@ -73,11 +75,20 @@ public class RetrieveRestaurant extends HttpServlet {
         }
 
         Restaurant restaurant = dbmanager.getRestaurantById(id);
+        int canreview = 0;
 
         if(restaurant == null){
             response.sendRedirect("index.jsp");
         }else{
+            HttpSession session = request.getSession();
+            if((int)session.getAttribute("userType") != 0) {
+                LocalDate lastDate = dbmanager.lastReviewDate(id, ((User)session.getAttribute("user")).getEmail());
+                if (lastDate != null && lastDate.isBefore(LocalDate.now())) {
+                    canreview = 1;
+                }
+            }
             request.setAttribute("restaurant", restaurant);
+            request.setAttribute("canreview",canreview);
             getServletContext().getRequestDispatcher("/restaurant.jsp").forward(request, response);
         }
     }

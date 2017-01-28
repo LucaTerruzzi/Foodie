@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-Sat Jan 28 11:28:33 CET 2017:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.13.1.1 - (1765088): instance a816c00e-0159-e49e-8e69-00000df00c18 
+Sat Jan 28 16:54:40 CET 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.13.1.1 - (1765088): instance a816c00e-0159-e5c9-20a0-00000e2fc938 
 on database directory /Users/Luca/Documents/UNI/ProgrammazioneWeb/Foodie/FoodieDB with class loader ParallelWebappClassLoader
   context: ROOT
   delegate: false
@@ -17,10 +17,10 @@ os.version=10.12.2
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
 ----------------------------------------------------------------
-Sat Jan 28 11:29:18 CET 2017: Shutting down Derby engine
+Sat Jan 28 17:13:59 CET 2017: Shutting down Derby engine
 ----------------------------------------------------------------
-Sat Jan 28 11:29:18 CET 2017:
-Shutting down instance a816c00e-0159-e49e-8e69-00000df00c18 on database directory /Users/Luca/Documents/UNI/ProgrammazioneWeb/Foodie/FoodieDB with class loader ParallelWebappClassLoader
+Sat Jan 28 17:13:59 CET 2017:
+Shutting down instance a816c00e-0159-e5c9-20a0-00000e2fc938 on database directory /Users/Luca/Documents/UNI/ProgrammazioneWeb/Foodie/FoodieDB with class loader ParallelWebappClassLoader
   context: ROOT
   delegate: false
 ----------> Parent Classloader:

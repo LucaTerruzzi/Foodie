@@ -67,9 +67,11 @@ public class Search extends HttpServlet {
             throws ServletException, IOException {
 
         String term = request.getParameter("term");
-        int type;
+        int type, pricefilter, order;
         try {
             type = Integer.parseInt(request.getParameter("type"));
+            pricefilter = Integer.parseInt(request.getParameter("pricefilter"));
+            order = Integer.parseInt(request.getParameter("order"));
         } catch (NumberFormatException e){
             response.sendRedirect("index.jsp");
             return;
@@ -82,7 +84,7 @@ public class Search extends HttpServlet {
         }
 
 
-        if(term.length() < 3){
+        if(term.length() < 0){
             response.sendRedirect("index.jsp?alert=1");
             return;
         }
@@ -96,13 +98,13 @@ public class Search extends HttpServlet {
         ArrayList<SearchResult> results = null;
         switch (type){
             case 0:
-                results = dbmanager.getRestaurants(term);
+                results = dbmanager.getRestaurants(term, pricefilter, order);
                 break;
             case 1:
-                results = dbmanager.getRestaurantsByCity(term);
+                results = dbmanager.getRestaurantsByCity(term, pricefilter, order);
                 break;
             case 2:
-                results = dbmanager.getRestaurantsByRegion(term);
+                results = dbmanager.getRestaurantsByRegion(term, pricefilter, order);
                 break;
             default:
         }
@@ -111,6 +113,10 @@ public class Search extends HttpServlet {
             response.sendRedirect("index.jsp");
         }else{
             request.setAttribute("results", results);
+            request.setAttribute("type", type);
+            request.setAttribute("term", term);
+            request.setAttribute("pricefilter", pricefilter);
+            request.setAttribute("order", order);
             getServletContext().getRequestDispatcher("/searchResults.jsp").forward(request, response);
         }
 

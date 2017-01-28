@@ -28,7 +28,8 @@
                 });*/
 
                 $(window).bind("pageshow", function() {
-                    $('#search #type').val(0);;
+                    $('#search #type').val(0);
+                    $('#search #order').val(2);
                 });
                 
                 var places = new Bloodhound({
@@ -89,11 +90,13 @@
                     switch (datum.id){
                         case -2:
                             $('#search #type').val(2);
+                            $('#search #order').val(1);
                             $('#search #field').val(datum.value);
                             $('#search').submit();
                             break;
                         case -1:
                             $('#search #type').val(1);
+                            $('#search #order').val(1);
                             $('#search #field').val(datum.value);
                             $('#search').submit();
                             break;
@@ -169,6 +172,8 @@
                     <input type="text" id="field" class="form-control typeahead" placeholder="What do you need" name="term">
                 </div>
                 <input type="hidden" id="type" name="type" value="0"/>
+                <input type="hidden" id="pricefilter" name="pricefilter" value="0"/>
+                <input type="hidden" id="order" name="order" value="2"/>
                 <button type="submit" class="btn btn-default">Search</button>
             </form>
 

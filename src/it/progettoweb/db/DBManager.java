@@ -8,6 +8,7 @@ package it.progettoweb.db;
 import it.progettoweb.data.*;
 
 import java.sql.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.UUID;
 
@@ -375,7 +376,8 @@ public class DBManager {
         try (PreparedStatement stm = connection.prepareStatement("INSERT INTO APP.REVIEW (TEXT, RATING, \"DATE\", RESTAURANT, AUTHOR, TITLE) VALUES (?, ?, ?, ?, ?, ?)")) {
             stm.setString(1, review.getBody());
             stm.setFloat(2, review.getRating());
-            stm.setDate(3, new java.sql.Date(review.getDate().getTime()));
+            //stm.setDate(3, new java.sql.Date(review.getDate().getTime()));
+            stm.setDate(3, java.sql.Date.valueOf(review.getDate()));
             stm.setInt(4,review.getRestaurant());
             stm.setString(5, review.getAuthor());
             stm.setString(6, review.getTitle());
@@ -391,6 +393,27 @@ public class DBManager {
         computeRating(review.getRestaurant());
 
         return true;
+    }
+
+    public LocalDate lastReviewDate(int id, String email){
+        try (PreparedStatement stm = connection.prepareStatement("SELECT MAX(\"DATE\") AS MAXDATE FROM APP.REVIEW WHERE RESTAURANT = ? AND AUTHOR = ?")) {
+            stm.setInt(1, id);
+            stm.setString(2, email);
+            try (ResultSet rs = stm.executeQuery()) {
+                if (rs.next()) {
+                    if(rs.getDate("MAXDATE") != null){
+                        return rs.getDate("MAXDATE").toLocalDate();
+                    }else{
+                        return LocalDate.now().minusDays(1);
+                    }
+                }
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
+        return null;
     }
 
     public boolean hasOwner(int id){
@@ -410,7 +433,7 @@ public class DBManager {
     }
 
     private ArrayList<Review> getReviews(int resId){
-        try (PreparedStatement stm = connection.prepareStatement("SELECT * FROM APP.REVIEW JOIN APP.\"USER\" ON APP.REVIEW.AUTHOR = APP.\"USER\".EMAIL  WHERE RESTAURANT = ?")) {
+        try (PreparedStatement stm = connection.prepareStatement("SELECT * FROM APP.REVIEW JOIN APP.\"USER\" ON APP.REVIEW.AUTHOR = APP.\"USER\".EMAIL  WHERE RESTAURANT = ? ORDER BY \"DATE\" DESC")) {
             stm.setInt(1, resId);
             try (ResultSet rs = stm.executeQuery()) {
                 ArrayList<Review> reviews = new ArrayList<>();
@@ -419,7 +442,7 @@ public class DBManager {
                     review.setId(rs.getInt("ID"));
                     review.setTitle(rs.getString("TITLE"));
                     review.setBody(rs.getString("TEXT"));
-                    review.setDate(rs.getDate("DATE"));
+                    review.setDate(rs.getDate("DATE").toLocalDate());
                     review.setRating(rs.getFloat("RATING"));
                     review.setAuthor(rs.getString("NAME") + ", " + rs.getString("SURNAME"));
                     review.setRestaurant(rs.getInt("RESTAURANT"));
@@ -534,9 +557,29 @@ public class DBManager {
         return null;
     }
 
-    public ArrayList<SearchResult> getRestaurants(String term){
-        try (PreparedStatement stm = connection.prepareStatement("SELECT * FROM APP.RESTAURANT JOIN APP.RESTAURANTCUISINE ON APP.RESTAURANT.ID = APP.RESTAURANTCUISINE.IDRES WHERE LOWER(NAME) LIKE ? ORDER BY APP.RESTAURANT.NAME, APP.RESTAURANT.ID")) {
+    public ArrayList<SearchResult> getRestaurants(String term, int pricefilter, int order){
+        StringBuilder query = new StringBuilder();
+        if(pricefilter == 0){
+            query.append("SELECT * FROM APP.RESTAURANT JOIN APP.RESTAURANTCUISINE ON APP.RESTAURANT.ID = APP.RESTAURANTCUISINE.IDRES WHERE LOWER(NAME) LIKE ?");
+        }else{
+            query.append("SELECT * FROM APP.RESTAURANT JOIN APP.RESTAURANTCUISINE ON APP.RESTAURANT.ID = APP.RESTAURANTCUISINE.IDRES WHERE LOWER(NAME) LIKE ? AND PRICE = ?");
+        }
+        switch (order){
+            case 2:
+                query.append(" ORDER BY APP.RESTAURANT.NAME, APP.RESTAURANT.ID");
+                break;
+            case 3:
+                query.append(" ORDER BY APP.RESTAURANT.PRICE DESC, APP.RESTAURANT.NAME, APP.RESTAURANT.ID");
+                break;
+            default:
+                query.append(" ORDER BY APP.RESTAURANT.NAME, APP.RESTAURANT.ID");
+
+        }
+        try (PreparedStatement stm = connection.prepareStatement(query.toString())) {
             stm.setString(1, '%' + term.toLowerCase() + '%');
+            if(pricefilter != 0){
+                stm.setInt(2, pricefilter);
+            }
             try (ResultSet rs = stm.executeQuery()) {
                 ArrayList<SearchResult> results = new ArrayList<>();
                 int curid = -1;
@@ -572,9 +615,31 @@ public class DBManager {
         return null;
     }
 
-    public ArrayList<SearchResult> getRestaurantsByRegion(String term){
-        try (PreparedStatement stm = connection.prepareStatement("SELECT * FROM APP.RESTAURANT JOIN APP.RESTAURANTCUISINE ON APP.RESTAURANT.ID = APP.RESTAURANTCUISINE.IDRES WHERE LOWER(REGION) LIKE ? ORDER BY APP.RESTAURANT.RATING DESC, APP.RESTAURANT.ID")) {
+    public ArrayList<SearchResult> getRestaurantsByRegion(String term, int pricefilter, int order){
+        StringBuilder query = new StringBuilder();
+        if(pricefilter == 0){
+            query.append("SELECT * FROM APP.RESTAURANT JOIN APP.RESTAURANTCUISINE ON APP.RESTAURANT.ID = APP.RESTAURANTCUISINE.IDRES WHERE LOWER(REGION) LIKE ?");
+        }else{
+            query.append("SELECT * FROM APP.RESTAURANT JOIN APP.RESTAURANTCUISINE ON APP.RESTAURANT.ID = APP.RESTAURANTCUISINE.IDRES WHERE LOWER(REGION) LIKE ? AND PRICE = ?");
+        }
+        switch (order){
+            case 1:
+                query.append(" ORDER BY APP.RESTAURANT.RATING DESC, APP.RESTAURANT.NAME, APP.RESTAURANT.ID");
+                break;
+            case 2:
+                query.append(" ORDER BY APP.RESTAURANT.NAME, APP.RESTAURANT.ID");
+                break;
+            case 3:
+                query.append(" ORDER BY APP.RESTAURANT.PRICE DESC, APP.RESTAURANT.NAME, APP.RESTAURANT.ID");
+                break;
+            default:
+                query.append(" ORDER BY APP.RESTAURANT.RATING DESC, APP.RESTAURANT.NAME, APP.RESTAURANT.ID");
+        }
+        try (PreparedStatement stm = connection.prepareStatement(query.toString())) {
             stm.setString(1, '%' + term.toLowerCase() + '%');
+            if(pricefilter != 0){
+                stm.setInt(2, pricefilter);
+            }
             try (ResultSet rs = stm.executeQuery()) {
                 ArrayList<SearchResult> results = new ArrayList<>();
                 int curid = -1;
@@ -613,9 +678,31 @@ public class DBManager {
         return null;
     }
 
-    public ArrayList<SearchResult> getRestaurantsByCity(String term){
-        try (PreparedStatement stm = connection.prepareStatement("SELECT * FROM APP.RESTAURANT JOIN APP.RESTAURANTCUISINE ON APP.RESTAURANT.ID = APP.RESTAURANTCUISINE.IDRES WHERE LOWER(CITY) LIKE ? ORDER BY APP.RESTAURANT.RATING DESC, APP.RESTAURANT.ID")) {
+    public ArrayList<SearchResult> getRestaurantsByCity(String term, int pricefilter, int order){
+        StringBuilder query = new StringBuilder();
+        if(pricefilter == 0){
+            query.append("SELECT * FROM APP.RESTAURANT JOIN APP.RESTAURANTCUISINE ON APP.RESTAURANT.ID = APP.RESTAURANTCUISINE.IDRES WHERE LOWER(CITY) LIKE ?");
+        }else{
+            query.append("SELECT * FROM APP.RESTAURANT JOIN APP.RESTAURANTCUISINE ON APP.RESTAURANT.ID = APP.RESTAURANTCUISINE.IDRES WHERE LOWER(CITY) LIKE ? AND PRICE = ?");
+        }
+        switch (order){
+            case 1:
+                query.append(" ORDER BY APP.RESTAURANT.RATING DESC, APP.RESTAURANT.NAME, APP.RESTAURANT.ID");
+                break;
+            case 2:
+                query.append(" ORDER BY APP.RESTAURANT.NAME, APP.RESTAURANT.ID");
+                break;
+            case 3:
+                query.append(" ORDER BY APP.RESTAURANT.PRICE DESC, APP.RESTAURANT.NAME, APP.RESTAURANT.ID");
+                break;
+            default:
+                query.append(" ORDER BY APP.RESTAURANT.RATING DESC, APP.RESTAURANT.NAME, APP.RESTAURANT.ID");
+        }
+        try (PreparedStatement stm = connection.prepareStatement(query.toString())) {
             stm.setString(1, '%' + term.toLowerCase() + '%');
+            if(pricefilter != 0){
+                stm.setInt(2, pricefilter);
+            }
             try (ResultSet rs = stm.executeQuery()) {
                 ArrayList<SearchResult> results = new ArrayList<>();
                 int curid = -1;
@@ -642,6 +729,63 @@ public class DBManager {
                         results.add(result);
                         rank++;
                     }
+                }
+
+                return results;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
+        return null;
+    }
+
+    public ArrayList<String> getCuisines(String term){
+        try (PreparedStatement stm = connection.prepareStatement("SELECT DISTINCT CUISINETYPE FROM APP.RESTAURANT JOIN APP.RESTAURANTCUISINE ON APP.RESTAURANT.ID = APP.RESTAURANTCUISINE.IDRES WHERE LOWER(NAME) LIKE ?")) {
+            stm.setString(1, '%' + term.toLowerCase() + '%');
+            try (ResultSet rs = stm.executeQuery()) {
+                ArrayList<String> results = new ArrayList<>();
+                while (rs.next()){
+                    results.add(rs.getString("CUISINETYPE"));
+                }
+
+                return results;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
+        return null;
+    }
+
+    public ArrayList<String> getCuisinesRegion(String term){
+        try (PreparedStatement stm = connection.prepareStatement("SELECT DISTINCT CUISINETYPE FROM APP.RESTAURANT JOIN APP.RESTAURANTCUISINE ON APP.RESTAURANT.ID = APP.RESTAURANTCUISINE.IDRES WHERE LOWER(REGION) LIKE ?")) {
+            stm.setString(1, '%' + term.toLowerCase() + '%');
+            try (ResultSet rs = stm.executeQuery()) {
+                ArrayList<String> results = new ArrayList<>();
+                while (rs.next()){
+                    results.add(rs.getString("CUISINETYPE"));
+                }
+
+                return results;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
+        return null;
+    }
+
+    public ArrayList<String> getCuisinesCity(String term){
+        try (PreparedStatement stm = connection.prepareStatement("SELECT DISTINCT CUISINETYPE FROM APP.RESTAURANT JOIN APP.RESTAURANTCUISINE ON APP.RESTAURANT.ID = APP.RESTAURANTCUISINE.IDRES WHERE LOWER(CITY) LIKE ?")) {
+            stm.setString(1, '%' + term.toLowerCase() + '%');
+            try (ResultSet rs = stm.executeQuery()) {
+                ArrayList<String> results = new ArrayList<>();
+                while (rs.next()){
+                    results.add(rs.getString("CUISINETYPE"));
                 }
 
                 return results;

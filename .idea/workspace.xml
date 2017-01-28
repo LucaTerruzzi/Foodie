@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="236c4e26-c158-4237-8c57-21e1b7388dbe" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/it/progettoweb/filters/FillRestaurantFilter.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FoodieDB/db.lck" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FoodieDB/dbex.lck" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FoodieDB/log/log25.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FoodieDB/log/log26.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FoodieDB/log/log27.dat" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FoodieDB/log/log.ctrl" afterPath="$PROJECT_DIR$/FoodieDB/log/log.ctrl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FoodieDB/log/logmirror.ctrl" afterPath="$PROJECT_DIR$/FoodieDB/log/logmirror.ctrl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FoodieDB/seg0/c10.dat" afterPath="$PROJECT_DIR$/FoodieDB/seg0/c10.dat" />
@@ -21,19 +17,20 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FoodieDB/seg0/c571.dat" afterPath="$PROJECT_DIR$/FoodieDB/seg0/c571.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/WEB-INF/classes/it/progettoweb/db/DBManager.class" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/WEB-INF/classes/it/progettoweb/db/DBManager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/WEB-INF/classes/it/progettoweb/logic/Search.class" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/WEB-INF/classes/it/progettoweb/logic/Search.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/WEB-INF/classes/it/progettoweb/services/autocompleteService.class" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/WEB-INF/classes/it/progettoweb/services/autocompleteService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/foodie/it/progettoweb/db/DBManager.class" afterPath="$PROJECT_DIR$/out/production/foodie/it/progettoweb/db/DBManager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/foodie/it/progettoweb/logic/Search.class" afterPath="$PROJECT_DIR$/out/production/foodie/it/progettoweb/logic/Search.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/foodie/it/progettoweb/services/autocompleteService.class" afterPath="$PROJECT_DIR$/out/production/foodie/it/progettoweb/services/autocompleteService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apache-tomcat-8.5.5/bin/derby.log" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.5/bin/derby.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/searchResults.jsp" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/searchResults.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/it/progettoweb/data/Review.java" afterPath="$PROJECT_DIR$/src/it/progettoweb/data/Review.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/it/progettoweb/db/DBManager.java" afterPath="$PROJECT_DIR$/src/it/progettoweb/db/DBManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/it/progettoweb/logic/RetrieveRestaurant.java" afterPath="$PROJECT_DIR$/src/it/progettoweb/logic/RetrieveRestaurant.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/it/progettoweb/logic/Search.java" afterPath="$PROJECT_DIR$/src/it/progettoweb/logic/Search.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/it/progettoweb/services/autocompleteService.java" afterPath="$PROJECT_DIR$/src/it/progettoweb/services/autocompleteService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/it/progettoweb/logic/StoreReview.java" afterPath="$PROJECT_DIR$/src/it/progettoweb/logic/StoreReview.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/restaurant.jsp" afterPath="$PROJECT_DIR$/web/restaurant.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/searchResults.jsp" afterPath="$PROJECT_DIR$/web/searchResults.jsp" />
     </list>
     <ignored path="foodie.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -87,11 +84,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DBManager.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DBManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/it/progettoweb/db/DBManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="536" column="62" lean-forward="false" selection-start-line="536" selection-start-column="62" selection-end-line="536" selection-end-column="62" />
+            <state relative-caret-position="840">
+              <caret line="434" column="52" lean-forward="false" selection-start-line="434" selection-start-column="52" selection-end-line="434" selection-end-column="52" />
               <folding>
                 <element signature="method#DBManager#0;class#DBManager#0" expanded="false" />
                 <element signature="method#shutdown#0;class#DBManager#0" expanded="false" />
@@ -109,107 +106,73 @@
                 <element signature="method#assignRestaurant#0;class#DBManager#0" expanded="false" />
                 <element signature="method#getAdminNotifications#0;class#DBManager#0" expanded="false" />
                 <element signature="method#saveReview#0;class#DBManager#0" expanded="false" />
+                <element signature="method#lastReviewDate#0;class#DBManager#0" expanded="false" />
                 <element signature="method#hasOwner#0;class#DBManager#0" expanded="false" />
-                <element signature="method#getReviews#0;class#DBManager#0" expanded="false" />
                 <element signature="method#getReviewsNumber#0;class#DBManager#0" expanded="false" />
                 <element signature="method#computeRating#0;class#DBManager#0" expanded="false" />
                 <element signature="method#getRestaurantById#0;class#DBManager#0" expanded="false" />
                 <element signature="method#getRestaurants#0;class#DBManager#0" expanded="false" />
                 <element signature="method#getRestaurantsByRegion#0;class#DBManager#0" expanded="false" />
                 <element signature="method#getRestaurantsByCity#0;class#DBManager#0" expanded="false" />
+                <element signature="method#getCuisines#0;class#DBManager#0" expanded="false" />
+                <element signature="method#getCuisinesRegion#0;class#DBManager#0" expanded="false" />
+                <element signature="method#getCuisinesCity#0;class#DBManager#0" expanded="false" />
                 <element signature="method#getCuisineSuggestion#0;class#DBManager#0" expanded="false" />
                 <element signature="method#getPlaceSuggestion#0;class#DBManager#0" expanded="false" />
                 <element signature="method#getRestaurantSuggestion#0;class#DBManager#0" expanded="false" />
-                <marker date="1485597277000" expanded="true" signature="1874:1916" ph="SELECT * FRO... USER" />
-                <marker date="1485597277000" expanded="true" signature="3197:3288" ph="INSERT INTO APP.\&quot;USER\&quot;... " />
-                <marker date="1485597277000" expanded="true" signature="3863:3959" ph="UPDATE APP.\... " />
-                <marker date="1485597277000" expanded="true" signature="4437:4505" ph="UPDATE APP.\... " />
-                <marker date="1485597277000" expanded="true" signature="5008:5106" ph="UPDATE APP.\... " />
-                <marker date="1485597277000" expanded="true" signature="5683:5731" ph="UPDATE APP.\... " />
-                <marker date="1485597277000" expanded="true" signature="6067:6109" ph="SELECT * FRO... USER" />
-                <marker date="1485597277000" expanded="true" signature="6817:6868" ph="UPDATE APP.\... " />
-                <marker date="1485597277000" expanded="true" signature="7207:7249" ph="SELECT * FRO... USER" />
-                <marker date="1485597277000" expanded="true" signature="8072:8124" ph="UPDATE APP.\... " />
-                <marker date="1485597277000" expanded="true" signature="8572:8618" ph="SELECT EMAIL... USER" />
-                <marker date="1485597277000" expanded="true" signature="9085:9184" ph="INSERT INTO APP.REVIEW... " />
-                <marker date="1485597277000" expanded="true" signature="9708:9747" ph="UPDATE APP.N... " />
-                <marker date="1485597277000" expanded="true" signature="9708:9748" ph="UPDATE APP.N... " />
-                <marker date="1485597277000" expanded="true" signature="9708:9762" ph="UPDATE APP.N... " />
-                <marker date="1485597277000" expanded="true" signature="10239:10350" ph="SELECT FROM NOTIFICATION" />
-                <marker date="1485597277000" expanded="true" signature="10239:10351" ph="SELECT APP.N... NOTIFICATION" />
-                <marker date="1485597277000" expanded="true" signature="10887:10935" ph="UPDATE APP.R... " />
-                <marker date="1485597277000" expanded="true" signature="11336:11384" ph="UPDATE APP.J... " />
-                <marker date="1485597277000" expanded="true" signature="11851:11911" ph="SELECT * FRO... NOTIFICATION" />
-                <marker date="1485597277000" expanded="true" signature="11851:11929" ph="SELECT * FRO... NOTIFICATION" />
-                <marker date="1485597277000" expanded="true" signature="12871:12971" ph="INSERT INTO APP.REVIEW... " />
-                <marker date="1485597277000" expanded="true" signature="13618:13693" ph="SELECT APP.R... RESTAURANT" />
-                <marker date="1485597277000" expanded="true" signature="14110:14216" ph="SELECT * FRO... REVIEW" />
-                <marker date="1485597277000" expanded="true" signature="15230:15289" ph="SELECT COUNT... REVIEW" />
-                <marker date="1485597277000" expanded="true" signature="15733:15817" ph="SELECT AVG(C... REVIEW" />
-                <marker date="1485597277000" expanded="true" signature="16306:16355" ph="UPDATE APP.R... " />
-                <marker date="1485597277000" expanded="true" signature="16806:16925" ph="SELECT * FRO... RESTAURANT" />
-                <marker date="1485597277000" expanded="true" signature="18914:19093" ph="SELECT * FRO... RESTAURANT" />
-                <marker date="1485597277000" expanded="true" signature="20790:20978" ph="SELECT * FRO... RESTAURANT" />
-                <marker date="1485597277000" expanded="true" signature="22781:22967" ph="SELECT * FRO... RESTAURANT" />
-                <marker date="1485597277000" expanded="true" signature="24845:24902" ph="SELECT TYPE CUISINETYPE" />
-                <marker date="1485597277000" expanded="true" signature="25636:25709" ph="SELECT DISTI... RESTAURANT" />
-                <marker date="1485597277000" expanded="true" signature="26365:26441" ph="SELECT DISTI... RESTAURANT" />
-                <marker date="1485597277000" expanded="true" signature="27275:27358" ph="SELECT DISTI... RESTAURANT" />
+                <marker date="1485618875000" expanded="true" signature="1902:1944" ph="SELECT * FRO... USER" />
+                <marker date="1485618875000" expanded="true" signature="3225:3316" ph="INSERT INTO APP.\&quot;USER\&quot;... " />
+                <marker date="1485618875000" expanded="true" signature="3891:3987" ph="UPDATE APP.\... " />
+                <marker date="1485618875000" expanded="true" signature="4465:4533" ph="UPDATE APP.\... " />
+                <marker date="1485618875000" expanded="true" signature="5036:5134" ph="UPDATE APP.\... " />
+                <marker date="1485618875000" expanded="true" signature="5711:5759" ph="UPDATE APP.\... " />
+                <marker date="1485618875000" expanded="true" signature="6095:6137" ph="SELECT * FRO... USER" />
+                <marker date="1485618875000" expanded="true" signature="6845:6896" ph="UPDATE APP.\... " />
+                <marker date="1485618875000" expanded="true" signature="7235:7277" ph="SELECT * FRO... USER" />
+                <marker date="1485618875000" expanded="true" signature="8100:8152" ph="UPDATE APP.\... " />
+                <marker date="1485618875000" expanded="true" signature="8600:8646" ph="SELECT EMAIL... USER" />
+                <marker date="1485618875000" expanded="true" signature="9113:9212" ph="INSERT INTO APP.REVIEW... " />
+                <marker date="1485618875000" expanded="true" signature="9736:9775" ph="UPDATE APP.N... " />
+                <marker date="1485618875000" expanded="true" signature="9736:9776" ph="UPDATE APP.N... " />
+                <marker date="1485618875000" expanded="true" signature="9736:9790" ph="UPDATE APP.N... " />
+                <marker date="1485618875000" expanded="true" signature="10267:10378" ph="SELECT FROM NOTIFICATION" />
+                <marker date="1485618875000" expanded="true" signature="10267:10379" ph="SELECT APP.N... NOTIFICATION" />
+                <marker date="1485618875000" expanded="true" signature="10915:10963" ph="UPDATE APP.R... " />
+                <marker date="1485618875000" expanded="true" signature="11364:11412" ph="UPDATE APP.J... " />
+                <marker date="1485618875000" expanded="true" signature="11879:11939" ph="SELECT * FRO... NOTIFICATION" />
+                <marker date="1485618875000" expanded="true" signature="11879:11957" ph="SELECT * FRO... NOTIFICATION" />
+                <marker date="1485618875000" expanded="true" signature="12899:12999" ph="INSERT INTO APP.REVIEW... " />
+                <marker date="1485618875000" expanded="true" signature="13739:13819" ph="SELECT MAX(D... REVIEW" />
+                <marker date="1485618875000" expanded="true" signature="13739:13822" ph="SELECT MAX(\... REVIEW" />
+                <marker date="1485618875000" expanded="true" signature="14459:14534" ph="SELECT APP.R... RESTAURANT" />
+                <marker date="1485618875000" expanded="true" signature="14951:15057" ph="SELECT * FRO... REVIEW" />
+                <marker date="1485618875000" expanded="true" signature="14951:15066" ph="SELECT * FRO... REVIEW" />
+                <marker date="1485618875000" expanded="true" signature="14951:15080" ph="SELECT * FRO... REVIEW" />
+                <marker date="1485618875000" expanded="true" signature="16108:16167" ph="SELECT COUNT... REVIEW" />
+                <marker date="1485618875000" expanded="true" signature="16611:16695" ph="SELECT AVG(C... REVIEW" />
+                <marker date="1485618875000" expanded="true" signature="17184:17233" ph="UPDATE APP.R... " />
+                <marker date="1485618875000" expanded="true" signature="17684:17803" ph="SELECT * FRO... RESTAURANT" />
+                <marker date="1485618875000" expanded="true" signature="19861:19992" ph="SELECT * FRO... RESTAURANT" />
+                <marker date="1485618875000" expanded="true" signature="20037:20182" ph="SELECT * FRO... RESTAURANT" />
+                <marker date="1485618875000" expanded="true" signature="22549:22682" ph="SELECT * FRO... RESTAURANT" />
+                <marker date="1485618875000" expanded="true" signature="22727:22874" ph="SELECT * FRO... RESTAURANT" />
+                <marker date="1485618875000" expanded="true" signature="28417:28567" ph="SELECT DISTI... RESTAURANT" />
+                <marker date="1485618875000" expanded="true" signature="29149:29301" ph="SELECT DISTI... RESTAURANT" />
+                <marker date="1485618875000" expanded="true" signature="29881:30031" ph="SELECT DISTI... RESTAURANT" />
+                <marker date="1485618875000" expanded="true" signature="30697:30754" ph="SELECT TYPE CUISINETYPE" />
+                <marker date="1485618875000" expanded="true" signature="31488:31561" ph="SELECT DISTI... RESTAURANT" />
+                <marker date="1485618875000" expanded="true" signature="32217:32293" ph="SELECT DISTI... RESTAURANT" />
+                <marker date="1485618875000" expanded="true" signature="33127:33210" ph="SELECT DISTI... RESTAURANT" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Search.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/Search.java">
+      <file leaf-file-name="restaurant.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/restaurant.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="90" column="50" lean-forward="false" selection-start-line="89" selection-start-column="8" selection-end-line="90" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="autocompleteService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/it/progettoweb/services/autocompleteService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="673">
-              <caret line="82" column="8" lean-forward="false" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FillRestaurantFilter.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/it/progettoweb/filters/FillRestaurantFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="31" column="53" lean-forward="false" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="179" column="73" lean-forward="false" selection-start-line="179" selection-start-column="73" selection-end-line="179" selection-end-column="73" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="APP.REVIEW" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/64d61d3c/60e6a14f-ea49-4590-9e5d-cff429d22906/APP.REVIEW">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="463">
+              <caret line="40" column="32" lean-forward="false" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -218,18 +181,61 @@
       <file leaf-file-name="writeRev.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/writeRev.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
+            <state relative-caret-position="58">
               <caret line="22" column="56" lean-forward="false" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SessionFilter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/it/progettoweb/filters/SessionFilter.java">
+      <file leaf-file-name="Search.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/Search.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="30" column="46" lean-forward="false" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
+            <state relative-caret-position="-2">
+              <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RetrieveRestaurant.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/RetrieveRestaurant.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="268">
+              <caret line="84" column="115" lean-forward="false" selection-start-line="84" selection-start-column="115" selection-end-line="84" selection-end-column="115" />
+              <folding>
+                <element signature="e#0#3391#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StoreReview.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/StoreReview.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="403">
+              <caret line="111" column="19" lean-forward="false" selection-start-line="111" selection-start-column="19" selection-end-line="111" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="31" column="45" lean-forward="false" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="searchResults.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/searchResults.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="298">
+              <caret line="35" column="50" lean-forward="false" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -291,15 +297,12 @@
         <option value="$PROJECT_DIR$/src/it/progettoweb/data/SearchResult.java" />
         <option value="dbtable:/9b71311c/60e6a14f-ea49-4590-9e5d-cff429d22906/APP.USER" />
         <option value="$PROJECT_DIR$/web/user.jsp" />
-        <option value="$PROJECT_DIR$/src/it/progettoweb/data/Review.java" />
         <option value="dbtable:/9b71311c/60e6a14f-ea49-4590-9e5d-cff429d22906/APP.RESTAURANT" />
-        <option value="$PROJECT_DIR$/web/searchResults.jsp" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/data/Notification.java" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/data/User.java" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/logic/RefreshNotifications.java" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/logic/ClaimRestaurant.java" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/logic/DismissNotification.java" />
-        <option value="$PROJECT_DIR$/web/restaurant.jsp" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/logic/AssignRestaurant.java" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/filters/AdminFilter.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/notificatons.jsp" />
@@ -307,17 +310,20 @@
         <option value="$PROJECT_DIR$/src/it/progettoweb/filters/AdminOwnerFilter.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/adminBar.jsp" />
         <option value="$PROJECT_DIR$/web/notifications.jsp" />
-        <option value="$PROJECT_DIR$/src/it/progettoweb/logic/RetrieveRestaurant.java" />
-        <option value="$PROJECT_DIR$/src/it/progettoweb/logic/StoreReview.java" />
         <option value="$PROJECT_DIR$/web/writeRev.jsp" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/filters/SessionFilter.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/60e6a14f-ea49-4590-9e5d-cff429d22906/console.sql" />
-        <option value="$PROJECT_DIR$/src/it/progettoweb/db/DBManager.java" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/src/it/progettoweb/logic/Search.java" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/services/autocompleteService.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/filters/FillRestaurantFilter.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/60e6a14f-ea49-4590-9e5d-cff429d22906/console.sql" />
+        <option value="$PROJECT_DIR$/web/searchResults.jsp" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/src/it/progettoweb/data/Review.java" />
+        <option value="$PROJECT_DIR$/src/it/progettoweb/logic/Search.java" />
+        <option value="$PROJECT_DIR$/web/restaurant.jsp" />
+        <option value="$PROJECT_DIR$/src/it/progettoweb/logic/StoreReview.java" />
+        <option value="$PROJECT_DIR$/src/it/progettoweb/logic/RetrieveRestaurant.java" />
+        <option value="$PROJECT_DIR$/src/it/progettoweb/db/DBManager.java" />
       </list>
     </option>
   </component>
@@ -505,6 +511,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Foodie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Foodie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="progettoweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1137,7 +1165,7 @@
       <workItem from="1485514549243" duration="2337000" />
       <workItem from="1485517439965" duration="973000" />
       <workItem from="1485528275787" duration="17800000" />
-      <workItem from="1485589394857" duration="10105000" />
+      <workItem from="1485589394857" duration="22628000" />
     </task>
     <task id="LOCAL-00001" summary="Autocomplete &amp; Login">
       <created>1476382465551</created>
@@ -1150,7 +1178,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="175599000" />
+    <option name="totallyTimeSpent" value="188122000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1168,76 +1196,39 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17453505" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38915664" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32771084" sideWeight="0.49713877" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2160229" sideWeight="0.44578314" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2160229" sideWeight="0.55421686" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14878398" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17453505" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38915664" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32771084" sideWeight="0.49713877" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2160229" sideWeight="0.44378698" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2160229" sideWeight="0.556213" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35060242" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.49713877" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22317597" sideWeight="0.46626505" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22031474" sideWeight="0.5337349" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -1277,7 +1268,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="20" />
+      <option name="time" value="22" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1286,27 +1277,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/error.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/data/AutocompleteElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/services/ApplicationConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/user.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1326,13 +1296,6 @@
     <entry file="dbDummy://dbtable:/9b71311c/60e6a14f-ea49-4590-9e5d-cff429d22906/APP.RESTAURANTCUISINE" />
     <entry file="dbDummy://dbtable:/9b71311c/60e6a14f-ea49-4590-9e5d-cff429d22906/APP.USER" />
     <entry file="dbDummy://dbtable:/9b71311c/60e6a14f-ea49-4590-9e5d-cff429d22906/APP.REVIEW" />
-    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/data/Review.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/9b71311c/60e6a14f-ea49-4590-9e5d-cff429d22906/APP.RESTAURANT" />
     <entry file="file://$PROJECT_DIR$/.idea/libraries/api.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -1350,25 +1313,11 @@
     </entry>
     <entry file="dbDummy://dbtable:/e8d99b0f/60e6a14f-ea49-4590-9e5d-cff429d22906/APP.REVIEW" />
     <entry file="dbDummy://dbtable:/e8d99b0f/60e6a14f-ea49-4590-9e5d-cff429d22906/APP.RESTAURANT" />
-    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/data/SearchResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/it/progettoweb/data/Restaurant.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="12" selection-end-column="3" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/data/Notification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1478,14 +1427,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/searchResults.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/it/progettoweb/filters/AdminOwnerFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -1521,126 +1462,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/writeRev.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="56" lean-forward="false" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/StoreReview.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/it/progettoweb/filters/SessionFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="30" column="46" lean-forward="false" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/64d61d3c/60e6a14f-ea49-4590-9e5d-cff429d22906/APP.RESTAURANT">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/60e6a14f-ea49-4590-9e5d-cff429d22906/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="36" lean-forward="false" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/db/DBManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="536" column="62" lean-forward="false" selection-start-line="536" selection-start-column="62" selection-end-line="536" selection-end-column="62" />
-          <folding>
-            <element signature="method#DBManager#0;class#DBManager#0" expanded="false" />
-            <element signature="method#shutdown#0;class#DBManager#0" expanded="false" />
-            <element signature="method#authenticate#0;class#DBManager#0" expanded="false" />
-            <element signature="method#register#0;class#DBManager#0" expanded="false" />
-            <element signature="method#enableAccount#0;class#DBManager#0" expanded="false" />
-            <element signature="method#enableRecovery#0;class#DBManager#0" expanded="false" />
-            <element signature="method#changePasswordRecovery#0;class#DBManager#0" expanded="false" />
-            <element signature="method#changeName#0;class#DBManager#0" expanded="false" />
-            <element signature="method#changeSurname#0;class#DBManager#0" expanded="false" />
-            <element signature="method#changePassword#0;class#DBManager#0" expanded="false" />
-            <element signature="method#uniqueMail#0;class#DBManager#0" expanded="false" />
-            <element signature="method#placeClaimNotification#0;class#DBManager#0" expanded="false" />
-            <element signature="method#dismissNotification#0;class#DBManager#0" expanded="false" />
-            <element signature="method#assignRestaurant#0;class#DBManager#0" expanded="false" />
-            <element signature="method#getAdminNotifications#0;class#DBManager#0" expanded="false" />
-            <element signature="method#saveReview#0;class#DBManager#0" expanded="false" />
-            <element signature="method#hasOwner#0;class#DBManager#0" expanded="false" />
-            <element signature="method#getReviews#0;class#DBManager#0" expanded="false" />
-            <element signature="method#getReviewsNumber#0;class#DBManager#0" expanded="false" />
-            <element signature="method#computeRating#0;class#DBManager#0" expanded="false" />
-            <element signature="method#getRestaurantById#0;class#DBManager#0" expanded="false" />
-            <element signature="method#getRestaurants#0;class#DBManager#0" expanded="false" />
-            <element signature="method#getRestaurantsByRegion#0;class#DBManager#0" expanded="false" />
-            <element signature="method#getRestaurantsByCity#0;class#DBManager#0" expanded="false" />
-            <element signature="method#getCuisineSuggestion#0;class#DBManager#0" expanded="false" />
-            <element signature="method#getPlaceSuggestion#0;class#DBManager#0" expanded="false" />
-            <element signature="method#getRestaurantSuggestion#0;class#DBManager#0" expanded="false" />
-            <marker date="1485597277000" expanded="true" signature="1874:1916" ph="SELECT * FRO... USER" />
-            <marker date="1485597277000" expanded="true" signature="3197:3288" ph="INSERT INTO APP.\&quot;USER\&quot;... " />
-            <marker date="1485597277000" expanded="true" signature="3863:3959" ph="UPDATE APP.\... " />
-            <marker date="1485597277000" expanded="true" signature="4437:4505" ph="UPDATE APP.\... " />
-            <marker date="1485597277000" expanded="true" signature="5008:5106" ph="UPDATE APP.\... " />
-            <marker date="1485597277000" expanded="true" signature="5683:5731" ph="UPDATE APP.\... " />
-            <marker date="1485597277000" expanded="true" signature="6067:6109" ph="SELECT * FRO... USER" />
-            <marker date="1485597277000" expanded="true" signature="6817:6868" ph="UPDATE APP.\... " />
-            <marker date="1485597277000" expanded="true" signature="7207:7249" ph="SELECT * FRO... USER" />
-            <marker date="1485597277000" expanded="true" signature="8072:8124" ph="UPDATE APP.\... " />
-            <marker date="1485597277000" expanded="true" signature="8572:8618" ph="SELECT EMAIL... USER" />
-            <marker date="1485597277000" expanded="true" signature="9085:9184" ph="INSERT INTO APP.REVIEW... " />
-            <marker date="1485597277000" expanded="true" signature="9708:9747" ph="UPDATE APP.N... " />
-            <marker date="1485597277000" expanded="true" signature="9708:9748" ph="UPDATE APP.N... " />
-            <marker date="1485597277000" expanded="true" signature="9708:9762" ph="UPDATE APP.N... " />
-            <marker date="1485597277000" expanded="true" signature="10239:10350" ph="SELECT FROM NOTIFICATION" />
-            <marker date="1485597277000" expanded="true" signature="10239:10351" ph="SELECT APP.N... NOTIFICATION" />
-            <marker date="1485597277000" expanded="true" signature="10887:10935" ph="UPDATE APP.R... " />
-            <marker date="1485597277000" expanded="true" signature="11336:11384" ph="UPDATE APP.J... " />
-            <marker date="1485597277000" expanded="true" signature="11851:11911" ph="SELECT * FRO... NOTIFICATION" />
-            <marker date="1485597277000" expanded="true" signature="11851:11929" ph="SELECT * FRO... NOTIFICATION" />
-            <marker date="1485597277000" expanded="true" signature="12871:12971" ph="INSERT INTO APP.REVIEW... " />
-            <marker date="1485597277000" expanded="true" signature="13618:13693" ph="SELECT APP.R... RESTAURANT" />
-            <marker date="1485597277000" expanded="true" signature="14110:14216" ph="SELECT * FRO... REVIEW" />
-            <marker date="1485597277000" expanded="true" signature="15230:15289" ph="SELECT COUNT... REVIEW" />
-            <marker date="1485597277000" expanded="true" signature="15733:15817" ph="SELECT AVG(C... REVIEW" />
-            <marker date="1485597277000" expanded="true" signature="16306:16355" ph="UPDATE APP.R... " />
-            <marker date="1485597277000" expanded="true" signature="16806:16925" ph="SELECT * FRO... RESTAURANT" />
-            <marker date="1485597277000" expanded="true" signature="18914:19093" ph="SELECT * FRO... RESTAURANT" />
-            <marker date="1485597277000" expanded="true" signature="20790:20978" ph="SELECT * FRO... RESTAURANT" />
-            <marker date="1485597277000" expanded="true" signature="22781:22967" ph="SELECT * FRO... RESTAURANT" />
-            <marker date="1485597277000" expanded="true" signature="24845:24902" ph="SELECT TYPE CUISINETYPE" />
-            <marker date="1485597277000" expanded="true" signature="25636:25709" ph="SELECT DISTI... RESTAURANT" />
-            <marker date="1485597277000" expanded="true" signature="26365:26441" ph="SELECT DISTI... RESTAURANT" />
-            <marker date="1485597277000" expanded="true" signature="27275:27358" ph="SELECT DISTI... RESTAURANT" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="179" column="73" lean-forward="false" selection-start-line="179" selection-start-column="73" selection-end-line="179" selection-end-column="73" />
           <folding />
         </state>
       </provider>
@@ -1669,30 +1494,144 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/filters/FillRestaurantFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="31" column="53" lean-forward="false" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/register.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="50" column="75" lean-forward="true" selection-start-line="50" selection-start-column="75" selection-end-line="50" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/data/SearchResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/60e6a14f-ea49-4590-9e5d-cff429d22906/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="41" lean-forward="false" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/64d61d3c/60e6a14f-ea49-4590-9e5d-cff429d22906/APP.RESTAURANT">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/data/Notification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding>
+            <element signature="e#643#644#0" expanded="true" />
+            <element signature="e#670#671#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/data/RecoveryMail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/searchResults.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="35" column="50" lean-forward="false" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="31" column="45" lean-forward="false" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/data/Review.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/filters/GuestFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/Search.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="90" column="50" lean-forward="false" selection-start-line="89" selection-start-column="8" selection-end-line="90" selection-end-column="50" />
+        <state relative-caret-position="-2">
+          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/restaurant.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="44" lean-forward="false" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+        <state relative-caret-position="463">
+          <caret line="40" column="32" lean-forward="false" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/writeRev.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="22" column="56" lean-forward="false" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/RetrieveRestaurant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="79" column="44" lean-forward="false" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="44" />
+        <state relative-caret-position="268">
+          <caret line="84" column="115" lean-forward="false" selection-start-line="84" selection-start-column="115" selection-end-line="84" selection-end-column="115" />
           <folding>
-            <element signature="e#0#2868#0" expanded="true" />
+            <element signature="e#0#3391#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/StoreReview.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="111" column="19" lean-forward="false" selection-start-line="111" selection-start-column="19" selection-end-line="111" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1709,11 +1648,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/filters/FillRestaurantFilter.java">
+    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/db/DBManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="31" column="53" lean-forward="false" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
-          <folding />
+        <state relative-caret-position="840">
+          <caret line="434" column="52" lean-forward="false" selection-start-line="434" selection-start-column="52" selection-end-line="434" selection-end-column="52" />
+          <folding>
+            <element signature="method#DBManager#0;class#DBManager#0" expanded="false" />
+            <element signature="method#shutdown#0;class#DBManager#0" expanded="false" />
+            <element signature="method#authenticate#0;class#DBManager#0" expanded="false" />
+            <element signature="method#register#0;class#DBManager#0" expanded="false" />
+            <element signature="method#enableAccount#0;class#DBManager#0" expanded="false" />
+            <element signature="method#enableRecovery#0;class#DBManager#0" expanded="false" />
+            <element signature="method#changePasswordRecovery#0;class#DBManager#0" expanded="false" />
+            <element signature="method#changeName#0;class#DBManager#0" expanded="false" />
+            <element signature="method#changeSurname#0;class#DBManager#0" expanded="false" />
+            <element signature="method#changePassword#0;class#DBManager#0" expanded="false" />
+            <element signature="method#uniqueMail#0;class#DBManager#0" expanded="false" />
+            <element signature="method#placeClaimNotification#0;class#DBManager#0" expanded="false" />
+            <element signature="method#dismissNotification#0;class#DBManager#0" expanded="false" />
+            <element signature="method#assignRestaurant#0;class#DBManager#0" expanded="false" />
+            <element signature="method#getAdminNotifications#0;class#DBManager#0" expanded="false" />
+            <element signature="method#saveReview#0;class#DBManager#0" expanded="false" />
+            <element signature="method#lastReviewDate#0;class#DBManager#0" expanded="false" />
+            <element signature="method#hasOwner#0;class#DBManager#0" expanded="false" />
+            <element signature="method#getReviewsNumber#0;class#DBManager#0" expanded="false" />
+            <element signature="method#computeRating#0;class#DBManager#0" expanded="false" />
+            <element signature="method#getRestaurantById#0;class#DBManager#0" expanded="false" />
+            <element signature="method#getRestaurants#0;class#DBManager#0" expanded="false" />
+            <element signature="method#getRestaurantsByRegion#0;class#DBManager#0" expanded="false" />
+            <element signature="method#getRestaurantsByCity#0;class#DBManager#0" expanded="false" />
+            <element signature="method#getCuisines#0;class#DBManager#0" expanded="false" />
+            <element signature="method#getCuisinesRegion#0;class#DBManager#0" expanded="false" />
+            <element signature="method#getCuisinesCity#0;class#DBManager#0" expanded="false" />
+            <element signature="method#getCuisineSuggestion#0;class#DBManager#0" expanded="false" />
+            <element signature="method#getPlaceSuggestion#0;class#DBManager#0" expanded="false" />
+            <element signature="method#getRestaurantSuggestion#0;class#DBManager#0" expanded="false" />
+            <marker date="1485618875000" expanded="true" signature="1902:1944" ph="SELECT * FRO... USER" />
+            <marker date="1485618875000" expanded="true" signature="3225:3316" ph="INSERT INTO APP.\&quot;USER\&quot;... " />
+            <marker date="1485618875000" expanded="true" signature="3891:3987" ph="UPDATE APP.\... " />
+            <marker date="1485618875000" expanded="true" signature="4465:4533" ph="UPDATE APP.\... " />
+            <marker date="1485618875000" expanded="true" signature="5036:5134" ph="UPDATE APP.\... " />
+            <marker date="1485618875000" expanded="true" signature="5711:5759" ph="UPDATE APP.\... " />
+            <marker date="1485618875000" expanded="true" signature="6095:6137" ph="SELECT * FRO... USER" />
+            <marker date="1485618875000" expanded="true" signature="6845:6896" ph="UPDATE APP.\... " />
+            <marker date="1485618875000" expanded="true" signature="7235:7277" ph="SELECT * FRO... USER" />
+            <marker date="1485618875000" expanded="true" signature="8100:8152" ph="UPDATE APP.\... " />
+            <marker date="1485618875000" expanded="true" signature="8600:8646" ph="SELECT EMAIL... USER" />
+            <marker date="1485618875000" expanded="true" signature="9113:9212" ph="INSERT INTO APP.REVIEW... " />
+            <marker date="1485618875000" expanded="true" signature="9736:9775" ph="UPDATE APP.N... " />
+            <marker date="1485618875000" expanded="true" signature="9736:9776" ph="UPDATE APP.N... " />
+            <marker date="1485618875000" expanded="true" signature="9736:9790" ph="UPDATE APP.N... " />
+            <marker date="1485618875000" expanded="true" signature="10267:10378" ph="SELECT FROM NOTIFICATION" />
+            <marker date="1485618875000" expanded="true" signature="10267:10379" ph="SELECT APP.N... NOTIFICATION" />
+            <marker date="1485618875000" expanded="true" signature="10915:10963" ph="UPDATE APP.R... " />
+            <marker date="1485618875000" expanded="true" signature="11364:11412" ph="UPDATE APP.J... " />
+            <marker date="1485618875000" expanded="true" signature="11879:11939" ph="SELECT * FRO... NOTIFICATION" />
+            <marker date="1485618875000" expanded="true" signature="11879:11957" ph="SELECT * FRO... NOTIFICATION" />
+            <marker date="1485618875000" expanded="true" signature="12899:12999" ph="INSERT INTO APP.REVIEW... " />
+            <marker date="1485618875000" expanded="true" signature="13739:13819" ph="SELECT MAX(D... REVIEW" />
+            <marker date="1485618875000" expanded="true" signature="13739:13822" ph="SELECT MAX(\... REVIEW" />
+            <marker date="1485618875000" expanded="true" signature="14459:14534" ph="SELECT APP.R... RESTAURANT" />
+            <marker date="1485618875000" expanded="true" signature="14951:15057" ph="SELECT * FRO... REVIEW" />
+            <marker date="1485618875000" expanded="true" signature="14951:15066" ph="SELECT * FRO... REVIEW" />
+            <marker date="1485618875000" expanded="true" signature="14951:15080" ph="SELECT * FRO... REVIEW" />
+            <marker date="1485618875000" expanded="true" signature="16108:16167" ph="SELECT COUNT... REVIEW" />
+            <marker date="1485618875000" expanded="true" signature="16611:16695" ph="SELECT AVG(C... REVIEW" />
+            <marker date="1485618875000" expanded="true" signature="17184:17233" ph="UPDATE APP.R... " />
+            <marker date="1485618875000" expanded="true" signature="17684:17803" ph="SELECT * FRO... RESTAURANT" />
+            <marker date="1485618875000" expanded="true" signature="19861:19992" ph="SELECT * FRO... RESTAURANT" />
+            <marker date="1485618875000" expanded="true" signature="20037:20182" ph="SELECT * FRO... RESTAURANT" />
+            <marker date="1485618875000" expanded="true" signature="22549:22682" ph="SELECT * FRO... RESTAURANT" />
+            <marker date="1485618875000" expanded="true" signature="22727:22874" ph="SELECT * FRO... RESTAURANT" />
+            <marker date="1485618875000" expanded="true" signature="28417:28567" ph="SELECT DISTI... RESTAURANT" />
+            <marker date="1485618875000" expanded="true" signature="29149:29301" ph="SELECT DISTI... RESTAURANT" />
+            <marker date="1485618875000" expanded="true" signature="29881:30031" ph="SELECT DISTI... RESTAURANT" />
+            <marker date="1485618875000" expanded="true" signature="30697:30754" ph="SELECT TYPE CUISINETYPE" />
+            <marker date="1485618875000" expanded="true" signature="31488:31561" ph="SELECT DISTI... RESTAURANT" />
+            <marker date="1485618875000" expanded="true" signature="32217:32293" ph="SELECT DISTI... RESTAURANT" />
+            <marker date="1485618875000" expanded="true" signature="33127:33210" ph="SELECT DISTI... RESTAURANT" />
+          </folding>
         </state>
       </provider>
     </entry>

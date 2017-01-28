@@ -18,6 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.mail.internet.*;
 import javax.mail.*;
 import javax.servlet.http.HttpSession;
+import java.time.LocalDate;
 import java.util.*;
 
 /**
@@ -105,11 +106,17 @@ public class StoreReview extends HttpServlet {
         }
 
         HttpSession session = request.getSession();
+        LocalDate lastDate = dbmanager.lastReviewDate(id, ((User)session.getAttribute("user")).getEmail());
+        if(lastDate == null || !lastDate.isBefore(LocalDate.now())){
+            response.sendRedirect("index.jsp");
+            return;
+        }
         Review review = new Review();
         review.setTitle(title);
         review.setBody(body);
         review.setRating(rating);
-        review.setDate(new Date());
+        //review.setDate(new Date());
+        review.setDate(LocalDate.now());
         review.setAuthor(((User)session.getAttribute("user")).getEmail());
         review.setRestaurant(id);
         //get user email

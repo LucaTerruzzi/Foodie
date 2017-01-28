@@ -38,7 +38,7 @@
     </c:choose></p>
     <p><jsp:getProperty name="restaurant" property="rating"/></p>
     <p><c:out value="${restaurant.location.city}"/>, <c:out value="${restaurant.location.address}"/></p>
-    <c:if test="${sessionScope.userType != 0}">
+    <c:if test="${canreview == 1}">
         <p><a href="writeRev.jsp?id=<jsp:getProperty name="restaurant" property="id"/>">SCRIVI LA RECENSIONE, CAZZO!</a> </p>
     </c:if>
     <div>

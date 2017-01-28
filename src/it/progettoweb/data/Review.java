@@ -1,5 +1,6 @@
 package it.progettoweb.data;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 /**
@@ -10,7 +11,7 @@ public class Review {
     private int id;
     private String title;
     private String body;
-    private Date date;
+    private LocalDate date;
     private float rating;
     private String author;
     private int restaurant;
@@ -39,11 +40,11 @@ public class Review {
         this.body = body;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
