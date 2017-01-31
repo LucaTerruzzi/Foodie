@@ -53,7 +53,7 @@
             <div class="w3-panel w3-green">Recovery email sent. Check email<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>
         </c:when>
         <c:when test="${param.message == 4}">
-            <div class="w3-panel w3-green">Password succesfully changed<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>
+            <div class="w3-panel w3-green">Password successfully changed<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>
         </c:when>
         <c:when test="${param.message == 5}">
             <div class="w3-panel w3-green">Restaurant claimed!<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>

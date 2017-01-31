@@ -1,25 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package it.progettoweb.logic;
 
-import it.progettoweb.data.ConfirmationMail;
-import it.progettoweb.data.Notification;
-import it.progettoweb.data.Review;
 import it.progettoweb.data.User;
 import it.progettoweb.db.DBManager;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.mail.internet.*;
-import javax.mail.*;
 import javax.servlet.http.HttpSession;
-import java.util.*;
 
 /**
  * Servlet which manages refreshing notifications
@@ -36,7 +24,7 @@ public class RefreshNotifications extends HttpServlet {
      */
     @Override
     public void init() throws ServletException {
-        // initialize dbmanager attribute
+        // Initialize dbmanager attribute
         this.dbmanager = (DBManager)super.getServletContext().getAttribute("dbmanager");
     }
 
@@ -53,6 +41,7 @@ public class RefreshNotifications extends HttpServlet {
             throws ServletException, IOException {
 
         HttpSession session = request.getSession();
+        // If the user is an admin
         if((int)session.getAttribute("userType") == 3 && session.getAttribute("user") != null){
             ((User)session.getAttribute("user")).setNotifications(dbmanager.getAdminNotifications());
             response.sendRedirect("index.jsp");
@@ -73,7 +62,7 @@ public class RefreshNotifications extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        //you shouldn't reach this servlet via POST !!!
+        // This servlet shouldn't be reached via POST
         response.sendRedirect("index.jsp");
 
     }

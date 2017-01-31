@@ -2,25 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="236c4e26-c158-4237-8c57-21e1b7388dbe" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FoodieDB/log/log.ctrl" afterPath="$PROJECT_DIR$/FoodieDB/log/log.ctrl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FoodieDB/log/log34.dat" afterPath="$PROJECT_DIR$/FoodieDB/log/log34.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FoodieDB/log/logmirror.ctrl" afterPath="$PROJECT_DIR$/FoodieDB/log/logmirror.ctrl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FoodieDB/seg0/c10.dat" afterPath="$PROJECT_DIR$/FoodieDB/seg0/c10.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FoodieDB/seg0/c230.dat" afterPath="$PROJECT_DIR$/FoodieDB/seg0/c230.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FoodieDB/seg0/c241.dat" afterPath="$PROJECT_DIR$/FoodieDB/seg0/c241.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FoodieDB/seg0/c251.dat" afterPath="$PROJECT_DIR$/FoodieDB/seg0/c251.dat" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/pics/other/background1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/pics/other/backgroundPicBlurred.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/pics/other/backgroundPicBlurred4060.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/pics/other/backgroundPicBrush.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/pics/other/backgroundPic.jpg" afterPath="$PROJECT_DIR$/web/pics/other/backgroundPic.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apache-tomcat-8.5.5/bin/derby.log" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.5/bin/derby.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/css/fdColours.css" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/css/fdColours.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/notifications.jsp" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/notifications.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/restaurant.jsp" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/restaurant.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/searchResults.jsp" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/searchResults.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/writeRev.jsp" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/writeRev.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/fdColours.css" afterPath="$PROJECT_DIR$/web/css/fdColours.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/notifications.jsp" afterPath="$PROJECT_DIR$/web/notifications.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/restaurant.jsp" afterPath="$PROJECT_DIR$/web/restaurant.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/searchResults.jsp" afterPath="$PROJECT_DIR$/web/searchResults.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/writeRev.jsp" afterPath="$PROJECT_DIR$/web/writeRev.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/it/progettoweb/logic/AccountConfirm.java" afterPath="$PROJECT_DIR$/src/it/progettoweb/logic/AccountConfirm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/it/progettoweb/logic/AssignRestaurant.java" afterPath="$PROJECT_DIR$/src/it/progettoweb/logic/AssignRestaurant.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/it/progettoweb/logic/ClaimRestaurant.java" afterPath="$PROJECT_DIR$/src/it/progettoweb/logic/ClaimRestaurant.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/it/progettoweb/logic/EditInfos.java" afterPath="$PROJECT_DIR$/src/it/progettoweb/logic/EditInfos.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/it/progettoweb/logic/Login.java" afterPath="$PROJECT_DIR$/src/it/progettoweb/logic/Login.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/it/progettoweb/logic/Logout.java" afterPath="$PROJECT_DIR$/src/it/progettoweb/logic/Logout.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/it/progettoweb/logic/PwdRecovery.java" afterPath="$PROJECT_DIR$/src/it/progettoweb/logic/PwdRecovery.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/it/progettoweb/logic/PwdRecoverySender.java" afterPath="$PROJECT_DIR$/src/it/progettoweb/logic/PwdRecoverySender.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/it/progettoweb/logic/RefreshNotifications.java" afterPath="$PROJECT_DIR$/src/it/progettoweb/logic/RefreshNotifications.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/it/progettoweb/logic/Register.java" afterPath="$PROJECT_DIR$/src/it/progettoweb/logic/Register.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/it/progettoweb/logic/RetrieveRestaurant.java" afterPath="$PROJECT_DIR$/src/it/progettoweb/logic/RetrieveRestaurant.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/it/progettoweb/logic/Search.java" afterPath="$PROJECT_DIR$/src/it/progettoweb/logic/Search.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/it/progettoweb/logic/StoreReview.java" afterPath="$PROJECT_DIR$/src/it/progettoweb/logic/StoreReview.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/register.jsp" afterPath="$PROJECT_DIR$/web/register.jsp" />
     </list>
     <ignored path="foodie.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,154 +75,7 @@
     <favorites_list name="foodie" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DBManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/it/progettoweb/db/DBManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="434" column="51" lean-forward="false" selection-start-line="434" selection-start-column="51" selection-end-line="434" selection-end-column="51" />
-              <folding>
-                <element signature="method#DBManager#0;class#DBManager#0" expanded="false" />
-                <element signature="method#shutdown#0;class#DBManager#0" expanded="false" />
-                <element signature="method#authenticate#0;class#DBManager#0" expanded="false" />
-                <element signature="method#register#0;class#DBManager#0" expanded="false" />
-                <element signature="method#enableAccount#0;class#DBManager#0" expanded="false" />
-                <element signature="method#enableRecovery#0;class#DBManager#0" expanded="false" />
-                <element signature="method#changePasswordRecovery#0;class#DBManager#0" expanded="false" />
-                <element signature="method#changeName#0;class#DBManager#0" expanded="false" />
-                <element signature="method#changeSurname#0;class#DBManager#0" expanded="false" />
-                <element signature="method#changePassword#0;class#DBManager#0" expanded="false" />
-                <element signature="method#uniqueMail#0;class#DBManager#0" expanded="false" />
-                <element signature="method#placeClaimNotification#0;class#DBManager#0" expanded="false" />
-                <element signature="method#dismissNotification#0;class#DBManager#0" expanded="false" />
-                <element signature="method#assignRestaurant#0;class#DBManager#0" expanded="false" />
-                <element signature="method#getAdminNotifications#0;class#DBManager#0" expanded="false" />
-                <element signature="method#saveReview#0;class#DBManager#0" expanded="false" />
-                <element signature="method#lastReviewDate#0;class#DBManager#0" expanded="false" />
-                <element signature="method#hasOwner#0;class#DBManager#0" expanded="false" />
-                <element signature="method#getReviews#0;class#DBManager#0" expanded="false" />
-                <element signature="method#getReviewsNumber#0;class#DBManager#0" expanded="false" />
-                <element signature="method#computeRating#0;class#DBManager#0" expanded="false" />
-                <element signature="method#getRestaurantById#0;class#DBManager#0" expanded="false" />
-                <element signature="method#getRestaurants#0;class#DBManager#0" expanded="false" />
-                <element signature="method#getRestaurantsByRegion#0;class#DBManager#0" expanded="false" />
-                <element signature="method#getRestaurantsByCity#0;class#DBManager#0" expanded="false" />
-                <element signature="method#getCuisines#0;class#DBManager#0" expanded="false" />
-                <element signature="method#getCuisinesRegion#0;class#DBManager#0" expanded="false" />
-                <element signature="method#getCuisinesCity#0;class#DBManager#0" expanded="false" />
-                <element signature="method#getCuisineSuggestion#0;class#DBManager#0" expanded="false" />
-                <element signature="method#getPlaceSuggestion#0;class#DBManager#0" expanded="false" />
-                <element signature="method#getRestaurantSuggestion#0;class#DBManager#0" expanded="false" />
-                <marker date="1485618875000" expanded="true" signature="1902:1944" ph="SELECT * FRO... USER" />
-                <marker date="1485618875000" expanded="true" signature="3225:3316" ph="INSERT INTO APP.\&quot;USER\&quot;... " />
-                <marker date="1485618875000" expanded="true" signature="3891:3987" ph="UPDATE APP.\... " />
-                <marker date="1485618875000" expanded="true" signature="4465:4533" ph="UPDATE APP.\... " />
-                <marker date="1485618875000" expanded="true" signature="5036:5134" ph="UPDATE APP.\... " />
-                <marker date="1485618875000" expanded="true" signature="5711:5759" ph="UPDATE APP.\... " />
-                <marker date="1485618875000" expanded="true" signature="6095:6137" ph="SELECT * FRO... USER" />
-                <marker date="1485618875000" expanded="true" signature="6845:6896" ph="UPDATE APP.\... " />
-                <marker date="1485618875000" expanded="true" signature="7235:7277" ph="SELECT * FRO... USER" />
-                <marker date="1485618875000" expanded="true" signature="8100:8152" ph="UPDATE APP.\... " />
-                <marker date="1485618875000" expanded="true" signature="8600:8646" ph="SELECT EMAIL... USER" />
-                <marker date="1485618875000" expanded="true" signature="9113:9212" ph="INSERT INTO APP.REVIEW... " />
-                <marker date="1485618875000" expanded="true" signature="9736:9775" ph="UPDATE APP.N... " />
-                <marker date="1485618875000" expanded="true" signature="9736:9776" ph="UPDATE APP.N... " />
-                <marker date="1485618875000" expanded="true" signature="9736:9790" ph="UPDATE APP.N... " />
-                <marker date="1485618875000" expanded="true" signature="10267:10378" ph="SELECT FROM NOTIFICATION" />
-                <marker date="1485618875000" expanded="true" signature="10267:10379" ph="SELECT APP.N... NOTIFICATION" />
-                <marker date="1485618875000" expanded="true" signature="10915:10963" ph="UPDATE APP.R... " />
-                <marker date="1485618875000" expanded="true" signature="11364:11412" ph="UPDATE APP.J... " />
-                <marker date="1485618875000" expanded="true" signature="11879:11939" ph="SELECT * FRO... NOTIFICATION" />
-                <marker date="1485618875000" expanded="true" signature="11879:11957" ph="SELECT * FRO... NOTIFICATION" />
-                <marker date="1485618875000" expanded="true" signature="12899:12999" ph="INSERT INTO APP.REVIEW... " />
-                <marker date="1485618875000" expanded="true" signature="13739:13819" ph="SELECT MAX(D... REVIEW" />
-                <marker date="1485618875000" expanded="true" signature="13739:13822" ph="SELECT MAX(\... REVIEW" />
-                <marker date="1485618875000" expanded="true" signature="14459:14534" ph="SELECT APP.R... RESTAURANT" />
-                <marker date="1485618875000" expanded="true" signature="14951:15057" ph="SELECT * FRO... REVIEW" />
-                <marker date="1485618875000" expanded="true" signature="14951:15066" ph="SELECT * FRO... REVIEW" />
-                <marker date="1485618875000" expanded="true" signature="14951:15080" ph="SELECT * FRO... REVIEW" />
-                <marker date="1485618875000" expanded="true" signature="16108:16167" ph="SELECT COUNT... REVIEW" />
-                <marker date="1485618875000" expanded="true" signature="16611:16695" ph="SELECT AVG(C... REVIEW" />
-                <marker date="1485618875000" expanded="true" signature="17184:17233" ph="UPDATE APP.R... " />
-                <marker date="1485618875000" expanded="true" signature="17684:17803" ph="SELECT * FRO... RESTAURANT" />
-                <marker date="1485618875000" expanded="true" signature="19861:19992" ph="SELECT * FRO... RESTAURANT" />
-                <marker date="1485618875000" expanded="true" signature="20037:20182" ph="SELECT * FRO... RESTAURANT" />
-                <marker date="1485618875000" expanded="true" signature="22549:22682" ph="SELECT * FRO... RESTAURANT" />
-                <marker date="1485618875000" expanded="true" signature="22727:22874" ph="SELECT * FRO... RESTAURANT" />
-                <marker date="1485618875000" expanded="true" signature="28417:28567" ph="SELECT DISTI... RESTAURANT" />
-                <marker date="1485618875000" expanded="true" signature="29149:29301" ph="SELECT DISTI... RESTAURANT" />
-                <marker date="1485618875000" expanded="true" signature="29881:30031" ph="SELECT DISTI... RESTAURANT" />
-                <marker date="1485618875000" expanded="true" signature="30697:30754" ph="SELECT TYPE CUISINETYPE" />
-                <marker date="1485618875000" expanded="true" signature="31488:31561" ph="SELECT DISTI... RESTAURANT" />
-                <marker date="1485618875000" expanded="true" signature="32217:32293" ph="SELECT DISTI... RESTAURANT" />
-                <marker date="1485618875000" expanded="true" signature="33127:33210" ph="SELECT DISTI... RESTAURANT" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Search.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/Search.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1065">
-              <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RetrieveRestaurant.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/RetrieveRestaurant.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="120" column="9" lean-forward="false" selection-start-line="120" selection-start-column="9" selection-end-line="120" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#4503#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/register.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="152" column="24" lean-forward="false" selection-start-line="152" selection-start-column="22" selection-end-line="152" selection-end-column="24" />
-              <folding>
-                <element signature="n#style#0;n#input#0;n#form#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#form#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#form#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#2;n#form#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#3;n#form#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#4;n#form#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#5;n#form#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Register.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/Register.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1350">
-              <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StoreReview.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/StoreReview.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="628">
-              <caret line="111" column="19" lean-forward="false" selection-start-line="111" selection-start-column="19" selection-end-line="111" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -252,22 +107,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/it/progettoweb/filters/GuestFilter.java" />
-        <option value="$PROJECT_DIR$/src/it/progettoweb/logic/Login.java" />
-        <option value="$PROJECT_DIR$/src/it/progettoweb/logic/AccountConfirm.java" />
-        <option value="$PROJECT_DIR$/src/it/progettoweb/logic/Register.java" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/data/RecoveryEmail.java" />
         <option value="$PROJECT_DIR$/web/pwdRecovery.jsp" />
         <option value="$PROJECT_DIR$/web/pwdChange.jsp" />
-        <option value="$PROJECT_DIR$/src/it/progettoweb/logic/PwdRecoverySender.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/restaurantBar.jsp" />
-        <option value="$PROJECT_DIR$/src/it/progettoweb/logic/PwdRecovery.java" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/data/OpeningHours.java" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/listeners/ContextListener.java" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/data/Mail.java" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/data/RecoveryMail.java" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/data/ConfirmationMail.java" />
-        <option value="$PROJECT_DIR$/src/it/progettoweb/logic/EditInfos.java" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/data/AutocompleteElement.java" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/data/Restaurant.java" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/data/Location.java" />
@@ -278,10 +126,7 @@
         <option value="dbtable:/9b71311c/60e6a14f-ea49-4590-9e5d-cff429d22906/APP.RESTAURANT" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/data/Notification.java" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/data/User.java" />
-        <option value="$PROJECT_DIR$/src/it/progettoweb/logic/RefreshNotifications.java" />
-        <option value="$PROJECT_DIR$/src/it/progettoweb/logic/ClaimRestaurant.java" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/logic/DismissNotification.java" />
-        <option value="$PROJECT_DIR$/src/it/progettoweb/logic/AssignRestaurant.java" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/filters/AdminFilter.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/notificatons.jsp" />
         <option value="$PROJECT_DIR$/web/notificatons.jsp" />
@@ -294,15 +139,25 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/filters/FillRestaurantFilter.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/60e6a14f-ea49-4590-9e5d-cff429d22906/console.sql" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/data/Review.java" />
-        <option value="$PROJECT_DIR$/src/it/progettoweb/logic/StoreReview.java" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/db/DBManager.java" />
-        <option value="$PROJECT_DIR$/src/it/progettoweb/logic/Search.java" />
         <option value="$PROJECT_DIR$/web/searchResults.jsp" />
         <option value="$PROJECT_DIR$/web/restaurant.jsp" />
+        <option value="$PROJECT_DIR$/src/it/progettoweb/logic/AccountConfirm.java" />
+        <option value="$PROJECT_DIR$/src/it/progettoweb/logic/AssignRestaurant.java" />
+        <option value="$PROJECT_DIR$/src/it/progettoweb/logic/ClaimRestaurant.java" />
+        <option value="$PROJECT_DIR$/src/it/progettoweb/logic/EditInfos.java" />
+        <option value="$PROJECT_DIR$/src/it/progettoweb/logic/Login.java" />
+        <option value="$PROJECT_DIR$/src/it/progettoweb/logic/Logout.java" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/logic/RetrieveRestaurant.java" />
+        <option value="$PROJECT_DIR$/src/it/progettoweb/logic/Search.java" />
+        <option value="$PROJECT_DIR$/src/it/progettoweb/logic/StoreReview.java" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/src/it/progettoweb/logic/PwdRecovery.java" />
+        <option value="$PROJECT_DIR$/src/it/progettoweb/logic/PwdRecoverySender.java" />
+        <option value="$PROJECT_DIR$/src/it/progettoweb/logic/RefreshNotifications.java" />
         <option value="$PROJECT_DIR$/web/register.jsp" />
+        <option value="$PROJECT_DIR$/src/it/progettoweb/logic/Register.java" />
       </list>
     </option>
   </component>
@@ -323,8 +178,8 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="width" value="1680" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -342,6 +197,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -442,9 +299,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1059,6 +914,7 @@
       <workItem from="1485589394857" duration="22685000" />
       <workItem from="1485620649357" duration="1195000" />
       <workItem from="1485854479899" duration="16954000" />
+      <workItem from="1485884648172" duration="4222000" />
     </task>
     <task id="LOCAL-00001" summary="Autocomplete &amp; Login">
       <created>1476382465551</created>
@@ -1071,7 +927,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206328000" />
+    <option name="totallyTimeSpent" value="210550000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1083,8 +939,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1100,15 +956,14 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38915664" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38915664" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20171674" sideWeight="0.44378698" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16904762" sideWeight="0.44378698" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2160229" sideWeight="0.556213" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1117,6 +972,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32771084" sideWeight="0.49713877" order="14" side_tool="false" content_ui="tabs" />
@@ -1170,17 +1026,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://dbtable:/9b71311c/60e6a14f-ea49-4590-9e5d-cff429d22906/APP.RESTAURANTCUISINE" />
-    <entry file="dbDummy://dbtable:/9b71311c/60e6a14f-ea49-4590-9e5d-cff429d22906/APP.USER" />
-    <entry file="dbDummy://dbtable:/9b71311c/60e6a14f-ea49-4590-9e5d-cff429d22906/APP.REVIEW" />
-    <entry file="dbDummy://dbtable:/9b71311c/60e6a14f-ea49-4590-9e5d-cff429d22906/APP.RESTAURANT" />
-    <entry file="file://$PROJECT_DIR$/.idea/libraries/api.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/libraries/derby.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1201,13 +1046,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1739#1740#0" expanded="false" />
-            <element signature="e#1775#1776#0" expanded="false" />
-            <element signature="e#1850#1851#0" expanded="false" />
-            <element signature="e#1900#1901#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1243,37 +1081,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-572">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/ClaimRestaurant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="89" column="47" lean-forward="false" selection-start-line="89" selection-start-column="47" selection-end-line="89" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/64d61d3c/60e6a14f-ea49-4590-9e5d-cff429d22906/APP.NOTIFICATION">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="dbDummy://dbtable:/64d61d3c/60e6a14f-ea49-4590-9e5d-cff429d22906/APP.NOTIFICATION" />
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/navbar.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1296,13 +1107,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/RefreshNotifications.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="54" column="30" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/it/progettoweb/filters/AdminOwnerFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -1314,7 +1118,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1322,15 +1125,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/AssignRestaurant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-505">
-          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1353,7 +1147,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="673">
           <caret line="82" column="8" lean-forward="false" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1378,18 +1171,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/64d61d3c/60e6a14f-ea49-4590-9e5d-cff429d22906/APP.RESTAURANT">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="dbDummy://dbtable:/64d61d3c/60e6a14f-ea49-4590-9e5d-cff429d22906/APP.RESTAURANT" />
     <entry file="file://$PROJECT_DIR$/src/it/progettoweb/data/Notification.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -1418,66 +1200,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/64d61d3c/60e6a14f-ea49-4590-9e5d-cff429d22906/APP.REVIEW">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="dbDummy://dbtable:/64d61d3c/60e6a14f-ea49-4590-9e5d-cff429d22906/APP.REVIEW" />
     <entry file="file://$PROJECT_DIR$/src/it/progettoweb/data/SearchResult.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/EditInfos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-420">
-          <caret line="31" column="6" lean-forward="true" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/Search.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/RetrieveRestaurant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="120" column="9" lean-forward="false" selection-start-line="120" selection-start-column="9" selection-end-line="120" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#4503#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="68" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/Register.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1350">
-          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1485,15 +1212,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-773">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/writeRev.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="56" lean-forward="false" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1501,15 +1219,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
           <caret line="27" column="21" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/it/progettoweb/db/DBManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
+        <state relative-caret-position="471">
           <caret line="434" column="51" lean-forward="false" selection-start-line="434" selection-start-column="51" selection-end-line="434" selection-end-column="51" />
           <folding>
+            <element signature="e#0#33874#0" expanded="false" />
+            <element signature="imports" expanded="false" />
             <element signature="method#DBManager#0;class#DBManager#0" expanded="false" />
             <element signature="method#shutdown#0;class#DBManager#0" expanded="false" />
             <element signature="method#authenticate#0;class#DBManager#0" expanded="false" />
@@ -1541,81 +1260,174 @@
             <element signature="method#getCuisineSuggestion#0;class#DBManager#0" expanded="false" />
             <element signature="method#getPlaceSuggestion#0;class#DBManager#0" expanded="false" />
             <element signature="method#getRestaurantSuggestion#0;class#DBManager#0" expanded="false" />
-            <marker date="1485618875000" expanded="true" signature="1902:1944" ph="SELECT * FRO... USER" />
-            <marker date="1485618875000" expanded="true" signature="3225:3316" ph="INSERT INTO APP.\&quot;USER\&quot;... " />
-            <marker date="1485618875000" expanded="true" signature="3891:3987" ph="UPDATE APP.\... " />
-            <marker date="1485618875000" expanded="true" signature="4465:4533" ph="UPDATE APP.\... " />
-            <marker date="1485618875000" expanded="true" signature="5036:5134" ph="UPDATE APP.\... " />
-            <marker date="1485618875000" expanded="true" signature="5711:5759" ph="UPDATE APP.\... " />
-            <marker date="1485618875000" expanded="true" signature="6095:6137" ph="SELECT * FRO... USER" />
-            <marker date="1485618875000" expanded="true" signature="6845:6896" ph="UPDATE APP.\... " />
-            <marker date="1485618875000" expanded="true" signature="7235:7277" ph="SELECT * FRO... USER" />
-            <marker date="1485618875000" expanded="true" signature="8100:8152" ph="UPDATE APP.\... " />
-            <marker date="1485618875000" expanded="true" signature="8600:8646" ph="SELECT EMAIL... USER" />
-            <marker date="1485618875000" expanded="true" signature="9113:9212" ph="INSERT INTO APP.REVIEW... " />
-            <marker date="1485618875000" expanded="true" signature="9736:9775" ph="UPDATE APP.N... " />
-            <marker date="1485618875000" expanded="true" signature="9736:9776" ph="UPDATE APP.N... " />
-            <marker date="1485618875000" expanded="true" signature="9736:9790" ph="UPDATE APP.N... " />
-            <marker date="1485618875000" expanded="true" signature="10267:10378" ph="SELECT FROM NOTIFICATION" />
-            <marker date="1485618875000" expanded="true" signature="10267:10379" ph="SELECT APP.N... NOTIFICATION" />
-            <marker date="1485618875000" expanded="true" signature="10915:10963" ph="UPDATE APP.R... " />
-            <marker date="1485618875000" expanded="true" signature="11364:11412" ph="UPDATE APP.J... " />
-            <marker date="1485618875000" expanded="true" signature="11879:11939" ph="SELECT * FRO... NOTIFICATION" />
-            <marker date="1485618875000" expanded="true" signature="11879:11957" ph="SELECT * FRO... NOTIFICATION" />
-            <marker date="1485618875000" expanded="true" signature="12899:12999" ph="INSERT INTO APP.REVIEW... " />
-            <marker date="1485618875000" expanded="true" signature="13739:13819" ph="SELECT MAX(D... REVIEW" />
-            <marker date="1485618875000" expanded="true" signature="13739:13822" ph="SELECT MAX(\... REVIEW" />
-            <marker date="1485618875000" expanded="true" signature="14459:14534" ph="SELECT APP.R... RESTAURANT" />
-            <marker date="1485618875000" expanded="true" signature="14951:15057" ph="SELECT * FRO... REVIEW" />
-            <marker date="1485618875000" expanded="true" signature="14951:15066" ph="SELECT * FRO... REVIEW" />
-            <marker date="1485618875000" expanded="true" signature="14951:15080" ph="SELECT * FRO... REVIEW" />
-            <marker date="1485618875000" expanded="true" signature="16108:16167" ph="SELECT COUNT... REVIEW" />
-            <marker date="1485618875000" expanded="true" signature="16611:16695" ph="SELECT AVG(C... REVIEW" />
-            <marker date="1485618875000" expanded="true" signature="17184:17233" ph="UPDATE APP.R... " />
-            <marker date="1485618875000" expanded="true" signature="17684:17803" ph="SELECT * FRO... RESTAURANT" />
-            <marker date="1485618875000" expanded="true" signature="19861:19992" ph="SELECT * FRO... RESTAURANT" />
-            <marker date="1485618875000" expanded="true" signature="20037:20182" ph="SELECT * FRO... RESTAURANT" />
-            <marker date="1485618875000" expanded="true" signature="22549:22682" ph="SELECT * FRO... RESTAURANT" />
-            <marker date="1485618875000" expanded="true" signature="22727:22874" ph="SELECT * FRO... RESTAURANT" />
-            <marker date="1485618875000" expanded="true" signature="28417:28567" ph="SELECT DISTI... RESTAURANT" />
-            <marker date="1485618875000" expanded="true" signature="29149:29301" ph="SELECT DISTI... RESTAURANT" />
-            <marker date="1485618875000" expanded="true" signature="29881:30031" ph="SELECT DISTI... RESTAURANT" />
-            <marker date="1485618875000" expanded="true" signature="30697:30754" ph="SELECT TYPE CUISINETYPE" />
-            <marker date="1485618875000" expanded="true" signature="31488:31561" ph="SELECT DISTI... RESTAURANT" />
-            <marker date="1485618875000" expanded="true" signature="32217:32293" ph="SELECT DISTI... RESTAURANT" />
-            <marker date="1485618875000" expanded="true" signature="33127:33210" ph="SELECT DISTI... RESTAURANT" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/searchResults.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
+        <state relative-caret-position="570">
           <caret line="38" column="4" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/StoreReview.java">
+    <entry file="file://$PROJECT_DIR$/web/writeRev.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="111" column="19" lean-forward="false" selection-start-line="111" selection-start-column="19" selection-end-line="111" selection-end-column="19" />
+        <state relative-caret-position="330">
+          <caret line="22" column="39" lean-forward="true" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/AssignRestaurant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/ClaimRestaurant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="43" column="52" lean-forward="true" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/user.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="36" column="68" lean-forward="false" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/Logout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="77" column="57" lean-forward="false" selection-start-line="77" selection-start-column="57" selection-end-line="77" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/AccountConfirm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-174">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/PwdRecovery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="84" column="27" lean-forward="false" selection-start-line="84" selection-start-column="27" selection-end-line="84" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#init#0;class#PwdRecovery#0" expanded="false" />
+            <element signature="docComment;method#doGet#0;class#PwdRecovery#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/PwdRecoverySender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="79" column="35" lean-forward="false" selection-start-line="79" selection-start-column="35" selection-end-line="79" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/RefreshNotifications.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="43" column="34" lean-forward="false" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2346#2347#0" expanded="true" />
+            <element signature="e#2403#2404#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/EditInfos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="176" column="8" lean-forward="true" selection-start-line="176" selection-start-column="8" selection-end-line="176" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="40" column="41" lean-forward="false" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/Register.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="142" column="35" lean-forward="false" selection-start-line="142" selection-start-column="35" selection-end-line="142" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/register.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="152" column="24" lean-forward="false" selection-start-line="152" selection-start-column="22" selection-end-line="152" selection-end-column="24" />
+        <state relative-caret-position="532">
+          <caret line="144" column="45" lean-forward="false" selection-start-line="144" selection-start-column="45" selection-end-line="144" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/RetrieveRestaurant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="56" column="52" lean-forward="false" selection-start-line="56" selection-start-column="52" selection-end-line="56" selection-end-column="52" />
           <folding>
-            <element signature="n#style#0;n#input#0;n#form#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#form#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#form#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#2;n#form#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#3;n#form#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#4;n#form#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#5;n#form#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#0#4501#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/Search.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="49" column="52" lean-forward="false" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#4145#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/progettoweb/logic/StoreReview.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="54" column="52" lean-forward="false" selection-start-line="54" selection-start-column="52" selection-end-line="54" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#4345#0" expanded="true" />
           </folding>
         </state>
       </provider>

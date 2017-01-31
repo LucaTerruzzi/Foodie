@@ -2,9 +2,7 @@ package it.progettoweb.logic;
 
 import it.progettoweb.data.RecoveryMail;
 import it.progettoweb.db.DBManager;
-
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -26,7 +24,7 @@ public class PwdRecoverySender extends HttpServlet {
      */
     @Override
     public void init() throws ServletException {
-        // initialize dbmanager attribute
+        // Initialize dbmanager attribute
         this.dbmanager = (DBManager)super.getServletContext().getAttribute("dbmanager");
     }
 
@@ -39,7 +37,7 @@ public class PwdRecoverySender extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //you shouldn't reach this servlet via GET !!!
+        // This servlet shouldn't be reached via GET
         response.sendRedirect("index.jsp");
     }
 
@@ -56,28 +54,30 @@ public class PwdRecoverySender extends HttpServlet {
         // Parameters of the POST
         String email;
 
-        //retireve parameter
+        // Retrieve mail
         email = request.getParameter("email");
 
+        // If mail is null
         if(email == null){
-            //something wrong !!!
             response.sendRedirect("index.jsp");
             return;
         }
 
-        //Place token in DB or error
+        // Gets the generated token
         String token = dbmanager.enableRecovery(email);
+        // If the token cannot be generated
         if(token == null){
+            // Wrong username or password
             response.sendRedirect("pwdRecovery.jsp?error=1");
             return;
         }
 
         // Send confirmation email
         if(new RecoveryMail(email, token).send()){
-            // if everything is ok
+            // Recovery email sent. Check email
             response.sendRedirect("index.jsp?message=3");
         }else{
-            // if something wrong redirect with error
+            // Something went wrong
             response.sendRedirect("index.jsp?error=3");
         }
 

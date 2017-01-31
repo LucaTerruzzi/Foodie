@@ -1,18 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package it.progettoweb.logic;
 
-import it.progettoweb.data.Location;
-import it.progettoweb.data.Restaurant;
 import it.progettoweb.data.User;
 import it.progettoweb.db.DBManager;
-
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.StringJoiner;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Class for logging out users
+ * Class for assigning restaurants
  * @author Luca, Riccardo, Mario
  */
 public class AssignRestaurant extends HttpServlet {
@@ -33,7 +23,7 @@ public class AssignRestaurant extends HttpServlet {
      */
     @Override
     public void init() throws ServletException {
-        // initialize dbmanager attribute
+        // Initialize dbmanager attribute
         this.dbmanager = (DBManager)super.getServletContext().getAttribute("dbmanager");
     }
 
@@ -48,7 +38,7 @@ public class AssignRestaurant extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //you shouldn't reach this servlet via GET !!!
+        // This servlet shouldn't be reached via GET
         response.sendRedirect("index.jsp");
     }
 
@@ -64,6 +54,7 @@ public class AssignRestaurant extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         int id;
+        // Parsing to integer
         try {
             id = Integer.parseInt(request.getParameter("id"));
         } catch (NumberFormatException e){
@@ -71,18 +62,24 @@ public class AssignRestaurant extends HttpServlet {
             return;
         }
 
+        // If notification is dismissed
         HttpSession session = request.getSession();
         if(request.getParameter("dismiss") != null){
             if(dbmanager.dismissNotification(id)){
+                // Notification dismissed
                 response.sendRedirect("index.jsp?message=6");
+                // Notification refresh
                 ((User)session.getAttribute("user")).setNotifications(dbmanager.getAdminNotifications());
                 return;
             }
         }
 
+        // If notification is accepted, sets the owner
         if(request.getParameter("accept") != null){
             if(dbmanager.assignRestaurant(id)){
+                // Notification refresh
                 ((User)session.getAttribute("user")).setNotifications(dbmanager.getAdminNotifications());
+                // Owner set
                 response.sendRedirect("index.jsp?message=7");
                 return;
             }
@@ -99,7 +96,7 @@ public class AssignRestaurant extends HttpServlet {
      */
     @Override
     public String getServletInfo() {
-        return "Retrieve restaurant";
+        return "Assign restaurant";
     }
 
 }

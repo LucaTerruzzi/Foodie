@@ -1,25 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package it.progettoweb.logic;
 
-import it.progettoweb.data.ConfirmationMail;
 import it.progettoweb.data.Notification;
-import it.progettoweb.data.Review;
 import it.progettoweb.data.User;
 import it.progettoweb.db.DBManager;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.mail.internet.*;
-import javax.mail.*;
 import javax.servlet.http.HttpSession;
-import java.util.*;
 
 /**
  * Servlet which manages claiming restaurants
@@ -36,7 +25,7 @@ public class ClaimRestaurant extends HttpServlet {
      */
     @Override
     public void init() throws ServletException {
-        // initialize dbmanager attribute
+        // Initialize dbmanager attribute
         this.dbmanager = (DBManager)super.getServletContext().getAttribute("dbmanager");
     }
 
@@ -52,7 +41,7 @@ public class ClaimRestaurant extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        //you shouldn't reach this servlet via GET !!!
+        // This servlet shouldn't be reached via GET
         response.sendRedirect("index.jsp");
     }
 
@@ -68,9 +57,8 @@ public class ClaimRestaurant extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        //Parameters of the form
         int id;
-        //Retrieve parameters values
+        // Parsing to integer
         try {
             id = Integer.parseInt(request.getParameter("id"));
         } catch (NumberFormatException e){
@@ -78,20 +66,23 @@ public class ClaimRestaurant extends HttpServlet {
             return;
         }
 
-
         HttpSession session = request.getSession();
         Notification notification = new Notification();
         notification.setRestaurantClaimed(id);
         notification.setRestaurantClaimer(((User)session.getAttribute("user")).getEmail());
-        notification.setText("The user " + ((User)session.getAttribute("user")).getEmail() + "has claimed a restaurant");
+        notification.setText("The user " + ((User)session.getAttribute("user")).getEmail() + " has claimed a restaurant.");
+        // 0 -> Restaurant claiming
         notification.setType(0);
 
+        // If the restaurant already has an owner
         if(dbmanager.hasOwner(id)){
             response.sendRedirect("index.jsp");
             return;
         }
 
+        // If the notification has been successfully created
         if(dbmanager.placeClaimNotification(notification)){
+            // Restaurant claimed
             response.sendRedirect("index.jsp?message=5");
         }else{
             response.sendRedirect("index.jsp");

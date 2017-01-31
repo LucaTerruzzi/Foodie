@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package it.progettoweb.logic;
 
 import it.progettoweb.data.User;
@@ -28,7 +23,7 @@ public class Login extends HttpServlet {
      */
     @Override
     public void init() throws ServletException {
-        // initialize dbmanager attribute
+        // Initialize dbmanager attribute
         this.dbmanager = (DBManager)super.getServletContext().getAttribute("dbmanager");
     }
     
@@ -44,8 +39,8 @@ public class Login extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        //you shouldn't reach this servlet via GET !!!
+
+        // This servlet shouldn't be reached via GET
         response.sendRedirect("index.jsp");
     }
 
@@ -67,22 +62,20 @@ public class Login extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
            
-        //if necessary parameters are null, something wrong happened
+        // If necessary parameters are null
         if(email == null || password == null){
             response.sendRedirect("index.jsp");
             return;
         }
         
-        //authentiate user
+        // Authenticates user
         User user = dbmanager.authenticate(email, password);
-        
+
+        // If user does not exist in DB
         if(user == null){
-            //user not present in DB
-            //request.setAttribute("errorCode", 1);
-            //request.getRequestDispatcher("index.jsp").forward(request, response);
             response.sendRedirect("index.jsp?error=1");
         }else{
-            //user present in DB. save in session
+            // The user is present in DB, saves it in the session
             HttpSession session = request.getSession();
             session.setAttribute("user", user);
             session.setAttribute("userType", user.getUserType());

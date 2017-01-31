@@ -54,7 +54,7 @@ public class RetrieveRestaurant extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //you shouldn't reach this servlet via GET !!!
+        // This servlet shouldn't be reached via GET
         //response.sendRedirect("index.jsp");
         doPost(request, response);
     }

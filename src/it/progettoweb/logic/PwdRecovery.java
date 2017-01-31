@@ -3,7 +3,6 @@ package it.progettoweb.logic;
 import it.progettoweb.db.DBManager;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -25,7 +24,7 @@ public class PwdRecovery extends HttpServlet {
      */
     @Override
     public void init() throws ServletException {
-        // initialize dbmanager attribute
+        // Initialize dbmanager attribute
         this.dbmanager = (DBManager)super.getServletContext().getAttribute("dbmanager");
     }
 
@@ -38,7 +37,7 @@ public class PwdRecovery extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //you shouldn't reach this servlet via POST !!!
+        // This servlet shouldn't be reached via GET
         response.sendRedirect("index.jsp");
     }
 
@@ -54,34 +53,36 @@ public class PwdRecovery extends HttpServlet {
         // Parameters of the POST
         String email, token, password, passwordRep;
 
-        // retrieve parameters
+        // Retrieve parameters
         email = request.getParameter("user");
         token = request.getParameter("token");
         password = request.getParameter("password");
         passwordRep = request.getParameter("password-rep");
 
-        //If these parameters are null something went wrong (should never happen!)
+        //If these parameters are null
         if(email == null || token == null || password == null || passwordRep == null){
             response.sendRedirect("index.jsp");
             return;
         }
 
-        //password length
+        // Password length must be between 6 and 20
         if(password.length() < 6 || password.length() > 20){
             response.sendRedirect("pwdChange.jsp?user=" + email + "&token" + token + "&error=1");
             return;
         }
 
-        //password equal
+        // Password must match its repetition
         if(!password.equals(passwordRep)){
             response.sendRedirect("pwdChange.jsp?user=" + email + "&token" + token + "&error=2");
             return;
         }
 
-        //change password in DB
+        // Updates the password in the DB
         if(dbmanager.changePasswordRecovery(email, token, password)){
+            // Password successfully changed
             response.sendRedirect("index.jsp?message=4");
         }else{
+            // Invalid link
             response.sendRedirect("index.jsp?error=2");
         }
 

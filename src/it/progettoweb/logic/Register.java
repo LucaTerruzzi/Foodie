@@ -1,21 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package it.progettoweb.logic;
 
 import it.progettoweb.data.ConfirmationMail;
 import it.progettoweb.db.DBManager;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.mail.internet.*;
-import javax.mail.*;
-import java.util.*;
 
 /**
  * Servlet which manages registration
@@ -32,7 +24,7 @@ public class Register extends HttpServlet {
      */
     @Override
     public void init() throws ServletException {
-        // initialize dbmanager attribute
+        // Initialize dbmanager attribute
         this.dbmanager = (DBManager)super.getServletContext().getAttribute("dbmanager");
     }
     
@@ -47,8 +39,8 @@ public class Register extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        //you shouldn't reach this servlet via GET !!!
+
+        // This servlet shouldn't be reached via GET
         response.sendRedirect("index.jsp");
     }
 
@@ -64,10 +56,10 @@ public class Register extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        //Parameters of the form
+        // Parameters of the form
         String name, surname, email, emailRep, password, passwordRep, terms;
         
-        //Rretrieve parameters values
+        // Retrieve parameters values
         name = request.getParameter("name");
         surname = request.getParameter("surname");
         email = request.getParameter("email");
@@ -76,72 +68,79 @@ public class Register extends HttpServlet {
         passwordRep = request.getParameter("password-rep");
         terms = request.getParameter("terms");
         
-        //If these parameters are null something went wrong (should never happen!)
+        // If these parameters are null
         if(name == null || surname == null || email == null || emailRep == null || password == null || passwordRep == null){
             response.sendRedirect("index.jsp");
             return;
         }
         
-        //Parameters error check (already performed via javascript. Server side control for security reasons).
-        
-        //name length
+        // Parameters error check (already performed via javascript. Server side control for security reasons).
+
+        // Name length must be between 2 and 20
         if(name.length() < 2 || name.length() > 20){
             response.sendRedirect("register.jsp?error=1");
             return;
         }
-        
-        //surname length
+
+        // Surname length must be between 2 and 20
         if(surname.length() < 2 || surname.length() > 20){
+            // Generic error
             response.sendRedirect("register.jsp?error=1");
             return;
         }
 
-        //email validator
+        // Email validation
         try {
             InternetAddress emailAddr = new InternetAddress(email);
             emailAddr.validate();
         } catch (AddressException ex) {
+            // Generic error
             response.sendRedirect("register.jsp?error=1");
             return;
         }
 
-        //email equal
+        // Email must match with its repetition
         if(!email.equals(emailRep)){
+            // Emails are different
             response.sendRedirect("register.jsp?error=2");
             return;
         }
 
-        //password length
+        // Password length must be between 6 and 20
         if(password.length() < 6 || password.length() > 20){
+            // Generic error
             response.sendRedirect("register.jsp?error=1");
             return;
         }
 
-        //password equal
+        // Password must match with its repetition
         if(!password.equals(passwordRep)){
+            // Passwords are different
             response.sendRedirect("register.jsp?error=3");
             return;
         }
 
-        //terms of service
+        // Terms of service must be accepted
         if(terms == null || !terms.equals("yes")){
+            // You must accept the terms of service
             response.sendRedirect("register.jsp?error=4");
             return;
         }
 
-        //Register in DB or error if already present
+        // Register in DB or error if already present
         String token = dbmanager.register(name, surname, email, password);
         if(token == null){
+            // This email has already been registered
             response.sendRedirect("register.jsp?error=5");
             return;
         }
 
         // Send confirmation email
         if(new ConfirmationMail(email, token).send()){
-            // if everything is ok
+            // Registration successful. Check email
             response.sendRedirect("index.jsp?message=2");
         }else{
-            // if something wrong redirect with error
+            // Something went wrong
             response.sendRedirect("index.jsp?error=3");
         }
 

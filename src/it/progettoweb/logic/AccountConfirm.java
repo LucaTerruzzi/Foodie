@@ -1,9 +1,7 @@
 package it.progettoweb.logic;
 
 import it.progettoweb.db.DBManager;
-
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -19,13 +17,13 @@ public class AccountConfirm extends HttpServlet {
     private DBManager dbmanager;
 
     /**
-     * initialize DBManager attribute
+     * Initialize DBManager attribute
      *
      * @throws ServletException
      */
     @Override
     public void init() throws ServletException {
-        // initialize dbmanager attribute
+        // Initialize dbmanager attribute
         this.dbmanager = (DBManager)super.getServletContext().getAttribute("dbmanager");
     }
 
@@ -45,19 +43,20 @@ public class AccountConfirm extends HttpServlet {
         email = request.getParameter("user");
         token = request.getParameter("token");
 
+        // Parameter checking
         if(email == null || token == null){
-            //something wrong !!!
             response.sendRedirect("index.jsp");
             return;
         }
 
+        // If the token checks, enables account
         if(dbmanager.enableAccount(email, token)){
+            // Account confirmed
             response.sendRedirect("index.jsp?message=1");
         }else{
+            // Invalid link
             response.sendRedirect("index.jsp?error=2");
         }
-
-
 
     }
 
@@ -70,7 +69,7 @@ public class AccountConfirm extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //you shouldn't reach this servlet via POST !!!
+        // This servlet shouldn't be reached via POST
         response.sendRedirect("index.jsp");
     }
 

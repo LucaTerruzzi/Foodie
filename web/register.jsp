@@ -136,7 +136,7 @@
                 <div class="w3-panel w3-red">Emails are different<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>
             </c:when>
             <c:when test="${param.error == 3}">
-                <div class="w3-panel w3-red">Passwords are dfferent<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>
+                <div class="w3-panel w3-red">Passwords are different<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>
             </c:when>
             <c:when test="${param.error == 4}">
                 <div class="w3-panel w3-red">You must accept the terms of service<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>
