@@ -36,6 +36,7 @@
     <p><c:forEach items="${results}" var="result">
     <h4>${result.getName()} - ${result.getRank()}</h4>
     <h5>${result.getCity()}, ${result.getState()}</h5>
+    <img src="pics/${result.getId()}/${result.getId()}_owner_1.jpg" alt="foto" style="max-width: 100px; max-height: 100px"/>
         ${result.getRating()}
         N. reviews: ${result.getNrev()}
         Price: ${result.getRange()}

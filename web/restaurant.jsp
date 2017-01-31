@@ -25,6 +25,7 @@
         </form>
     </c:if>
     <img src="pics/<jsp:getProperty name="restaurant" property="id"/>/<jsp:getProperty name="restaurant" property="id"/>_owner_1.jpg" alt="foto"/>
+    <img src="pics/<jsp:getProperty name="restaurant" property="id"/>/<jsp:getProperty name="restaurant" property="id"/>_qr.jpg" alt="foto"/>
     <h5><jsp:getProperty name="restaurant" property="openingHours"/></h5>
     <p><jsp:getProperty name="restaurant" property="description"/></p>
     <a href="<jsp:getProperty name="restaurant" property="link"/>">Sito</a>

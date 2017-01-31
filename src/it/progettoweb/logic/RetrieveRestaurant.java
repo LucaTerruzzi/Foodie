@@ -9,9 +9,13 @@ import it.progettoweb.data.Location;
 import it.progettoweb.data.Restaurant;
 import it.progettoweb.data.User;
 import it.progettoweb.db.DBManager;
+import net.glxn.qrgen.QRCode;
+import net.glxn.qrgen.image.ImageType;
 import org.glassfish.jersey.server.model.Suspendable;
 
-import java.io.IOException;
+import java.io.*;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.StringJoiner;
@@ -87,12 +91,35 @@ public class RetrieveRestaurant extends HttpServlet {
                     canreview = 1;
                 }
             }
+
+            placeQR(restaurant);
+
             request.setAttribute("restaurant", restaurant);
             request.setAttribute("canreview",canreview);
             getServletContext().getRequestDispatcher("/restaurant.jsp").forward(request, response);
         }
     }
 
+
+
+    private void placeQR(Restaurant restaurant) throws IOException{
+        URL qrUrl = getServletContext().getResource("/pics/" + restaurant.getId());
+        File qrFile = new File(qrUrl.getPath() + "/" + restaurant.getId() + "_qr.jpg");
+
+        if(!qrFile.isFile()){
+            StringBuilder text = new StringBuilder();
+            text.append(restaurant.getName());
+            text.append("\n");
+            text.append(restaurant.getLocation().getAddress()).append(", ").append(restaurant.getLocation().getCity());
+            text.append(", ").append(restaurant.getLocation().getState());
+            text.append("\n");
+            text.append(restaurant.getOpeningHours());
+            ByteArrayOutputStream qrStream = QRCode.from(text.toString()).to(ImageType.JPG).withSize(256, 256).stream();
+            try(OutputStream outputStream = new FileOutputStream(qrFile)) {
+                qrStream.writeTo(outputStream);
+            }
+        }
+    }
 
     /**
      * Returns a short description of the servlet.

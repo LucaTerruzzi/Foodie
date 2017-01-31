@@ -17,6 +17,9 @@
           <element id="library" level="project" name="ext" />
           <element id="library" level="project" name="jbcrypt-0.4-atlassian-1" />
           <element id="library" level="project" name="derby" />
+          <element id="library" level="project" name="core-2.2" />
+          <element id="library" level="project" name="javase-2.2" />
+          <element id="library" level="project" name="qrgen-1.3" />
         </element>
       </element>
     </root>
