@@ -8,7 +8,7 @@ body, html {height: 100%}
 
 .fd-light-grey{
     background-color: #F1F1F1;
-    color: black;
+    color: #5F5F5F;
 }
 
 .fd-dark-grey{
@@ -21,4 +21,13 @@ body, html {height: 100%}
 
 .fd-suggestion-indented{
     margin-left: 8px;
+}
+
+.fd-image{
+    padding: 8px;
+    max-width: 100%;
+}
+
+.fd-small-image{
+    padding: 2px;
 }
