@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="236c4e26-c158-4237-8c57-21e1b7388dbe" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/fdErrorPage.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/pwdChangeScript.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/pwdRecoveryScript.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/registerScript.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/writeRevScript.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FoodieDB/log/log34.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/index_back.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/pics/202/202_qr.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/index_back.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/pics/1/1_qr.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/pics/1016/1016_qr.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/pics/913/913_qr.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FoodieDB/log/log.ctrl" afterPath="$PROJECT_DIR$/FoodieDB/log/log.ctrl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FoodieDB/log/log35.dat" afterPath="$PROJECT_DIR$/FoodieDB/log/log35.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FoodieDB/log/logmirror.ctrl" afterPath="$PROJECT_DIR$/FoodieDB/log/logmirror.ctrl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FoodieDB/seg0/c10.dat" afterPath="$PROJECT_DIR$/FoodieDB/seg0/c10.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FoodieDB/seg0/c230.dat" afterPath="$PROJECT_DIR$/FoodieDB/seg0/c230.dat" />
@@ -23,31 +18,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/foodie/it/progettoweb/db/DBManager.class" afterPath="$PROJECT_DIR$/out/production/foodie/it/progettoweb/db/DBManager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apache-tomcat-8.5.5/bin/derby.log" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.5/bin/derby.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/css/fdColours.css" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/css/fdColours.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/css/fdIndex.css" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/css/fdIndex.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/error.jsp" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/error.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/notifications.jsp" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/notifications.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/pwdChange.jsp" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/pwdChange.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/pwdRecovery.jsp" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/pwdRecovery.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/register.jsp" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/register.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/restaurant.jsp" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/restaurant.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/js/registerScript.js" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/js/registerScript.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/searchResults.jsp" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/searchResults.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/user.jsp" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/user.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/writeRev.jsp" afterPath="$PROJECT_DIR$/out/artifacts/foodie_war_exploded/writeRev.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/it/progettoweb/db/DBManager.java" afterPath="$PROJECT_DIR$/src/it/progettoweb/db/DBManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/fdColours.css" afterPath="$PROJECT_DIR$/web/css/fdColours.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/fdIndex.css" afterPath="$PROJECT_DIR$/web/css/fdIndex.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/error.jsp" afterPath="$PROJECT_DIR$/web/error.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/notifications.jsp" afterPath="$PROJECT_DIR$/web/notifications.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/pwdChange.jsp" afterPath="$PROJECT_DIR$/web/pwdChange.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/pwdRecovery.jsp" afterPath="$PROJECT_DIR$/web/pwdRecovery.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/register.jsp" afterPath="$PROJECT_DIR$/web/register.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/restaurant.jsp" afterPath="$PROJECT_DIR$/web/restaurant.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/registerScript.js" afterPath="$PROJECT_DIR$/web/js/registerScript.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/searchResults.jsp" afterPath="$PROJECT_DIR$/web/searchResults.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/user.jsp" afterPath="$PROJECT_DIR$/web/user.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/writeRev.jsp" afterPath="$PROJECT_DIR$/web/writeRev.jsp" />
     </list>
     <ignored path="foodie.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -100,7 +74,58 @@
     <favorites_list name="foodie" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="register.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/register.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="811">
+              <caret line="65" column="113" lean-forward="false" selection-start-line="65" selection-start-column="113" selection-end-line="65" selection-end-column="113" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="registerScript.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/js/registerScript.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1185">
+              <caret line="79" column="87" lean-forward="false" selection-start-line="79" selection-start-column="87" selection-end-line="79" selection-end-column="87" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pwdChangeScript.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/pwdChangeScript.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="30" column="40" lean-forward="false" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pwdRecoveryScript.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/pwdRecoveryScript.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="writeRevScript.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/writeRevScript.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="30" column="85" lean-forward="false" selection-start-line="30" selection-start-column="85" selection-end-line="30" selection-end-column="85" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -186,12 +211,12 @@
         <option value="$PROJECT_DIR$/web/restaurant.jsp" />
         <option value="$PROJECT_DIR$/web/pwdRecovery.jsp" />
         <option value="$PROJECT_DIR$/web/js/pwdRecoveryScript.js" />
-        <option value="$PROJECT_DIR$/web/js/registerScript.js" />
         <option value="$PROJECT_DIR$/web/register.jsp" />
         <option value="$PROJECT_DIR$/web/writeRev.jsp" />
         <option value="$PROJECT_DIR$/web/js/writeRevScript.js" />
         <option value="$PROJECT_DIR$/web/css/fdColours.css" />
         <option value="$PROJECT_DIR$/src/it/progettoweb/db/DBManager.java" />
+        <option value="$PROJECT_DIR$/web/js/registerScript.js" />
       </list>
     </option>
   </component>
@@ -212,8 +237,8 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1680" />
-    <option name="height" value="1050" />
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -231,6 +256,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -311,6 +338,10 @@
               <option name="myItemId" value="progettoweb" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -352,7 +383,73 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="listeners" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Foodie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Foodie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="progettoweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="filters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Foodie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Foodie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="progettoweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Foodie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Foodie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="progettoweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -372,8 +469,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -994,6 +1089,7 @@
       <workItem from="1485939941979" duration="6333000" />
       <workItem from="1485949676060" duration="600000" />
       <workItem from="1485957372618" duration="8039000" />
+      <workItem from="1485966966926" duration="1740000" />
     </task>
     <task id="LOCAL-00001" summary="Autocomplete &amp; Login">
       <created>1476382465551</created>
@@ -1006,7 +1102,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="225599000" />
+    <option name="totallyTimeSpent" value="227339000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1018,7 +1114,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1040,10 +1136,10 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28614157" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28554216" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17083333" sideWeight="0.44378698" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17310444" sideWeight="0.44378698" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2160229" sideWeight="0.556213" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1137,9 +1233,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="45" column="121" lean-forward="false" selection-start-line="45" selection-start-column="121" selection-end-line="45" selection-end-column="121" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1147,9 +1240,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1650">
           <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1284,9 +1374,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="23" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1301,11 +1388,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2025">
           <caret line="146" column="35" lean-forward="false" selection-start-line="146" selection-start-column="35" selection-end-line="146" selection-end-column="35" />
-          <folding>
-            <element signature="e#5215#5216#0" expanded="false" />
-            <element signature="e#5264#5265#0" expanded="false" />
-            <marker date="1485957345000" expanded="false" signature="38:340" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1313,11 +1395,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1005">
           <caret line="89" column="27" lean-forward="false" selection-start-line="89" selection-start-column="27" selection-end-line="89" selection-end-column="27" />
-          <folding>
-            <element signature="e#3299#3300#0" expanded="false" />
-            <element signature="e#3360#3361#0" expanded="false" />
-            <marker date="1485957345000" expanded="false" signature="38:266" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1325,7 +1402,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1333,7 +1409,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1373,18 +1448,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/fdPwdChange.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/fdPwdChange.css" />
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
@@ -1401,22 +1468,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/pwdChangeScript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="40" lean-forward="true" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/pwdRecoveryScript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/pwdRecovery.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -1427,60 +1478,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/registerScript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1230">
-          <caret line="82" column="76" lean-forward="false" selection-start-line="82" selection-start-column="76" selection-end-line="82" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="65" column="113" lean-forward="false" selection-start-line="65" selection-start-column="113" selection-end-line="65" selection-end-column="113" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/it/progettoweb/db/DBManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="471" column="54" lean-forward="false" selection-start-line="471" selection-start-column="54" selection-end-line="471" selection-end-column="54" />
-          <folding>
-            <marker date="1485966438000" expanded="true" signature="1011:1053" ph="SELECT * FRO... USER" />
-            <marker date="1485966438000" expanded="true" signature="2185:2276" ph="INSERT INTO APP.\&quot;USER\&quot;... " />
-            <marker date="1485966438000" expanded="true" signature="2851:2947" ph="UPDATE APP.\... " />
-            <marker date="1485966438000" expanded="true" signature="3425:3493" ph="UPDATE APP.\... " />
-            <marker date="1485966438000" expanded="true" signature="3996:4094" ph="UPDATE APP.\... " />
-            <marker date="1485966438000" expanded="true" signature="4671:4719" ph="UPDATE APP.\... " />
-            <marker date="1485966438000" expanded="true" signature="5055:5097" ph="SELECT * FRO... USER" />
-            <marker date="1485966438000" expanded="true" signature="5805:5856" ph="UPDATE APP.\... " />
-            <marker date="1485966438000" expanded="true" signature="6195:6237" ph="SELECT * FRO... USER" />
-            <marker date="1485966438000" expanded="true" signature="7060:7112" ph="UPDATE APP.\... " />
-            <marker date="1485966438000" expanded="true" signature="7560:7606" ph="SELECT EMAIL... USER" />
-            <marker date="1485966438000" expanded="true" signature="8073:8172" ph="INSERT INTO APP.NOTIFICATION... " />
-            <marker date="1485966438000" expanded="true" signature="8696:8750" ph="UPDATE APP.N... " />
-            <marker date="1485966438000" expanded="true" signature="9227:9339" ph="SELECT APP.N... NOTIFICATION" />
-            <marker date="1485966438000" expanded="true" signature="9875:9923" ph="UPDATE APP.R... " />
-            <marker date="1485966438000" expanded="true" signature="10324:10372" ph="UPDATE APP.\... " />
-            <marker date="1485966438000" expanded="true" signature="10839:10917" ph="SELECT * FRO... NOTIFICATION" />
-            <marker date="1485966438000" expanded="true" signature="11859:11959" ph="INSERT INTO APP.REVIEW... " />
-            <marker date="1485966438000" expanded="true" signature="12699:12782" ph="SELECT MAX(\... REVIEW" />
-            <marker date="1485966438000" expanded="true" signature="13419:13494" ph="SELECT APP.R... RESTAURANT" />
-            <marker date="1485966438000" expanded="true" signature="13911:14040" ph="SELECT * FRO... REVIEW" />
-            <marker date="1485966438000" expanded="true" signature="15068:15127" ph="SELECT COUNT... REVIEW" />
-            <marker date="1485966438000" expanded="true" signature="15571:15655" ph="SELECT AVG(C... REVIEW" />
-            <marker date="1485966438000" expanded="true" signature="16096:16145" ph="UPDATE APP.R... " />
-            <marker date="1485966438000" expanded="true" signature="16596:16715" ph="SELECT * FRO... RESTAURANT" />
-            <marker date="1485966438000" expanded="true" signature="27329:27479" ph="SELECT DISTI... RESTAURANT" />
-            <marker date="1485966438000" expanded="true" signature="28061:28213" ph="SELECT DISTI... RESTAURANT" />
-            <marker date="1485966438000" expanded="true" signature="28793:28943" ph="SELECT DISTI... RESTAURANT" />
-            <marker date="1485966438000" expanded="true" signature="29609:29666" ph="SELECT TYPE CUISINETYPE" />
-            <marker date="1485966438000" expanded="true" signature="30400:30473" ph="SELECT DISTI... RESTAURANT" />
-            <marker date="1485966438000" expanded="true" signature="31129:31205" ph="SELECT DISTI... RESTAURANT" />
-            <marker date="1485966438000" expanded="true" signature="32039:32122" ph="SELECT DISTI... RESTAURANT" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1488,7 +1489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="549">
           <caret line="123" column="42" lean-forward="false" selection-start-line="123" selection-start-column="42" selection-end-line="123" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1496,7 +1496,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="37">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1516,18 +1515,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/writeRevScript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="85" lean-forward="false" selection-start-line="30" selection-start-column="85" selection-end-line="30" selection-end-column="85" />
-          <folding>
-            <marker date="1485966086000" expanded="true" signature="881:1174" ph="{...}" />
-            <marker date="1485966086000" expanded="true" signature="940:1064" ph="{...}" />
-            <marker date="1485966086000" expanded="true" signature="1068:1168" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/pwdChange.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -1535,6 +1522,46 @@
           <folding>
             <element signature="n#c:choose#0;n#jsp:root#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/pwdChangeScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="40" lean-forward="false" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/register.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="811">
+          <caret line="65" column="113" lean-forward="false" selection-start-line="65" selection-start-column="113" selection-end-line="65" selection-end-column="113" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/pwdRecoveryScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/writeRevScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="30" column="85" lean-forward="false" selection-start-line="30" selection-start-column="85" selection-end-line="30" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/registerScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1185">
+          <caret line="79" column="87" lean-forward="false" selection-start-line="79" selection-start-column="87" selection-end-line="79" selection-end-column="87" />
+          <folding />
         </state>
       </provider>
     </entry>

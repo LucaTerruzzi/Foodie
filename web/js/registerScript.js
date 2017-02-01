@@ -54,10 +54,10 @@ $(function () {
             $('#pwd-error').show();
             err = true;
         }else if(result.score < 4){
-            $(this).removeClass("fd-invalid-input").removeClass("fd-valid-input").addClass("warning-input");
+            $(this).removeClass("fd-invalid-input").removeClass("fd-valid-input").addClass("fd-warning-input");
             $('#pwd-error').hide();
         }else{
-            $(this).removeClass("fd-invalid-input").removeClass("warning-input").addClass("fd-valid-input");
+            $(this).removeClass("fd-invalid-input").removeClass("fd-warning-input").addClass("fd-valid-input");
             $('#pwd-error').hide();
         }
         $('#pwd-rep').change();
@@ -77,11 +77,11 @@ $(function () {
     $('#terms').change(function(){
         if(!this.checked){
             $(this).removeClass("fd-valid-input").addClass("fd-invalid-input");
-            $('label[for="'+ this.id +'"]').removeClass("valid-label").addClass("invalid-label");
+            $('label[for="'+ this.id +'"]').removeClass("fd-valid-label").addClass("fd-invalid-label");
             err = true;
         }else{
             $(this).removeClass("fd-invalid-input").addClass("fd-valid-input");
-            $('label[for="'+ this.id +'"]').removeClass("invalid-label").addClass("valid-label");
+            $('label[for="'+ this.id +'"]').removeClass("fd-invalid-label").addClass("fd-valid-label");
         }
     });
 

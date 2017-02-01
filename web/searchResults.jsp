@@ -1,6 +1,9 @@
 <%--
   Created by IntelliJ IDEA.
-  Authors: Luca, Riccardo, Mario
+  User: Luca
+  Date: 19/01/2017
+  Time: 11:49
+  To change this template use File | Settings | File Templates.
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page errorPage="error.jsp"%>
@@ -13,6 +16,19 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/fdColours.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        function loadMap(query) {
+            $('#map-frame').attr('src', 'https://www.google.com/maps/embed/v1/place?key=AIzaSyDubqJqJa5bSjOdkRLrgVOy5lkioEK_Okk&q=' + encodeURI(query));
+            $('#map-modal').show();
+        }
+
+        $(function () {
+            $('#map-modal').click(function () {
+                $(this).hide();
+            })
+        });
+    </script>
 </head>
 <body>
 <%@include file="WEB-INF/navbar.jsp" %>
@@ -49,6 +65,7 @@
                     N. reviews: ${result.getNrev()}<br>
                     Price: ${result.getRange()}<br>
                     Cucine: <c:forEach items="${result.getCuisine()}" var="cuisine">${cuisine} </c:forEach><br>
+                    <button onclick="loadMap('${result.getName()}, ${result.getCity()}, ${result.getState()}')">Map</button>
                     <form method="POST" action="RetrieveRestaurant">
                         <input type="hidden" name="id" value="${result.getId()}"/>
                         <button type="submit" class="w3-btn fd-light-grey">Search</button>
@@ -62,6 +79,21 @@
             </div>
         </div>
     </c:forEach></div>
+
+    <div id="map-modal" class="w3-modal">
+        <div class="w3-modal-content">
+            <div class="w3-container" style="max-height: 100%">
+                <!--<h3><span onclick="$('#map-modal').hide()" class="w3-closebtn">&times;</span></h3>-->
+                <iframe
+                        width="100%"
+                        height="85%"
+                        frameborder="0" style="border:0"
+                        src="" allowfullscreen
+                        id="map-frame">
+                </iframe>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>
