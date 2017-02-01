@@ -1,7 +1,6 @@
-<%-- 
-    Document   : register
-    Created on : Jul 5, 2016, 11:08:21 AM
-    Author     : Luca
+<%--
+  Created by IntelliJ IDEA.
+  Authors: Luca, Riccardo, Mario
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

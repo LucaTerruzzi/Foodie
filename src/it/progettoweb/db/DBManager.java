@@ -470,7 +470,6 @@ public class DBManager {
             try (ResultSet rs = stm.executeQuery()) {
                 if (rs.next()) {
                     rating = rs.getFloat("AVGRATING");
-                    System.out.println(rating);
                 }else{
                     return false;
                 }

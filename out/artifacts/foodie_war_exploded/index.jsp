@@ -1,7 +1,6 @@
-<%-- 
-    Document   : index
-    Created on : Jun 11, 2016, 4:35:06 PM
-    Author     : Luca
+<%--
+  Created by IntelliJ IDEA.
+  Authors: Luca, Riccardo, Mario
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -28,7 +27,7 @@
     <title>Home</title>
 </head>
 <body>
-<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+<div class="bgimg w3-display-container w3-animate-opacity">
     <%@include file="WEB-INF/navbar.jsp" %>
     <c:choose>
         <c:when test="${param.error == 1}">
@@ -66,10 +65,9 @@
         </c:when>
     </c:choose>
     <div class="w3-display-middle">
-        <div class="container">
+        <div class="container w3-text-white">
             <form role="form" id="search" method="POST" action="Search">
                 <div class="w3-row">
-
                     <div class="w3-layout-cell">
                         <input class="w3-input typeahead" type="text" id="field" size="64" placeholder="Search" name="term">
                         <input type="hidden" id="type" name="type" value="0">
@@ -82,7 +80,6 @@
                 </div>
             </form>
         </div>
-
     </div>
 </div>
 </body>

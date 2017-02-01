@@ -1,7 +1,6 @@
 <%--
-    Document   : register
-    Created on : Jul 5, 2016, 11:08:21 AM
-    Author     : Luca
+  Created by IntelliJ IDEA.
+  Authors: Luca, Riccardo, Mario
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -12,80 +11,40 @@
     <title>Password change</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/fdColours.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="/js/pwdChangeScript.js"></script>
     <script src="js/zxcvbn.js"></script>
-    <style>
-        .invalid-input { color : red}
-        .warning-input { color : orange}
-        .valid-input { color : green}
-        .invalid-label {color: red}
-        .valid-label {color : green}
-        .warning-label {color : orange}
-    </style>
-    <script>
-        $(function () {
-            var err = false;
-
-            $('#pwd').change(function(){
-                var result = zxcvbn($(this).val());
-                if(result.score < 2){
-                    $(this).removeClass("warning-input").removeClass("valid-input").addClass("invalid-input");
-                    $('#pwd-error').show();
-                    err = true;
-                }else if(result.score < 4){
-                    $(this).removeClass("invalid-input").removeClass("valid-input").addClass("warning-input");
-                    $('#pwd-error').hide();
-                }else{
-                    $(this).removeClass("invalid-input").removeClass("warning-input").addClass("valid-input");
-                    $('#pwd-error').hide();
-                }
-                $('#pwd-rep').change();
-            });
-
-            $('#pwd-rep').change(function(){
-                if($(this).val() == '' || $(this).val() != $('#pwd').val()){
-                    $(this).removeClass("valid-input").addClass("invalid-input");
-                    $('#pwd-rep-error').show();
-                    err = true;
-                }else{
-                    $(this).removeClass("invalid-input").addClass("valid-input");
-                    $('#pwd-rep-error').hide();
-                }
-            });
-
-            $('#change-form').submit(function(){
-                err = false;
-                $(this).children().change();
-                if(err){
-                    $('.invalid-input').first().focus();
-                    return false;
-                }
-            });
-        });
-    </script>
 </head>
+<c:choose>
+    <c:when test="${param.error == 1}">
+        <div class="w3-panel w3-red">Password not strong enough<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>
+    </c:when>
+    <c:when test="${param.error == 2}">
+        <div class="w3-panel w3-red">Passwords are different<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>
+    </c:when>
+    <c:when test="${param.error == 4}">
+        <div class="w3-panel w3-red">You must accept the terms of service<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>
+    </c:when>
+    <c:when test="${param.error == 5}">
+        <div class="w3-panel w3-red">Email already present<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>
+    </c:when>
+</c:choose>
 <body>
-<div class="container">
-    <h2>Password change</h2>
-    <form role="form" method="POST" action="PwdRecovery" id="change-form">
+<div class="w3-container">
+    <h2 class="fd-white">Cambio Password</h2>
+    <form role="form" class="w3-container" method="POST" action="PwdRecovery" id="change-form">
         <input type="hidden" name="user" value="<c:out value="${param.user}"/>">
         <input type="hidden" name="token" value="<c:out value="${param.token}"/>">
-        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password">
-        <span id="pwd-error" style="display: none">Password is not strong enough</span>
-        <input type="password" class="form-control" id="pwd-rep" placeholder="Repeat password" name="password-rep">
-        <span id="pwd-rep-error" style="display: none">Passwords are different</span>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <input class="w3-input w3-animate-input w3-margin-top" type="password" id="pwd" placeholder="Inserisci la password" name="password" style="width:30%">
+        <label class="fd-invalid-label" id="pwd-error" style="display: none">Password is not strong enough</label>
+        <input class="w3-input w3-animate-input w3-margin-top" type="password" id="pwd-rep" placeholder="Ripeti la password" name="password-rep" style="width:30%">
+        <label class="fd-invalid-label" id="pwd-rep-error" style="display: none">Passwords are different</label><br>
+        <button type="submit" class="fd-dark-grey w3-btn w3-margin-top">Fatto</button>
     </form>
 </div>
-
-<c:choose>
-    <c:when test="${param.error == 1}">Password not strong enough</c:when>
-    <c:when test="${param.error == 2}">Passwords are different</c:when>
-    <c:when test="${param.error == 4}">You must accept the terms of service</c:when>
-    <c:when test="${param.error == 5}">Email already present</c:when>
-</c:choose>
-
 </body>
 </html>
