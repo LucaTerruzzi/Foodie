@@ -1,30 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package it.progettoweb.db;
 
 import it.progettoweb.data.*;
-
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.UUID;
 
+// To encrypt the password
 import org.mindrot.jbcrypt.BCrypt;
 
 /**
+ * Class which interfaces with the database
  *
- * @author Luca
+ * @author Luca, Riccardo, Mario
  */
 public class DBManager {
-
-    private String[] cuisine = {"bigola","italiana","francese","internazionale","tedesca","giapponese","indiana"};  //<-- TO BE DELETED
-    private String[] cities = {"monza","milano","carnate","trento","caspoggio","roma","firenze"};  //<-- TO BE DELETED
-    private String[] regions = {"lombardia","trentino","veneto","toscana","piemonte","puglia","emilia romagna"};  //<-- TO BE DELETED
-    private String[] states = {"italia","francia","spagna","germania","inghilterra","austria","mongolia"};  //<-- TO BE DELETED
-    private String[] restaurants = {"da gino","bigoli","mensa","cracco pec","forst","orso gino","da gianfranco","bigazzero","bigiggia","italia mia"};  //<-- TO BE DELETED
 
     private Connection connection;
 
@@ -32,7 +22,6 @@ public class DBManager {
 
         try {
 
-            //Class.forName("org.apache.derby.jdbc.EmbeddedDriver", true, getClass().getClassLoader());
             Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
 
         } catch(Exception e) {
@@ -54,9 +43,8 @@ public class DBManager {
     public User authenticate(String email, String password) {
 
         try (PreparedStatement stm = connection.prepareStatement("SELECT * FROM APP.\"USER\" WHERE EMAIL = ?")) {
-            //stm = connection.prepareStatement("SELECT * FROM APP.USER WHERE EMAIL = ? AND PASSWORD = ?");
+
             stm.setString(1, email);
-            //stm.setString(2, password);
 
             try (ResultSet rs = stm.executeQuery()) {
                 if (rs.next()) {

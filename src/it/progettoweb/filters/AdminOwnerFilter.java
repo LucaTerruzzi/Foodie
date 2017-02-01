@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package it.progettoweb.filters;
 
 import java.io.IOException;
@@ -17,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Filter non authenticated requests
+ * Guest and Regular user cannot go through
  * @author Luca, Riccardo, Mario
  */
 public class AdminOwnerFilter implements Filter {
@@ -30,7 +25,7 @@ public class AdminOwnerFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 
         HttpSession session = ((HttpServletRequest)request).getSession();
-        // If not authenticated
+        // If not administrator user or restaurant owner
         if((int)session.getAttribute("userType") == 0 || (int)session.getAttribute("userType") == 1 || session.getAttribute("user") == null){
             ((HttpServletResponse)response).sendRedirect("index.jsp");
         }else{

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package it.progettoweb.filters;
 
 import java.io.IOException;
@@ -12,12 +7,10 @@ import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
- * Filter non authenticated requests
+ * Filter requests to restaurant.jsp with no restaurant data
  * @author Luca, Riccardo, Mario
  */
 public class FillRestaurantFilter implements Filter {
@@ -29,6 +22,7 @@ public class FillRestaurantFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 
+        // If the restaurant is null
         if(request.getParameter("restaurant") == null){
             ((HttpServletResponse)response).sendRedirect("index.jsp");
         }else{

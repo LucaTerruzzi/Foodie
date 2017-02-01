@@ -8,7 +8,7 @@ import java.util.Properties;
 
 /**
  * User Class
- * Class which collects all user's infos
+ * Class which sends mail
  * @author Luca, Riccardo, Mario
  */
 public class Mail {
@@ -19,6 +19,8 @@ public class Mail {
 
     public boolean send(){
         Properties props = System.getProperties();
+
+        // Gmail
         props.setProperty("mail.smtp.host", "smtp.gmail.com");
         props.setProperty("mail.smtp.port", "465");
         props.put("mail.smtp.auth", "true");
@@ -27,7 +29,7 @@ public class Mail {
         // Get a Session object
         Session session = Session.getInstance(props, null);
 
-        //Create a new message
+        // Create a new message
         MimeMessage msg = new MimeMessage(session);
 
         Transport t = null;
@@ -38,7 +40,7 @@ public class Mail {
             return false;
         }
 
-        //Set the FROM and TO fields
+        // Set the FROM and TO fields
         try {
             msg.setFrom(new InternetAddress("team.at.foodie@gmail.com"));
             msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to,false));
@@ -47,7 +49,7 @@ public class Mail {
             msg.setSentDate(new Date());
             t.connect("smtp.gmail.com", 465,"team.at.foodie@gmail.com", "scC-Tvt-Upt-X5C");
             t.sendMessage(msg, msg.getAllRecipients());
-            //Transport.send(msg, "team.at.foodie@gmail.com", "scC-Tvt-Upt-X5C");
+
         } catch (MessagingException e) {
             e.printStackTrace();
             return false;

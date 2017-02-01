@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package it.progettoweb.data;
 
 
@@ -11,13 +6,26 @@ package it.progettoweb.data;
  * @author Luca, Riccardo, Mario
  */
 public class Location{
-    
+
+    // Location latitude
     private float latitude;
+
+    // Location longitude
     private float longitude;
+
+    // Location state
     private String state;
+
+    // Location city
     private String city;
+
+    // Location region
     private String region;
+
+    // Location province
     private String province;
+
+    // Location address
     private String address;
 
     /**

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package it.progettoweb.data;
 
 import java.util.ArrayList;
@@ -12,18 +7,38 @@ import java.util.ArrayList;
  * @author Luca, Riccardo, Mario
  */
 public class Restaurant{
-    
+
+    // Restaurant id
     private int id;
+
+    // Restaurant name
     private String name;
+
+    // Restaurant description
     private String description;
+
+    // Restaurant web link
     private String link;
+
+    // Restaurant cuisine
     private ArrayList<String> cuisine;
+
+    // Restaurant location
     private Location location;
-    //private OpeningHours openingHours;
+
+    // Restaurant opening hours
     private String openingHours;
+
+    // Restaurant price range
     private int priceRange;
+
+    // Restaurant rating
     private float rating;
+
+    // Restaurant reviews
     private ArrayList<Review> reviews;
+
+    // Restaurant owner
     private String owner;
 
     /**

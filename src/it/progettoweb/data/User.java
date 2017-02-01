@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package it.progettoweb.data;
 
 import java.io.Serializable;
@@ -15,11 +10,11 @@ import java.util.ArrayList;
  */
 public class User implements Serializable{
     
-    private int userType;       //0 -> anonymous, 1 -> standard, 2 -> owner, 3 -> administrator 
-    private String name;        //user's name
-    private String surname;     //user's surname
-    private String email;       //user's email
-    private ArrayList<Notification> notifications;
+    private int userType;       // 0 -> anonymous, 1 -> standard, 2 -> owner, 3 -> administrator
+    private String name;        // User's name
+    private String surname;     // User's surname
+    private String email;       // User's email
+    private ArrayList<Notification> notifications;  // List of notifications
 
     public User(){
     }
@@ -80,11 +75,16 @@ public class User implements Serializable{
         this.email = email;
     }
 
-
+    /**
+     * @return the notifications
+     */
     public ArrayList<Notification> getNotifications() {
         return notifications;
     }
 
+    /**
+     * @param notifications the email to set
+     */
     public void setNotifications(ArrayList<Notification> notifications) {
         this.notifications = notifications;
     }

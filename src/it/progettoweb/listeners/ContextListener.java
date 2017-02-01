@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package it.progettoweb.listeners;
 
 import it.progettoweb.db.DBManager;
@@ -13,31 +8,22 @@ import javax.servlet.ServletContextListener;
 /**
  * Web application lifecycle listener.
  *
- * @author Luca
+ * @author Luca, Riccardo, Mario
  */
 public class ContextListener implements ServletContextListener {
 
     @Override
     public void contextInitialized(ServletContextEvent sce) {
-        
-        //!!!! dburl -> TO BE SET IN web.xml !!!!
-        String dburl = sce.getServletContext().getInitParameter("dburl");
 
-        //System.out.println(System.getProperty("user.dir"));
+        String dburl = sce.getServletContext().getInitParameter("dburl");
 
         try {
 
             DBManager manager = new DBManager(dburl);
-
             sce.getServletContext().setAttribute("dbmanager", manager);
 
-        } catch (SQLException ex) {
+        } catch (SQLException ex) { throw new RuntimeException(ex); }
 
-            //Logger.getLogger(getClass().getName()).severe(ex.toString());
-
-            throw new RuntimeException(ex);
-
-        }
     }
 
     @Override

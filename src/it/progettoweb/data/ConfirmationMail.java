@@ -2,11 +2,17 @@ package it.progettoweb.data;
 
 /**
  * User Class
- * Class which collects all user's infos
+ * Class which handles confirmation mail
  * @author Luca, Riccardo, Mario
  */
 public class ConfirmationMail extends Mail{
 
+    /**
+     * Handles the confirmation mail
+     *
+     * @param to recipient
+     * @param token token sent to verify address
+     */
     public ConfirmationMail(String to, String token){
         this.to = to;
         StringBuffer sb = new StringBuffer();

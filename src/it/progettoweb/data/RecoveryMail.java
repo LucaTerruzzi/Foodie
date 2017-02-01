@@ -1,12 +1,17 @@
 package it.progettoweb.data;
 
 /**
- * User Class
- * Class which collects all user's infos
+ * Class which handles recovery mail
  * @author Luca, Riccardo, Mario
  */
 public class RecoveryMail extends Mail{
 
+    /**
+     * Handles the confirmation mail
+     *
+     * @param to recipient
+     * @param token token sent to recover mail
+     */
     public RecoveryMail(String to, String token){
         this.to = to;
         StringBuffer sb = new StringBuffer();
