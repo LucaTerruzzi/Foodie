@@ -17,7 +17,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/fdColours.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="js/valida.2.1.7.min.js"></script>
         <script src="js/zxcvbn.js"></script>
         <style>
             .invalid-input { color : red}
@@ -143,6 +142,9 @@
             </c:when>
             <c:when test="${param.error == 5}">
                 <div class="w3-panel w3-red">This email has already been registered<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>
+            </c:when>
+            <c:when test="${param.error == 6}">
+                <div class="w3-panel w3-red">Password in not strong enough<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>
             </c:when>
         </c:choose>
         <div class="w3-container">

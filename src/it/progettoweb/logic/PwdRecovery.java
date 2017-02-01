@@ -7,6 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+// Password strength libraries
+import com.nulabinc.zxcvbn.Strength;
+import com.nulabinc.zxcvbn.Zxcvbn;
 
 /**
  * Servlet which manages password change for recovery
@@ -65,8 +68,10 @@ public class PwdRecovery extends HttpServlet {
             return;
         }
 
-        // Password length must be between 6 and 20
-        if(password.length() < 6 || password.length() > 20){
+        // Password must be strong enough
+        Strength strength = new Zxcvbn().measure(password);
+        if(strength.getScore() < 2){
+            // Password is not strong enough
             response.sendRedirect("pwdChange.jsp?user=" + email + "&token" + token + "&error=1");
             return;
         }

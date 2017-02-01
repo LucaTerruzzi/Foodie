@@ -40,7 +40,7 @@ public class Mail {
             return false;
         }
 
-        // Set the FROM and TO fields
+        // Set the FROM and TO fields, message and try to send
         try {
             msg.setFrom(new InternetAddress("team.at.foodie@gmail.com"));
             msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to,false));

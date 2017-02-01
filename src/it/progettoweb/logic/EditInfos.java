@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+// Password strength libraries
+import com.nulabinc.zxcvbn.Strength;
+import com.nulabinc.zxcvbn.Zxcvbn;
 
 /**
  * Servlet which manages the edit of the user's profile
@@ -169,13 +172,15 @@ public class EditInfos extends HttpServlet {
             return false;
         }
 
-        // Old password length must be between 6 and 20
-        if(passwordOld.length() < 6 || passwordOld.length() > 20){
+        // Old password must't be empty
+        if(passwordOld.length() < 1){
             return false;
         }
 
-        // New password length must be between 6 and 20
-        if(password.length() < 6 || password.length() > 20){
+        // New password must be strong enough
+        Strength strength = new Zxcvbn().measure(password);
+        if(strength.getScore() < 2){
+            // Password is not strong enough
             return false;
         }
 

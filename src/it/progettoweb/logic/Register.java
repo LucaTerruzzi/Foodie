@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.mail.internet.*;
+// Password strength libraries
+import com.nulabinc.zxcvbn.Strength;
+import com.nulabinc.zxcvbn.Zxcvbn;
 
 /**
  * Servlet which manages registration
@@ -106,10 +109,11 @@ public class Register extends HttpServlet {
             return;
         }
 
-        // Password length must be between 6 and 20
-        if(password.length() < 6 || password.length() > 20){
-            // Generic error
-            response.sendRedirect("register.jsp?error=1");
+        // Password must be strong enough
+        Strength strength = new Zxcvbn().measure(password);
+        if(strength.getScore() < 2){
+            // Password is not strong enough
+            response.sendRedirect("register.jsp?error=6");
             return;
         }
 

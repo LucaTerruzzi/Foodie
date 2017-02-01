@@ -18,6 +18,61 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/fdColours.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        .invalid-input { color : red}
+        .warning-input { color : orange}
+        .valid-input { color : green}
+        .invalid-label {color: red}
+        .valid-label {color : green}
+        .warning-label {color : orange}
+    </style>
+    <script>
+        $(function () {
+            var err = false;
+
+            $('#title').change(function(){
+                if($(this).val().length < 3 || $(this).val().length > 63){
+                    $(this).removeClass("valid-input").addClass("invalid-input");
+                    $('#title-error').show();
+                    err = true;
+                }else{
+                    $(this).removeClass("invalid-input").addClass("valid-input");
+                    $('#title-error').hide();
+                }
+            });
+
+            $('#desc').change(function(){
+                if($(this).val().length < 16 || $(this).val().length > 1023){
+                    $(this).removeClass("valid-input").addClass("invalid-input");
+                    $('#desc-error').show();
+                    err = true;
+                }else{
+                    $(this).removeClass("invalid-input").addClass("valid-input");
+                    $('#desc-error').hide();
+                }
+            });
+
+            $('input:radio[name=rating]').change(function(){
+                if(!$('input:radio[name=rating]:checked').length){
+                    $(this).parent().removeClass("valid-input").addClass("invalid-input");
+                    err = true;
+                }else{
+                    $(this).parent().removeClass("invalid-input").addClass("valid-input");
+                }
+            });
+
+            $('#review-form').submit(function(){
+                err = false;
+                $(this).children().change();
+                $('input:radio[name=rating]').change();
+                if(err){
+                    $('.invalid-input').first().focus();
+                    return false;
+                }
+            });
+        });
+    </script>
 </head>
 <body>
 <%@include file="WEB-INF/navbar.jsp" %>
@@ -45,9 +100,11 @@
 </c:choose>
 
 <div class="w3-container w3-padding-16" style="max-width: 50%">
-    <form class="w3-container" role="form" method="POST" action="StoreReview">
-        <input class="w3-input w3-margin-bottom fd-text-dark-grey" type="text" id="name" placeholder="Titolo" name="title">
+    <form class="w3-container" role="form" method="POST" action="StoreReview" id="review-form">
+        <input class="w3-input w3-margin-bottom fd-text-dark-grey" type="text" id="title" placeholder="Titolo" name="title">
+        <span id="title-error" style="display: none">Title must be beween 3 and 63</span>
         <textarea class="w3-input w3-margin-bottom fd-text-dark-grey" rows="10"  id="desc" placeholder="Corpo" name="desc"></textarea>
+        <span id="desc-error" style="display: none">Description must be beween 16 and 1023</span>
         <p class="fd-text-dark-grey">Voto:
             1 <input class="w3-radio" type="radio" name="rating" value="1">
             2 <input class="w3-radio" type="radio" name="rating" value="2">

@@ -1,29 +1,29 @@
 ----------------------------------------------------------------
-Wed Feb 01 10:43:52 CET 2017:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.13.1.1 - (1765088): instance a816c00e-0159-f90f-1435-00000d34d908 
-on database directory /Users/Ricky/Documents/Uni/IntroduzioneProgrammazioneWeb/Foodie/FoodieDB with class loader ParallelWebappClassLoader
+Wed Feb 01 12:55:53 CET 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.13.1.1 - (1765088): instance a816c00e-0159-f987-f32a-00000d448de0 
+on database directory /Users/Luca/Documents/UNI/ProgrammazioneWeb/Foodie/FoodieDB with class loader ParallelWebappClassLoader
   context: ROOT
   delegate: false
 ----------> Parent Classloader:
-java.net.URLClassLoader@108c4c35
+java.net.URLClassLoader@5fa7e7ff
  
-Loaded from file:/Users/Ricky/Documents/Uni/IntroduzioneProgrammazioneWeb/Foodie/out/artifacts/foodie_war_exploded/WEB-INF/lib/derby.jar
+Loaded from file:/Users/Luca/Documents/UNI/ProgrammazioneWeb/Foodie/out/artifacts/foodie_war_exploded/WEB-INF/lib/derby.jar
 java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_66-b17
-user.dir=/Users/Ricky/Documents/Uni/IntroduzioneProgrammazioneWeb/Foodie/apache-tomcat-8.5.5/bin
+java.runtime.version=1.8.0_102-b14
+user.dir=/Users/Luca/Documents/UNI/ProgrammazioneWeb/Foodie/apache-tomcat-8.5.5/bin
 os.name=Mac OS X
 os.arch=x86_64
 os.version=10.12.2
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
 ----------------------------------------------------------------
-Wed Feb 01 11:14:21 CET 2017: Shutting down Derby engine
+Wed Feb 01 12:56:49 CET 2017: Shutting down Derby engine
 ----------------------------------------------------------------
-Wed Feb 01 11:14:21 CET 2017:
-Shutting down instance a816c00e-0159-f90f-1435-00000d34d908 on database directory /Users/Ricky/Documents/Uni/IntroduzioneProgrammazioneWeb/Foodie/FoodieDB with class loader ParallelWebappClassLoader
+Wed Feb 01 12:56:49 CET 2017:
+Shutting down instance a816c00e-0159-f987-f32a-00000d448de0 on database directory /Users/Luca/Documents/UNI/ProgrammazioneWeb/Foodie/FoodieDB with class loader ParallelWebappClassLoader
   context: ROOT
   delegate: false
 ----------> Parent Classloader:
-java.net.URLClassLoader@108c4c35
+java.net.URLClassLoader@5fa7e7ff
  
 ----------------------------------------------------------------
