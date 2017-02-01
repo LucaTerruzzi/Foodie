@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<ul class="w3-navbar fd-dark-grey">
+    <li><a href="index.jsp"><i class="fa fa-home"></i> Foodie</a></li>
+    <li class="w3-dropdown-hover w3-quarter w3-right">
+        <a href="#">Login</a>
+        <div class="w3-dropdown-content w3-card-4" >
+            <form action="Login" method="POST" style="width: inherit">
+                <input class="w3-input w3-border" type="email" name="email" placeholder="Email">
+                <input class="w3-input w3-border" type="password" name="password" placeholder="Password">
+                <button class="w3-btn fd-light-grey" type="submit" value="login">Login</button>
+            </form>
+            <a href="register.jsp" class="w3-btn fd-light-grey">Register</a>
+            <a href="pwdRecovery.jsp" class="w3-center fd-light-grey">Password Forgotten</a>
+        </div>
+    </li>
+</ul>

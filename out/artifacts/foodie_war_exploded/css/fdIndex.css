@@ -1,0 +1,29 @@
+.bgimg {
+    background-image: url('/pics/other/backgroundPic.jpg');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.tt-hint {
+    color: #999;
+}
+
+.tt-menu {
+    width: 422px;
+    margin: 4px 0;
+    background-color: #5F5F5F;
+}
+
+.tt-suggestion {
+    color: white;
+    padding: 3px 20px;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.tt-suggestion:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: white;
+}
