@@ -1,32 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package it.progettoweb.logic;
 
-import it.progettoweb.data.Location;
 import it.progettoweb.data.Restaurant;
 import it.progettoweb.data.User;
 import it.progettoweb.db.DBManager;
-import net.glxn.qrgen.QRCode;
-import net.glxn.qrgen.image.ImageType;
-import org.glassfish.jersey.server.model.Suspendable;
-
 import java.io.*;
-import java.net.URISyntaxException;
 import java.net.URL;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.StringJoiner;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+// QRGen to crate QR codes
+import net.glxn.qrgen.QRCode;
+import net.glxn.qrgen.image.ImageType;
 
 /**
- * Class for logging out users
+ * Class used to retrieve restaurants
  * @author Luca, Riccardo, Mario
  */
 public class RetrieveRestaurant extends HttpServlet {
@@ -39,7 +29,7 @@ public class RetrieveRestaurant extends HttpServlet {
      */
     @Override
     public void init() throws ServletException {
-        // initialize dbmanager attribute
+        // Initialize dbmanager attribute
         this.dbmanager = (DBManager)super.getServletContext().getAttribute("dbmanager");
     }
 
@@ -54,8 +44,6 @@ public class RetrieveRestaurant extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // This servlet shouldn't be reached via GET
-        //response.sendRedirect("index.jsp");
         doPost(request, response);
     }
 
@@ -70,7 +58,10 @@ public class RetrieveRestaurant extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        // Restaurant id
         int id;
+
+        // Parsing to integer
         try {
             id = Integer.parseInt(request.getParameter("id"));
         } catch (NumberFormatException e){
@@ -78,34 +69,50 @@ public class RetrieveRestaurant extends HttpServlet {
             return;
         }
 
+        // Gets the restaurant from the db
         Restaurant restaurant = dbmanager.getRestaurantById(id);
+
+        // 1 if the user can review the restaurant, 0 otherwise
         int canreview = 0;
 
+        // Checks if the user should be able to review the restaurant
         if(restaurant == null){
             response.sendRedirect("index.jsp");
         }else{
             HttpSession session = request.getSession();
             if((int)session.getAttribute("userType") != 0) {
+                // Last user review of this restaurant must be at least 1 day old
                 LocalDate lastDate = dbmanager.lastReviewDate(id, ((User)session.getAttribute("user")).getEmail());
                 if (lastDate != null && lastDate.isBefore(LocalDate.now())) {
                     canreview = 1;
                 }
             }
 
+            // Generates the qr if it hasn't already been generated
             placeQR(restaurant);
 
             request.setAttribute("restaurant", restaurant);
-            request.setAttribute("canreview",canreview);
+            request.setAttribute("canreview", canreview);
             getServletContext().getRequestDispatcher("/restaurant.jsp").forward(request, response);
         }
     }
 
 
-
+    /**
+     * Generates the qr if it hasn't already been generated
+     *
+     * @param restaurant restaurant to check
+     * @throws IOException if an I/O error occurs
+     */
     private void placeQR(Restaurant restaurant) throws IOException{
+
+        // Relative url of the picture folder
         URL qrUrl = getServletContext().getResource("/pics/" + restaurant.getId());
+
+        // Creation of the qr file object in the given folder
         File qrFile = new File(qrUrl.getPath() + "/" + restaurant.getId() + "_qr.jpg");
 
+        // If the qr hasn't already been generated, generate it
         if(!qrFile.isFile()){
             StringBuilder text = new StringBuilder();
             text.append(restaurant.getName());

@@ -1,25 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package it.progettoweb.logic;
 
-import it.progettoweb.data.ConfirmationMail;
 import it.progettoweb.data.Review;
 import it.progettoweb.data.User;
 import it.progettoweb.db.DBManager;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.mail.internet.*;
-import javax.mail.*;
 import javax.servlet.http.HttpSession;
 import java.time.LocalDate;
-import java.util.*;
 
 /**
  * Servlet which manages storing review
@@ -36,7 +26,7 @@ public class StoreReview extends HttpServlet {
      */
     @Override
     public void init() throws ServletException {
-        // initialize dbmanager attribute
+        // Initialize dbmanager attribute
         this.dbmanager = (DBManager)super.getServletContext().getAttribute("dbmanager");
     }
 
@@ -68,12 +58,15 @@ public class StoreReview extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        //Parameters of the form
+        // Parameters of the form
         String title, body;
         int rating, id;
-        //Retrieve parameters values
+
+        // Retrieve parameters values
         title = request.getParameter("title");
         body = request.getParameter("desc");
+
+        // Parsing to integer
         try {
             rating = Integer.parseInt(request.getParameter("rating"));
             id = Integer.parseInt(request.getParameter("id"));
@@ -82,47 +75,54 @@ public class StoreReview extends HttpServlet {
             return;
         }
 
-
-        //if necessary parameters are null, something wrong happened
+        // If mandatory parameters are null
         if(title == null || body == null){
             response.sendRedirect("index.jsp");
             return;
         }
 
-        // validate input
+        // Rating must be between 1 and 5
         if(rating < 1 || rating > 5){
+            // Invalid Rating
             response.sendRedirect("writeRev.jsp?error=1&id="+id);
             return;
         }
 
+        // Title length must be between 3 and 63
         if(title.length() < 3 || title.length() > 63){
+            // Invalid Title
             response.sendRedirect("writeRev.jsp?error=2&id="+id);
             return;
         }
 
+        // Body length must be between 16 and 1023
         if(body.length() < 16 || body.length() > 1023){
+            // Invalid Description
             response.sendRedirect("writeRev.jsp?error=3&id="+id);
             return;
         }
 
         HttpSession session = request.getSession();
+
+        // Date checking
         LocalDate lastDate = dbmanager.lastReviewDate(id, ((User)session.getAttribute("user")).getEmail());
         if(lastDate == null || !lastDate.isBefore(LocalDate.now())){
             response.sendRedirect("index.jsp");
             return;
         }
+
+        // Filling of review object
         Review review = new Review();
         review.setTitle(title);
         review.setBody(body);
         review.setRating(rating);
-        //review.setDate(new Date());
         review.setDate(LocalDate.now());
         review.setAuthor(((User)session.getAttribute("user")).getEmail());
         review.setRestaurant(id);
-        //get user email
 
         if(dbmanager.saveReview(review)){
-            response.sendRedirect("writeRev.jsp?message=1&id="+id);
+            // Redirects to the restaurant
+            response.sendRedirect("RetrieveRestaurant?id="+id);
         }else{
             response.sendRedirect("index.jsp");
         }

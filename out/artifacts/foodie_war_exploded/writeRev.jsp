@@ -32,7 +32,7 @@
         <div class="w3-panel w3-red">Invalid Description<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span></div>
     </c:when>
     <c:when test="${param.message == 1}">
-        <div class="w3-panel w3-green">Review posted succesfully
+        <div class="w3-panel w3-green">Review posted successfully
             <span onclick="this.parentElement.style.display='none'" class="w3-closebtn">
                     <form action="RetrieveRestaurant" method="post">
                         <input type="hidden" name="id" value="${param.id}">

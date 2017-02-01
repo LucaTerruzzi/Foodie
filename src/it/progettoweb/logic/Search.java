@@ -1,12 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package it.progettoweb.logic;
 
 import it.progettoweb.data.SearchResult;
-import it.progettoweb.data.User;
 import it.progettoweb.db.DBManager;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -14,7 +8,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  * Servlet for managing searches
@@ -24,13 +17,13 @@ public class Search extends HttpServlet {
 
     private DBManager dbmanager;
     /**
-     * initialize DBManager attribute
+     * Initialize DBManager attribute
      *
      * @throws ServletException
      */
     @Override
     public void init() throws ServletException {
-        // initialize dbmanager attribute
+        // Initialize dbmanager attribute
         this.dbmanager = (DBManager)super.getServletContext().getAttribute("dbmanager");
     }
 
@@ -66,35 +59,42 @@ public class Search extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        // Item searched
         String term = request.getParameter("term");
         int type, pricefilter, order;
         try {
+            // 0 Restaurant, 1 City, 2 Region
             type = Integer.parseInt(request.getParameter("type"));
+            // 0 All, 1 €, 2 €€, 3 €€€
             pricefilter = Integer.parseInt(request.getParameter("pricefilter"));
+            // 1 Raking, 2 Alphabetical, 3 Price
             order = Integer.parseInt(request.getParameter("order"));
         } catch (NumberFormatException e){
             response.sendRedirect("index.jsp");
             return;
         }
 
-        //if necessary parameters are null, something wrong happened
+        // If null is searched, redirects
         if(term == null){
             response.sendRedirect("index.jsp");
             return;
         }
 
-
+        // Term searched must be at least 3 characters long
         if(term.length() < 3){
+            // Input too short
             response.sendRedirect("index.jsp?alert=1");
             return;
         }
 
+        // Character which must not be searched
         if(term.toLowerCase().contains("%") || term.toLowerCase().contains("[") || term.toLowerCase().contains("]") ||
                 term.toLowerCase().contains("^")){
             response.sendRedirect("index.jsp");
             return;
         }
 
+        // List of results depending on the filtering
         ArrayList<SearchResult> results = null;
         switch (type){
             case 0:
