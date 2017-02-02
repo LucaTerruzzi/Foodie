@@ -62,7 +62,7 @@ $(function(){
         display : 'value',
         limit: 100,
         templates: {
-            header: '<h4 class="fd-suggestion-indented"><i class="fa fa-cutlery"> Restaurants</h4>',
+            header: '<h4 class="fd-suggestion-indented"><i class="fa fa-cutlery"></i> Restaurants</h4>',
             suggestion: Handlebars.compile('<div>{{value}}, {{spec}}</div>')
 
         }

@@ -21,7 +21,7 @@ public class ConfirmationMail extends Mail{
         sb.append("<body>");
         sb.append("<h3>Account confirmation</h3>");
         sb.append("<p>Dear user, here's the link to confirm your account.</p>");
-        sb.append("<a href='localhost:8080/AccountConfirm?user=");
+        sb.append("<a href='http://localhost:8080/AccountConfirm?user=");
         sb.append(to);
         sb.append("&token=");
         sb.append(token);

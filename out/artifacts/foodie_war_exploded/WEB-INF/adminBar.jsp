@@ -1,9 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
-  User: Luca
-  Date: 17/01/2017
-  Time: 11:04
-  To change this template use File | Settings | File Templates.
+  Authors: Luca, Riccardo, Mario
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:useBean id="user" scope="session" class="it.progettoweb.data.User"/>

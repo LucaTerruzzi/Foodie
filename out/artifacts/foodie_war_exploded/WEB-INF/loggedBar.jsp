@@ -1,9 +1,7 @@
-<%-- 
-    Document   : loggedBar
-    Created on : Jun 11, 2016, 8:30:56 PM
-    Author     : Luca
+<%--
+  Created by IntelliJ IDEA.
+  Authors: Luca, Riccardo, Mario
 --%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:useBean id="user" scope="session" class="it.progettoweb.data.User"/>
 

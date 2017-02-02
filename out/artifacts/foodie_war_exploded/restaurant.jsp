@@ -66,7 +66,7 @@
                     <p>Indirizzo:<br>
                         <c:out value="${restaurant.location.city}"/>, <c:out value="${restaurant.location.address}"/>
                     </p>
-                    <p><a href="<jsp:getProperty name="restaurant" property="link"/>">Link al sito</a></p>
+                    <c:if test="${not empty restaurant.link}"><p><a href="<jsp:getProperty name="restaurant" property="link"/>">Link al sito</a></p></c:if>
                         
                     <img class="w3-margin-bottom" src="pics/<jsp:getProperty name="restaurant" property="id"/>/<jsp:getProperty name="restaurant" property="id"/>_qr.jpg" alt="qr"/>
 

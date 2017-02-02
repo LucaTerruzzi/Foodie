@@ -309,7 +309,6 @@ public class DBManager {
         try (PreparedStatement stm = connection.prepareStatement("UPDATE APP.RESTAURANT SET OWNER = ? WHERE ID = ?")) {
             stm.setString(1, restaurantClaimer);
             stm.setInt(2, restaurantClaimed);
-            //stm.setString(2, password);
             if(stm.executeUpdate() == 0){
                 return false;
             }
@@ -319,12 +318,9 @@ public class DBManager {
             return false;
         }
 
-        try (PreparedStatement stm = connection.prepareStatement("UPDATE APP.\"USER\" SET TYPE = 2 WHERE EMAIL = ?")) {
+        try (PreparedStatement stm = connection.prepareStatement("UPDATE APP.\"USER\" SET TYPE = 2 WHERE EMAIL = ? AND TYPE = 1")) {
             stm.setString(1, restaurantClaimer);
-            //stm.setString(2, password);
-            if(stm.executeUpdate() == 0){
-                return false;
-            }
+            stm.executeUpdate();
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -364,7 +360,6 @@ public class DBManager {
         try (PreparedStatement stm = connection.prepareStatement("INSERT INTO APP.REVIEW (TEXT, RATING, \"DATE\", RESTAURANT, AUTHOR, TITLE) VALUES (?, ?, ?, ?, ?, ?)")) {
             stm.setString(1, review.getBody());
             stm.setFloat(2, review.getRating());
-            //stm.setDate(3, new java.sql.Date(review.getDate().getTime()));
             stm.setDate(3, java.sql.Date.valueOf(review.getDate()));
             stm.setInt(4,review.getRestaurant());
             stm.setString(5, review.getAuthor());
@@ -484,7 +479,6 @@ public class DBManager {
         try (PreparedStatement stm = connection.prepareStatement("UPDATE APP.RESTAURANT SET RATING = ? WHERE ID = ?")) {
             stm.setFloat(1, rating);
             stm.setInt(2, id);
-            //stm.setString(2, password);
             if(stm.executeUpdate() == 0){
                 return false;
             }
