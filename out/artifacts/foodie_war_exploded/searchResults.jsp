@@ -8,6 +8,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page errorPage="error.jsp"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <html>
 <head>
     <title>Restaurants</title>
@@ -51,7 +52,7 @@
                 <div class="w3-container w3-layout-cell">
                     <div class="w3-margin-top">
                         ${result.getCity()}, ${result.getState()}<br>
-                        Rating: ${result.getRating()}<br>
+                        Rating: <fmt:formatNumber value="${result.getRating()}" type="number" maxFractionDigits="1"/><br>
                         N. recensioni: ${result.getNrev()}<br>
                         Prezzo: <c:choose>
                                     <c:when test="${result.getRange() == 1}">€</c:when>

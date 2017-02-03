@@ -23,7 +23,7 @@
         <a href="#">I miei ristoranti</a>
         <div class="w3-dropdown-content w3-card-4" >
             <c:forEach items="${user.ownedRestaurants}" end="2" var="ownedRestaurant">
-                <h4>${ownedRestaurant.name}</h4>
+                <h5 class="w3-container fd-text-dark-grey">${ownedRestaurant.name}</h5>
                 <a class="w3-btn fd-light-grey" href="RetrieveRestaurant?id=${ownedRestaurant.id}">Vai</a>
             </c:forEach>
             <a class="w3-btn fd-light-grey" href="ownedRestaurants.jsp">Vedi Tutte</a>
@@ -32,5 +32,3 @@
     </li>
 
 </ul>
-
-<!--AGGIUNGERE PULSANTE RISTORANTE!!!-->

@@ -5,6 +5,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page errorPage="error.jsp"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <jsp:useBean id="restaurant" class="it.progettoweb.data.Restaurant" scope="request" />
 <html>
 <head>
@@ -40,7 +41,7 @@
                         </c:choose></h4>
                     </div>
                     <div class="w3-container w3-layout-col">
-                        <h4><jsp:getProperty name="restaurant" property="rating"/></h4>
+                        <h4><fmt:formatNumber value="${restaurant.rating}" type="number" maxFractionDigits="1"/></h4>
                     </div>
                     <div class="w3-container w3-layout-col">
                         <c:if test="${sessionScope.userType != 0 && sessionScope.user.email == restaurant.owner}"><h3>You are the owner!</h3></c:if>
