@@ -2,14 +2,6 @@
  * Created by Ricky on 28/01/2017.
  */
 $(function(){
-    /*var cuisine = new Bloodhound({
-     datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
-     queryTokenizer: Bloodhound.tokenizers.whitespace,
-     remote: {
-     url: 'service/autocomplete/cuisine/%QUERY',
-     wildcard: '%QUERY'
-     }
-     });*/
 
     $(window).bind("pageshow", function() {
         $('#search #type').val(0);
@@ -38,15 +30,7 @@ $(function(){
         hint: true,
         highlight: true,
         minLength: 3
-    }/*,{
-     name: 'couisine',
-     source: cuisine,
-     display : 'value',
-     limit: 100,
-     templates: {
-     header: '<h4 class="header"><span class="glyphicon glyphicon-record"></span>Cuisine</h4>'
-     }
-     }*/,{
+    },{
         name: 'places',
         source: places,
         display : 'value',

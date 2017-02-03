@@ -53,7 +53,11 @@
                         ${result.getCity()}, ${result.getState()}<br>
                         Rating: ${result.getRating()}<br>
                         N. recensioni: ${result.getNrev()}<br>
-                        Prezzo: ${result.getRange()}<br>
+                        Prezzo: <c:choose>
+                                    <c:when test="${result.getRange() == 1}">€</c:when>
+                                    <c:when test="${result.getRange() == 2}">€€</c:when>
+                                    <c:when test="${result.getRange() == 3}">€€€</c:when>
+                                </c:choose><br>
                         Cucine: <c:forEach items="${result.getCuisine()}" var="cuisine">${cuisine} </c:forEach><br>
                         <button class="w3-btn fd-light-grey w3-section" onclick="loadMap('${result.getName()}, ${result.getCity()}, ${result.getState()}')">Mappa</button>
                         <form method="POST" action="RetrieveRestaurant">

@@ -17,7 +17,9 @@
     <link rel="stylesheet" href="css/fdColours.css">
 </head>
 <body class="fd-light-grey">
+
 <%@include file="WEB-INF/navbar.jsp" %>
+
 <div class="w3-container w3-padding-16 fd-text-dark-grey">
     <div class="w3-row">
         <div class="w3-half w3-container w3-center">
