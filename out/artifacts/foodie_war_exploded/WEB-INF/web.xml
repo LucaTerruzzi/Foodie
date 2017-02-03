@@ -59,6 +59,8 @@
         <filter-name>AdminOwnerFilter</filter-name>
         <url-pattern>/notifications.jsp</url-pattern>
         <url-pattern>/RefreshNotifications</url-pattern>
+        <url-pattern>/ownedRestaurants.jsp</url-pattern>
+        <url-pattern>/RefreshOwnedRestaurants</url-pattern>
     </filter-mapping>
     <filter-mapping>
         <filter-name>FillRestaurantFilter</filter-name>

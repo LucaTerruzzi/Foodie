@@ -37,4 +37,18 @@
             <a class="w3-btn fd-light-grey" href="RefreshNotifications">Aggiorna</a>
         </div>
     </li>
+
+    <c:if test="${not empty user.ownedRestaurants}">
+        <li class="w3-dropdown-hover w3-quarter w3-right">
+            <a href="#">I miei ristoranti</a>
+            <div class="w3-dropdown-content w3-card-4" >
+                <c:forEach items="${user.ownedRestaurants}" end="2" var="ownedRestaurant">
+                    <h4>${ownedRestaurant.name}</h4>
+                    <a class="w3-btn fd-light-grey" href="RetrieveRestaurant?id=${ownedRestaurant.id}">Vai</a>
+                </c:forEach>
+                <a class="w3-btn fd-light-grey" href="ownedRestaurants.jsp">Vedi Tutte</a>
+                <a class="w3-btn fd-light-grey" href="RefreshOwnedRestaurants">Aggiorna</a>
+            </div>
+        </li>
+    </c:if>
 </ul>
