@@ -120,6 +120,10 @@
         <servlet-name>AssignRestaurant</servlet-name>
         <servlet-class>it.progettoweb.logic.AssignRestaurant</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RefreshOwnedRestaurants</servlet-name>
+        <servlet-class>it.progettoweb.logic.RefreshOwnedRestaurants</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -171,6 +175,10 @@
     <servlet-mapping>
         <servlet-name>AssignRestaurant</servlet-name>
         <url-pattern>/AssignRestaurant</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RefreshOwnedRestaurants</servlet-name>
+        <url-pattern>/RefreshOwnedRestaurants</url-pattern>
     </servlet-mapping>
     <error-page>
         <error-code>404</error-code>

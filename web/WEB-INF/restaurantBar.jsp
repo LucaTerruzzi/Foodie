@@ -4,6 +4,7 @@
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:useBean id="user" scope="session" class="it.progettoweb.data.User"/>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
 <ul class="w3-navbar fd-dark-grey">
@@ -17,6 +18,19 @@
             </form>
         </div>
     </li>
+
+    <li class="w3-dropdown-hover w3-quarter w3-right">
+        <a href="#">I miei ristoranti</a>
+        <div class="w3-dropdown-content w3-card-4" >
+            <c:forEach items="${user.ownedRestaurants}" end="2" var="ownedRestaurant">
+                <h4>${ownedRestaurant.name}</h4>
+                <a class="w3-btn fd-light-grey" href="RetrieveRestaurant?id=${ownedRestaurant.id}">Vai</a>
+            </c:forEach>
+            <a class="w3-btn fd-light-grey" href="ownedRestaurants.jsp">Vedi Tutte</a>
+            <a class="w3-btn fd-light-grey" href="RefreshOwnedRestaurants">Aggiorna</a>
+        </div>
+    </li>
+
 </ul>
 
 <!--AGGIUNGERE PULSANTE RISTORANTE!!!-->

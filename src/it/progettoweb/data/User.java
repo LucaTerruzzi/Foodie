@@ -15,6 +15,7 @@ public class User implements Serializable{
     private String surname;     // User's surname
     private String email;       // User's email
     private ArrayList<Notification> notifications;  // List of notifications
+    private ArrayList<RestaurantDropdown> ownedRestaurants;  // List of the owned restaurants
 
     public User(){
     }
@@ -87,5 +88,19 @@ public class User implements Serializable{
      */
     public void setNotifications(ArrayList<Notification> notifications) {
         this.notifications = notifications;
+    }
+
+    /**
+     * @return the owned restaurants
+     */
+    public ArrayList<RestaurantDropdown> getOwnedRestaurants() {
+        return ownedRestaurants;
+    }
+
+    /**
+     * @param ownedRestaurants the owned restaurants to set
+     */
+    public void setOwnedRestaurants(ArrayList<RestaurantDropdown> ownedRestaurants) {
+        this.ownedRestaurants = ownedRestaurants;
     }
 }

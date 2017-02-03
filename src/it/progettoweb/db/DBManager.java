@@ -56,6 +56,10 @@ public class DBManager {
                         user.setUserType(rs.getInt("TYPE"));
                         if(rs.getInt("TYPE") == 3){
                             user.setNotifications(getAdminNotifications());
+                            user.setOwnedRestaurants(getOwnedRestaurants(rs.getString("EMAIL")));
+                        }
+                        if(rs.getInt("TYPE") == 2){
+                            user.setOwnedRestaurants(getOwnedRestaurants(rs.getString("EMAIL")));
                         }
                         return user;
                     }
@@ -347,6 +351,28 @@ public class DBManager {
                 }
 
                 return notifications;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
+        return null;
+    }
+
+    public ArrayList<RestaurantDropdown> getOwnedRestaurants(String email){
+        try (PreparedStatement stm = connection.prepareStatement("SELECT ID, NAME FROM APP.RESTAURANT WHERE OWNER = ?")) {
+            stm.setString(1, email);
+            try (ResultSet rs = stm.executeQuery()) {
+                ArrayList<RestaurantDropdown> ownedRestaurants = new ArrayList<>();
+                while (rs.next()) {
+                    RestaurantDropdown ownedRestaurant = new RestaurantDropdown();
+                    ownedRestaurant.setId(rs.getInt("ID"));
+                    ownedRestaurant.setName(rs.getString("NAME"));
+                    ownedRestaurants.add(ownedRestaurant);
+                }
+
+                return ownedRestaurants;
             }
 
         } catch (SQLException e) {
